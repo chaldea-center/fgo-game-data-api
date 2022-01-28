@@ -249,6 +249,7 @@ class BaseVals(BaseModel):
     EventId: Optional[int] = None
     AddCount: Optional[int] = None
     RateCount: Optional[int] = None
+    DropRateCount: Optional[int] = None
     # aa0: Optional[int] = None
     # aa1: Optional[int] = None
     # aa2: Optional[int] = None
@@ -283,26 +284,26 @@ class NiceBuff(BaseModelORJson):
         ...,
         title="Buff group",
         description="Buff group. "
-        "See https://github.com/atlasacademy/fgo-docs#unstackable-buffs "
-        "for how this field is used.",
+                    "See https://github.com/atlasacademy/fgo-docs#unstackable-buffs "
+                    "for how this field is used.",
     )
     script: NiceBuffScript = Field(
         ...,
         title="Buff script",
         description="Random stuffs that get added to the buff entry. "
-        "See each field description for more details.",
+                    "See each field description for more details.",
     )
     vals: list[NiceTrait] = Field(
         [],
         title="Buff individualities",
         description="Buff traits/individualities. "
-        "For example, buff removal uses this field to target the buffs.",
+                    "For example, buff removal uses this field to target the buffs.",
     )
     tvals: list[NiceTrait] = Field(
         [],
         title="Buff tvals",
         description="Buff tvals: I'm quite sure this field is used for "
-        "visual purposes only and not gameplay.",
+                    "visual purposes only and not gameplay.",
     )
     ckSelfIndv: list[NiceTrait] = Field(
         [],
@@ -318,8 +319,8 @@ class NiceBuff(BaseModelORJson):
         ...,
         title="Buff max rate",
         description="Buff max rate. "
-        "See https://github.com/atlasacademy/fgo-docs#lower-and-upper-bounds-of-buffs "
-        "for how this field is used.",
+                    "See https://github.com/atlasacademy/fgo-docs#lower-and-upper-bounds-of-buffs "
+                    "for how this field is used.",
     )
 
 
@@ -347,9 +348,9 @@ class NiceBaseFunction(BaseModelORJson):
         ...,
         title="Function target team",
         description="Determines whether the function applies to only player's servants, "
-        "only quest enemies or both. "
-        "Note that this is independent of `funcTargetType`. "
-        "You need to look at both fields to check if the function applies.",
+                    "only quest enemies or both. "
+                    "Note that this is independent of `funcTargetType`. "
+                    "You need to look at both fields to check if the function applies.",
     )
     funcPopupText: str = Field(
         ..., title="Function pop-up text", description="Function pop-up text"
@@ -361,13 +362,13 @@ class NiceBaseFunction(BaseModelORJson):
         [],
         title="Function tvals",
         description="Function tvals: If available, function's targets or their buffs "
-        "need to satisfy the traits given here.",
+                    "need to satisfy the traits given here.",
     )
     funcquestTvals: list[NiceTrait] = Field(
         [],
         title="Function quest traits",
         description="Function quest traits. "
-        "The current quest needs this traits for the function to works.",
+                    "The current quest needs this traits for the function to works.",
     )
     funcGroup: list[NiceFuncGroup] = Field(
         [],
@@ -383,8 +384,8 @@ class NiceBaseFunction(BaseModelORJson):
         [],
         title="Buff details",
         description="Buff details to be used by apply buff functions."
-        "Even though this is a list, it is safe to assume it only contains 1 buff if applicable"
-        "e.g. you can get the buff by buffs[0]. `buffs[0]` is also what the game hardcoded.",
+                    "Even though this is a list, it is safe to assume it only contains 1 buff if applicable"
+                    "e.g. you can get the buff by buffs[0]. `buffs[0]` is also what the game hardcoded.",
     )
 
 
@@ -418,8 +419,8 @@ class NiceFunction(NiceBaseFunction):
         None,
         title="Parameter values when used by a support servant",
         description="Parameter values when used by a support servant. "
-        "If the function comes from a support servant, the values here will be "
-        "used if available, e.g. Chaldea Teatime.",
+                    "If the function comes from a support servant, the values here will be "
+                    "used if available, e.g. Chaldea Teatime.",
     )
 
 
@@ -555,7 +556,7 @@ class ExtraAssets(ExtraCCAssets):
         ExtraAssetsUrl(),
         title="Story images",
         description="Images that are used in the game scripts. Only the story field will be filled."
-        "Since the list comes from JP, the NA asset might not exist and returns 404.",
+                    "Since the list comes from JP, the NA asset might not exist and returns 404.",
     )
 
 
@@ -596,37 +597,37 @@ AscensionAddEntryHttpUrl = AscensionAddEntry[HttpUrl]
 
 class AscensionAdd(BaseModel):
     individuality: AscensionAddEntryTrait = Field(
-        AscensionAddEntryTrait(),
+        ...,
         title="Individuality changes",
         description="Some servants add or remove traits as they ascend.",
     )
     voicePrefix: AscensionAddEntryInt = Field(
-        AscensionAddEntryInt(),
+        ...,
         title="Voice prefix changes",
         description="Some servants change voice lines as they ascennd.",
     )
     overWriteServantName: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="Servant name changes"
+        ..., title="Servant name changes"
     )
     overWriteServantBattleName: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="Servant battle name changes"
+        ..., title="Servant battle name changes"
     )
     overWriteTDName: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="NP name changes"
+        ..., title="NP name changes"
     )
     overWriteTDRuby: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="NP ruby changes"
+        ..., title="NP ruby changes"
     )
     overWriteTDFileName: AscensionAddEntryHttpUrl = Field(
-        AscensionAddEntryHttpUrl(), title="NP image URL changes"
+        ..., title="NP image URL changes"
     )
     overWriteTDRank: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="NP rank changes"
+        ..., title="NP rank changes"
     )
     overWriteTDTypeText: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr(), title="NP type changes"
+        ..., title="NP type changes"
     )
-    lvMax: AscensionAddEntryInt = Field(AscensionAddEntryInt(), title="Max level")
+    lvMax: AscensionAddEntryInt = Field(..., title="Max level")
 
 
 class NiceServantChange(BaseModel):
@@ -720,7 +721,7 @@ class NiceVoiceCond(BaseModel):
         [],
         title="Voice Cond Value list",
         description="If the voice cond is `svtGroup`, "
-        "this list will hold the applicable servant IDs.",
+                    "this list will hold the applicable servant IDs.",
     )
     eventId: int = Field(0, title="Event ID", description="Event ID.")
 
@@ -730,16 +731,16 @@ class NiceVoicePlayCond(BaseModel):
         ...,
         title="Voice play condition group",
         description="To play a voice line, at least one condition group needs to be statisfied."
-        "Within one condition group, all conditions need to be statisfied."
-        "i.e. (group_1_cond_1 AND group_1_cond_2) OR (group_2_cond_1)",
+                    "Within one condition group, all conditions need to be statisfied."
+                    "i.e. (group_1_cond_1 AND group_1_cond_2) OR (group_2_cond_1)",
     )
     condType: NiceCondType = Field(..., title="Voice play condition type")
     targetId: int = Field(..., title="Voice play condition target ID")
     condValue: int = Field(
         ...,
         title="[DEPRECIATED, use condValues] Voice play condition target value."
-        "Use condValues since condValues in other places can have multiple values."
-        "This value is the first element of condValues.",
+              "Use condValues since condValues in other places can have multiple values."
+              "This value is the first element of condValues.",
     )
     condValues: list[int] = Field([], title="Voice play condition target values")
 
@@ -795,7 +796,7 @@ class NiceVoiceLine(BaseModelORJson):
         [],
         title="Voice line texts",
         description="Texts used for summoning subtitles. "
-        "Only summoning lines have data for this fields.",
+                    "Only summoning lines have data for this fields.",
     )
     subtitle: str = Field(
         [],
@@ -811,8 +812,8 @@ class NiceVoiceLine(BaseModelORJson):
         [],
         title="Voice line play conditions",
         description="Conditions to play the voice line."
-        "For example, there are male and female versions of a bond 5 voice line."
-        "The voice line is unlocked at bond 5 but only one of the line is played in my room.",
+                    "For example, there are male and female versions of a bond 5 voice line."
+                    "The voice line is unlocked at bond 5 but only one of the line is played in my room.",
     )
 
 
@@ -837,8 +838,8 @@ class NiceServantScript(BaseModel):
         None,
         title="SkillRankUp",
         description="Mapping <Skill IDs, list[Skill IDs]>. "
-        "Summer Kiara 1st skill additional data. "
-        "The keys are the base skill IDs and the values are the rank-up skill IDs.",
+                    "Summer Kiara 1st skill additional data. "
+                    "The keys are the base skill IDs and the values are the rank-up skill IDs.",
     )
 
 
@@ -858,15 +859,15 @@ class NiceServant(BaseModelORJson):
         ...,
         title="Servant ID",
         description="svt's internal ID. "
-        'Note that this is different from the 1~300 IDs shown in "Spirit Origin list", '
-        "which is `.collectionNo`. "
-        "This ID is unique accross svt items (servants, CEs, EXPs, enemies, …)",
+                    'Note that this is different from the 1~300 IDs shown in "Spirit Origin list", '
+                    "which is `.collectionNo`. "
+                    "This ID is unique accross svt items (servants, CEs, EXPs, enemies, …)",
     )
     collectionNo: int = Field(
         ...,
         title="Collection No",
         description='The ID number shown in "Spirit Origin list". '
-        "The community usually means this number when they talk about servant or CE IDs.",
+                    "The community usually means this number when they talk about servant or CE IDs.",
     )
     name: str = Field(..., title="svt's name", description="svt's name")
     ruby: str = Field(
@@ -876,8 +877,8 @@ class NiceServant(BaseModelORJson):
         ...,
         title="svt's class",
         description="svt's class. "
-        "Because enemies also use this model, you can see some non-playable classes "
-        "as possible values.",
+                    "Because enemies also use this model, you can see some non-playable classes "
+                    "as possible values.",
     )
     type: NiceSvtType = Field(..., title="svt's type", description="svt's type.")
     flag: NiceSvtFlag = Field(
@@ -951,13 +952,13 @@ class NiceServant(BaseModelORJson):
         ...,
         title="Accumulated EXP",
         description="Total EXP needed per level. "
-        'Equivalent to the "Accumulated EXP" value when feeding CE into another CE.',
+                    'Equivalent to the "Accumulated EXP" value when feeding CE into another CE.',
     )
     expFeed: list[int] = Field(
         ...,
         title="Base EXP",
         description="Base EXP per level. "
-        'Will show up as "Base EXP" when feeding the item into something else.',
+                    'Will show up as "Base EXP" when feeding the item into something else.',
     )
     bondEquip: int = Field(
         0,
@@ -1014,14 +1015,14 @@ class NiceServant(BaseModelORJson):
         ...,
         title="Costume Materials",
         description="Mapping <Costume svt ID, Materials to unlock the costume>. "
-        "Costume details can be found in `.profile.costume`",
+                    "Costume details can be found in `.profile.costume`",
     )
     coin: Optional[NiceServantCoin] = Field(None, title="Servant Coin")
     script: NiceServantScript = Field(
         ...,
         title="Servant Script",
         description="Random stuffs that get added to the servant entry. "
-        "See each field description for more details.",
+                    "See each field description for more details.",
     )
     skills: list[NiceSkill] = Field(
         ..., title="Skills", description="List of servant or CE skills."
@@ -1054,15 +1055,15 @@ class NiceEquip(BaseModelORJson):
         ...,
         title="Servant ID",
         description="svt's internal ID. "
-        'Note that this is different from the 1~300 IDs shown in "Spirit Origin list", '
-        "which is `.collectionNo`. "
-        "This ID is unique accross svt items (servants, CEs, EXPs, enemies, …)",
+                    'Note that this is different from the 1~300 IDs shown in "Spirit Origin list", '
+                    "which is `.collectionNo`. "
+                    "This ID is unique accross svt items (servants, CEs, EXPs, enemies, …)",
     )
     collectionNo: int = Field(
         ...,
         title="Collection No",
         description='The ID number shown in "Spirit Origin list". '
-        "The community usually means this number when they talk about servant or CE IDs.",
+                    "The community usually means this number when they talk about servant or CE IDs.",
     )
     name: str = Field(..., title="svt's name", description="svt's name")
     type: NiceSvtType = Field(..., title="svt's type", description="svt's type.")
@@ -1102,13 +1103,13 @@ class NiceEquip(BaseModelORJson):
         ...,
         title="Accumulated EXP",
         description="Total EXP needed per level. "
-        'Equivalent to the "Accumulated EXP" value when feeding CE into another CE.',
+                    'Equivalent to the "Accumulated EXP" value when feeding CE into another CE.',
     )
     expFeed: list[int] = Field(
         ...,
         title="Base EXP",
         description="Base EXP per level. "
-        'Will show up as "Base EXP" when feeding the item into something else.',
+                    'Will show up as "Base EXP" when feeding the item into something else.',
     )
     bondEquipOwner: Optional[int] = Field(
         None,
@@ -1541,19 +1542,19 @@ class EnemyServerMod(BaseModelORJson):
         ...,
         title="Attacking NP gain server mod",
         description="`enemyServerMod` when attacking: "
-        "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/np.md#attacking-np",
+                    "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/np.md#attacking-np",
     )
     tdAttackRate: int = Field(
         ...,
         title="Defending NP gain server mod",
         description="`enemyServerMod` when defending: "
-        "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/np.md#defending-np",
+                    "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/np.md#defending-np",
     )
     starRate: int = Field(
         ...,
         title="Star drop rate server mod",
         description="`serverRate` when attacking: "
-        "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/critstars.md",
+                    "https://github.com/atlasacademy/fgo-game-data-docs/blob/master/battle/critstars.md",
     )
 
 
@@ -1698,6 +1699,11 @@ class SupportServant(BaseModelORJson):
     misc: SupportServantMisc
 
 
+class NiceQuestPhaseExtraDetail(BaseModelORJson):
+    questSelect: list[int] | None = None
+    singleForceSvtId: int | None = None
+
+
 class NiceQuestPhase(NiceQuest):
     phase: int
     className: list[SvtClass] = []
@@ -1706,6 +1712,7 @@ class NiceQuestPhase(NiceQuest):
     exp: int
     bond: int
     battleBgId: int
+    extraDetail: NiceQuestPhaseExtraDetail
     scripts: list[ScriptLink] = []
     messages: list[NiceQuestMessage] = []
     supportServants: list[SupportServant] = []
@@ -1836,7 +1843,7 @@ class NiceBgmRelease(BaseModelORJson):
         ...,
         title="Condition Group",
         description="To play the BGM, at least one condition group needs to be statisfied."
-        "Within one condition group, all conditions need to be statisfied.",
+                    "Within one condition group, all conditions need to be statisfied.",
     )
     targetIds: list[int]
     vals: list[int]
