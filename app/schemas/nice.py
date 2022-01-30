@@ -798,7 +798,7 @@ class NiceVoiceLine(BaseModelORJson):
         "Only summoning lines have data for this fields.",
     )
     subtitle: str = Field(
-        [],
+        "",
         title="Voice line subtitles",
         description="English subtitle for the voice line, only applicable to NA data.",
     )
@@ -1242,8 +1242,8 @@ class NiceEventReward(BaseModelORJson):
     groupId: int
     point: int
     gifts: list[NiceGift]
-    # bgImagePoint: HttpUrl
-    # bgImageGet: HttpUrl
+    bgImagePoint: HttpUrl
+    bgImageGet: HttpUrl
 
 
 class NiceEventPointGroup(BaseModelORJson):
@@ -1258,7 +1258,7 @@ class NiceEventPointBuff(BaseModelORJson):
     groupId: int = 0
     eventPoint: int
     name: str
-    # detail: str
+    detail: str
     icon: HttpUrl
     background: NiceItemBGType
     value: int
@@ -1285,7 +1285,7 @@ class NiceEventMissionCondition(BaseModelORJson):
     condType: NiceCondType
     targetIds: list[int]
     targetNum: int
-    # conditionMessage: str
+    conditionMessage: str
     closedMessage: str = ""
     flag: int = 0
     detail: Optional[NiceEventMissionConditionDetail] = None
@@ -1298,7 +1298,7 @@ class NiceEventMission(BaseModelORJson):
     missionTargetId: int
     dispNo: int
     name: str
-    # detail: str
+    detail: str
     startedAt: int
     endedAt: int
     closedAt: int
@@ -1315,9 +1315,9 @@ class NiceEventMission(BaseModelORJson):
 class NiceEventTowerReward(BaseModelORJson):
     floor: int
     gifts: list[NiceGift]
-    # boardMessage: str
-    # rewardGet: HttpUrl
-    # banner: HttpUrl
+    boardMessage: str
+    rewardGet: HttpUrl
+    banner: HttpUrl
 
 
 class NiceEventTower(BaseModelORJson):
@@ -1336,8 +1336,8 @@ class NiceEventLotteryBox(BaseModelORJson):
     isRare: bool
     priority: int
     detail: str
-    # icon: HttpUrl
-    # banner: HttpUrl
+    icon: HttpUrl
+    banner: HttpUrl
 
 
 class NiceEventLottery(BaseModelORJson):
