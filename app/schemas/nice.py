@@ -241,6 +241,11 @@ class BaseVals(BaseModel):
     ForceSubState: Optional[int] = None
     IgnoreIndivUnreleaseable: Optional[int] = None
     OnParty: Optional[int] = None
+    CounterId: int | None = None
+    CounterLv: int | None = None
+    CounterOc: int | None = None
+    UseTreasureDevice: int | None = None
+    SkillReaction: int | None = None
     # Extra dataval from SkillLvEntty.DIC_KEY_APPLY_SUPPORT_SVT
     ApplySupportSvt: Optional[int] = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
@@ -839,6 +844,11 @@ class NiceServantScript(BaseModel):
         description="Mapping <Skill IDs, list[Skill IDs]>. "
         "Summer Kiara 1st skill additional data. "
         "The keys are the base skill IDs and the values are the rank-up skill IDs.",
+    )
+    svtBuffTurnExtend: bool | None = Field(
+        None,
+        title="Servant Buff Turn Extend",
+        description="Bazett's effect. Extend buff's duration from end of player turn to end of enemy turn.",
     )
 
 
