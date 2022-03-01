@@ -16,6 +16,7 @@ from .basic import (
 from .common import (
     MCAssets,
     NiceBuffScript,
+    NiceCostume,
     NiceTrait,
     NiceValentineScript,
     ScriptLink,
@@ -124,6 +125,7 @@ class AssetURL:
     spotImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/spot_{spot_id:0>6}.png"
     script = "{base_url}/{region}/Script/{script_path}.txt"
     bgmLogo = "{base_url}/{region}/MyRoomSound/soundlogo_{logo_id:0>3}.png"
+    servantModel = "{base_url}/{region}/Servants/{item_id}/manifest.json"
 
 
 class NiceItem(BaseModelORJson):
@@ -579,6 +581,7 @@ class ExtraAssets(ExtraCCAssets):
         description="Images that are used in the game scripts. Only the story field will be filled."
         "Since the list comes from JP, the NA asset might not exist and returns 404.",
     )
+    spriteModel: ExtraAssetsUrl = Field(ExtraAssetsUrl)
 
 
 class NiceCardDetail(BaseModel):
@@ -721,16 +724,6 @@ class NiceLoreStats(BaseModel):
     deity: NiceStatusRank = NiceStatusRank.none
 
 
-class NiceCostume(BaseModel):
-    id: int
-    costumeCollectionNo: int
-    battleCharaId: int
-    name: str
-    shortName: str
-    detail: str
-    priority: int
-
-
 class NiceVoiceCond(BaseModel):
     condType: NiceVoiceCondType = Field(
         ..., title="Voice Cond Type", description="Voice Condition Type Enum"
@@ -850,6 +843,13 @@ class NiceLore(BaseModel):
     illustrator: str
     stats: Optional[NiceLoreStats] = None
     costume: dict[int, NiceCostume] = {}
+    comments: list[NiceLoreComment] = []
+    voices: list[NiceVoiceGroup] = []
+    costume: dict[int, NiceCostume] = Field(
+        {},
+        title="Costume Details",
+        description="Mapping <Costume BattleCharaID, Costume Detail>.",
+    )
     comments: list[NiceLoreComment] = []
     voices: list[NiceVoiceGroup] = []
 
@@ -1591,16 +1591,16 @@ class EnemyAi(BaseModelORJson):
 
 
 class EnemyMisc(BaseModelORJson):
-    displayType: int
-    npcSvtType: int
+    displayType: int = 1
+    npcSvtType: int = 2
     passiveSkill: Optional[list[int]] = None
-    equipTargetId1: int
+    equipTargetId1: int = 0
     equipTargetIds: Optional[list[int]] = None
-    npcSvtClassId: int
-    overwriteSvtId: int
+    npcSvtClassId: int = 0
+    overwriteSvtId: int = 0
     userCommandCodeIds: list[int]
     commandCardParam: Optional[list[int]] = None
-    status: int
+    status: int = 0
 
 
 class EnemyDrop(BaseModelORJson):

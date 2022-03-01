@@ -154,7 +154,15 @@
             "rarity": 1,
             "atkMax": 13865,
             "hpMax": 55085,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png",
+            "costume": {
+              "9938890": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 9938890,
+                "shortName": ""
+              }
+            }
           },
           "drops": [
             {
@@ -466,7 +474,15 @@
             "rarity": 1,
             "atkMax": 13865,
             "hpMax": 55085,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png",
+            "costume": {
+              "9938890": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 9938890,
+                "shortName": ""
+              }
+            }
           },
           "drops": [
             {
@@ -783,7 +799,15 @@
             "rarity": 1,
             "atkMax": 13865,
             "hpMax": 55085,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png",
+            "costume": {
+              "9938890": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 9938890,
+                "shortName": ""
+              }
+            }
           },
           "drops": [
             {
@@ -1095,7 +1119,15 @@
             "rarity": 1,
             "atkMax": 13865,
             "hpMax": 55085,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png",
+            "costume": {
+              "9938890": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 9938890,
+                "shortName": ""
+              }
+            }
           },
           "drops": [
             {
@@ -1407,7 +1439,15 @@
             "rarity": 1,
             "atkMax": 13865,
             "hpMax": 55085,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Enemys/99388901.png",
+            "costume": {
+              "9938890": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 9938890,
+                "shortName": ""
+              }
+            }
           },
           "drops": [
             {
@@ -1733,7 +1773,33 @@
             "rarity": 5,
             "atkMax": 12068,
             "hpMax": 13225,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_1027003.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_1027003.png",
+            "costume": {
+              "102700": {
+                "id": 0,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 102700,
+                "shortName": ""
+              },
+              "102710": {
+                "id": 1,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 102710,
+                "shortName": ""
+              },
+              "102720": {
+                "id": 3,
+                "costumeCollectionNo": 0,
+                "battleCharaId": 102720,
+                "shortName": ""
+              },
+              "102730": {
+                "id": 11,
+                "costumeCollectionNo": 47,
+                "battleCharaId": 102730,
+                "shortName": "浅葱の羽織袴"
+              }
+            }
           },
           "drops": [
             {
@@ -2406,7 +2472,8 @@
             "rarity": 5,
             "atkMax": 12089,
             "hpMax": 12028,
-            "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_7025000.png"
+            "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_7025000.png",
+            "costume": {}
           },
           "drops": [
             {

@@ -98,7 +98,15 @@
         "rarity": 4,
         "atkMax": 9398,
         "hpMax": 11521,
-        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_2001300.png"
+        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_2001300.png",
+        "costume": {
+          "200130": {
+            "id": 11,
+            "costumeCollectionNo": 44,
+            "battleCharaId": 200130,
+            "shortName": "サマー・カジュアル"
+          }
+        }
       },
       "releaseConditions": [],
       "lv": 80,
@@ -981,7 +989,8 @@
                   "9404580": "https://assets.atlasacademy.io/GameData/JP/EquipFaces/f_94045800.png"
                 }
               },
-              "image": { "story": {} }
+              "image": { "story": {} },
+              "spriteModel": {}
             },
             "atkBase": 500,
             "atkMax": 2000,
@@ -1580,7 +1589,27 @@
         "rarity": 4,
         "atkMax": 10098,
         "hpMax": 10914,
-        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_2042002.png"
+        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_2042002.png",
+        "costume": {
+          "204200": {
+            "id": 0,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 204200,
+            "shortName": ""
+          },
+          "204210": {
+            "id": 1,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 204210,
+            "shortName": ""
+          },
+          "204220": {
+            "id": 3,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 204220,
+            "shortName": ""
+          }
+        }
       },
       "releaseConditions": [
         { "type": "forceFalse", "targetId": 0, "value": 0 }
@@ -2521,7 +2550,8 @@
                   "9404580": "https://assets.atlasacademy.io/GameData/JP/EquipFaces/f_94045800.png"
                 }
               },
-              "image": { "story": {} }
+              "image": { "story": {} },
+              "spriteModel": {}
             },
             "atkBase": 500,
             "atkMax": 2000,
@@ -3120,7 +3150,27 @@
         "rarity": 4,
         "atkMax": 8730,
         "hpMax": 11880,
-        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_4041000.png"
+        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_4041000.png",
+        "costume": {
+          "404100": {
+            "id": 0,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 404100,
+            "shortName": ""
+          },
+          "404110": {
+            "id": 1,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 404110,
+            "shortName": ""
+          },
+          "404120": {
+            "id": 3,
+            "costumeCollectionNo": 0,
+            "battleCharaId": 404120,
+            "shortName": ""
+          }
+        }
       },
       "releaseConditions": [],
       "lv": 80,
@@ -3820,7 +3870,8 @@
                   "9404580": "https://assets.atlasacademy.io/GameData/JP/EquipFaces/f_94045800.png"
                 }
               },
-              "image": { "story": {} }
+              "image": { "story": {} },
+              "spriteModel": {}
             },
             "atkBase": 500,
             "atkMax": 2000,
@@ -4419,7 +4470,15 @@
         "rarity": 4,
         "atkMax": 9112,
         "hpMax": 12625,
-        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_1036300.png"
+        "face": "https://assets.atlasacademy.io/GameData/JP/Faces/f_1036300.png",
+        "costume": {
+          "103630": {
+            "id": 11,
+            "costumeCollectionNo": 43,
+            "battleCharaId": 103630,
+            "shortName": "辨天衣"
+          }
+        }
       },
       "releaseConditions": [],
       "lv": 80,
@@ -5269,7 +5328,8 @@
                   "9404580": "https://assets.atlasacademy.io/GameData/JP/EquipFaces/f_94045800.png"
                 }
               },
-              "image": { "story": {} }
+              "image": { "story": {} },
+              "spriteModel": {}
             },
             "atkBase": 500,
             "atkMax": 2000,

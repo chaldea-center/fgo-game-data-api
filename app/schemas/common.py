@@ -109,3 +109,20 @@ class StageLink(BaseModel):
     questId: int
     phase: int
     stage: int
+
+
+class BasicCostume(BaseModelORJson):
+    id: int
+    costumeCollectionNo: int
+    battleCharaId: int
+    shortName: str
+
+
+class NiceCostume(BaseModelORJson):
+    id: int
+    costumeCollectionNo: int
+    battleCharaId: int
+    name: str
+    shortName: str
+    detail: str
+    priority: int

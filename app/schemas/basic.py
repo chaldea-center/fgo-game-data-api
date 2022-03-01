@@ -1,9 +1,10 @@
+from decimal import Decimal
 from typing import Optional
 
-from pydantic import HttpUrl
+from pydantic import Field, HttpUrl
 
 from .base import BaseModelORJson
-from .common import MCAssets, NiceBuffScript, NiceTrait
+from .common import BasicCostume, MCAssets, NiceBuffScript, NiceTrait
 from .enums import Attribute, FuncApplyTarget, SvtClass
 from .gameenums import (
     NiceBuffType,
@@ -66,6 +67,11 @@ class BasicServant(BaseModelORJson):
     atkMax: int
     hpMax: int
     face: HttpUrl
+    costume: dict[int, BasicCostume] = Field(
+        ...,
+        title="Costume Details",
+        description="Mapping <Costume BattleCharaID, Costume Detail>.",
+    )
 
 
 class BasicEquip(BaseModelORJson):
@@ -153,7 +159,7 @@ class BasicEvent(BaseModelORJson):
 
 class BasicWar(BaseModelORJson):
     id: int
-    coordinates: list[list[int]]
+    coordinates: list[list[Decimal]]
     age: str
     name: str
     longName: str
