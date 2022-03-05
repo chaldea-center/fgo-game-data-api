@@ -1771,6 +1771,23 @@ class NiceScriptSearchResult(BaseModelORJson):
     snippets: list[str]
 
 
+class NiceSpotRoad(BaseModelORJson):
+    id: int
+    warId: int
+    mapId: int
+    srcSpotId: int
+    dstSpotId: int
+    dispCondType: NiceCondType
+    dispTargetId: int
+    dispTargetValue: int
+    dispCondType2: NiceCondType
+    dispTargetId2: int
+    dispTargetValue2: int
+    activeCondType: NiceCondType
+    activeTargetId: int
+    activeTargetValue: int
+
+
 class NiceMap(BaseModel):
     id: int
     mapImage: Optional[HttpUrl] = None
@@ -1837,6 +1854,7 @@ class NiceWar(BaseModelORJson):
     warAdds: list[NiceWarAdd]
     maps: list[NiceMap]
     spots: list[NiceSpot]
+    spotRoads: list[NiceSpotRoad]
 
 
 class NiceAiAct(BaseModelORJson):
