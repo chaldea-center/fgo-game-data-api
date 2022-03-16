@@ -509,6 +509,19 @@ mstSvtLimitAdd = Table(
 )
 
 
+mstSvtLimitImage = Table(
+    "mstSvtLimitImage",
+    metadata,
+    Column("svtId", Integer, index=True),
+    Column("limitCount", Integer, index=True),
+    Column("priority", Integer),
+    Column("defaultLimitCount", Integer),
+    Column("condType", Integer),
+    Column("condTargetId", Integer),
+    Column("condNum", Integer),
+)
+
+
 mstSvtChange = Table(
     "mstSvtChange",
     metadata,
@@ -896,6 +909,18 @@ mstShop = Table(
     Column("closedAt", Integer),
 )
 
+mstShopRelease = Table(
+    "mstShopRelease",
+    metadata,
+    Column("condValues", ARRAY(Integer)),
+    Column("shopId", Integer, index=True),
+    Column("condType", Integer),
+    Column("condNum", Integer),
+    Column("priority", Integer),
+    Column("isClosedDisp", Boolean),
+    Column("closedMessage", String),
+    Column("closedItemName", String),
+)
 
 mstShopScript = Table(
     "mstShopScript",
@@ -1618,6 +1643,7 @@ TABLES_TO_BE_LOADED = [
     mstCv,
     mstIllustrator,
     mstShop,
+    mstShopRelease,
     mstShopScript,
     mstBgm,
     mstBgmRelease,
@@ -1645,6 +1671,7 @@ TABLES_TO_BE_LOADED = [
     mstCombineSkill,
     mstCombineCostume,
     mstSvtLimitAdd,
+    mstSvtLimitImage,
     mstSvtChange,
     mstSvtCostume,
     mstSvtVoice,

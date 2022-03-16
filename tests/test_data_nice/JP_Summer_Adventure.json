@@ -13,12 +13,15 @@
   "endedAt": 1632887999,
   "finishedAt": 1633492799,
   "materialOpenedAt": 1751295600,
-  "warIds": [9119],
+  "warIds": [
+    9119
+  ],
   "shop": [
     {
       "id": 80331001,
       "baseShopId": 80331001,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 310,
@@ -34,7 +37,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -43,7 +51,9 @@
         "amount": 200
       },
       "purchaseType": "servant",
-      "targetIds": [9405310],
+      "targetIds": [
+        9405310
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 2,
@@ -56,6 +66,7 @@
       "id": 80331002,
       "baseShopId": 80331002,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 320,
@@ -71,7 +82,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -80,7 +96,9 @@
         "amount": 200
       },
       "purchaseType": "servant",
-      "targetIds": [9405310],
+      "targetIds": [
+        9405310
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -93,6 +111,7 @@
       "id": 80331003,
       "baseShopId": 80331003,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 330,
@@ -108,7 +127,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -117,7 +141,9 @@
         "amount": 200
       },
       "purchaseType": "servant",
-      "targetIds": [9405310],
+      "targetIds": [
+        9405310
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -130,6 +156,7 @@
       "id": 80331004,
       "baseShopId": 80331004,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 10,
@@ -145,7 +172,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -154,7 +186,9 @@
         "amount": 200
       },
       "purchaseType": "costumeRelease",
-      "targetIds": [40290011],
+      "targetIds": [
+        40290011
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -167,6 +201,7 @@
       "id": 80331005,
       "baseShopId": 80331005,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 20,
@@ -182,7 +217,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -191,7 +231,9 @@
         "amount": 200
       },
       "purchaseType": "costumeRelease",
-      "targetIds": [40390011],
+      "targetIds": [
+        40390011
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -204,6 +246,7 @@
       "id": 80331006,
       "baseShopId": 80331006,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 30,
@@ -219,7 +262,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -228,7 +276,9 @@
         "amount": 200
       },
       "purchaseType": "costumeRelease",
-      "targetIds": [40080011],
+      "targetIds": [
+        40080011
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -241,6 +291,20 @@
       "id": 80331007,
       "baseShopId": 80331007,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331007,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "メインクエストクリア後に交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 40,
@@ -256,7 +320,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -265,7 +334,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [90120001],
+      "targetIds": [
+        90120001
+      ],
       "itemSet": [],
       "setNum": 10,
       "limitNum": 10,
@@ -278,6 +349,20 @@
       "id": 80331008,
       "baseShopId": 80331008,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331008,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "メインクエストクリア後に交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 50,
@@ -293,7 +378,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -302,7 +392,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [90120001],
+      "targetIds": [
+        90120001
+      ],
       "itemSet": [],
       "setNum": 10,
       "limitNum": 10,
@@ -315,6 +407,20 @@
       "id": 80331009,
       "baseShopId": 80331009,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331009,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "メインクエストクリア後に交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 60,
@@ -330,7 +436,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -339,7 +450,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [90120001],
+      "targetIds": [
+        90120001
+      ],
       "itemSet": [],
       "setNum": 10,
       "limitNum": 10,
@@ -352,6 +465,20 @@
       "id": 80331010,
       "baseShopId": 80331010,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331010,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "メインクエストクリア後に交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 460,
@@ -367,7 +494,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -376,7 +508,9 @@
         "amount": 400
       },
       "purchaseType": "item",
-      "targetIds": [6999],
+      "targetIds": [
+        6999
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -389,6 +523,7 @@
       "id": 80331011,
       "baseShopId": 80331011,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 340,
@@ -404,7 +539,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -413,7 +553,9 @@
         "amount": 100
       },
       "purchaseType": "item",
-      "targetIds": [5003],
+      "targetIds": [
+        5003
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -426,6 +568,7 @@
       "id": 80331012,
       "baseShopId": 80331012,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 350,
@@ -441,7 +584,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -450,7 +598,9 @@
         "amount": 100
       },
       "purchaseType": "item",
-      "targetIds": [5003],
+      "targetIds": [
+        5003
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -463,6 +613,7 @@
       "id": 80331013,
       "baseShopId": 80331013,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 360,
@@ -478,7 +629,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -487,7 +643,9 @@
         "amount": 100
       },
       "purchaseType": "item",
-      "targetIds": [5003],
+      "targetIds": [
+        5003
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -500,6 +658,7 @@
       "id": 80331014,
       "baseShopId": 80331014,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 370,
@@ -515,7 +674,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -524,7 +688,9 @@
         "amount": 20
       },
       "purchaseType": "servant",
-      "targetIds": [9570300],
+      "targetIds": [
+        9570300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -537,6 +703,7 @@
       "id": 80331015,
       "baseShopId": 80331015,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 380,
@@ -552,7 +719,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -561,7 +733,9 @@
         "amount": 20
       },
       "purchaseType": "servant",
-      "targetIds": [9670300],
+      "targetIds": [
+        9670300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -574,6 +748,7 @@
       "id": 80331016,
       "baseShopId": 80331016,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 390,
@@ -589,7 +764,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -598,7 +778,9 @@
         "amount": 10
       },
       "purchaseType": "servant",
-      "targetIds": [9770500],
+      "targetIds": [
+        9770500
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 50,
@@ -611,6 +793,7 @@
       "id": 80331017,
       "baseShopId": 80331017,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 400,
@@ -626,7 +809,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -635,7 +823,9 @@
         "amount": 6
       },
       "purchaseType": "servant",
-      "targetIds": [9770400],
+      "targetIds": [
+        9770400
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 100,
@@ -648,6 +838,7 @@
       "id": 80331018,
       "baseShopId": 80331018,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 410,
@@ -663,7 +854,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -672,7 +868,9 @@
         "amount": 3
       },
       "purchaseType": "servant",
-      "targetIds": [9770300],
+      "targetIds": [
+        9770300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 100,
@@ -685,6 +883,7 @@
       "id": 80331019,
       "baseShopId": 80331019,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 420,
@@ -700,7 +899,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -709,7 +913,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [6517],
+      "targetIds": [
+        6517
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 10,
@@ -722,6 +928,7 @@
       "id": 80331020,
       "baseShopId": 80331020,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 430,
@@ -737,7 +944,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -746,7 +958,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [6539],
+      "targetIds": [
+        6539
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -759,6 +973,7 @@
       "id": 80331021,
       "baseShopId": 80331021,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 440,
@@ -774,7 +989,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -783,7 +1003,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [6523],
+      "targetIds": [
+        6523
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -796,6 +1018,7 @@
       "id": 80331022,
       "baseShopId": 80331022,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 450,
@@ -811,7 +1034,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -820,7 +1048,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6532],
+      "targetIds": [
+        6532
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -833,6 +1063,7 @@
       "id": 80331023,
       "baseShopId": 80331023,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 470,
@@ -848,7 +1079,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -857,7 +1093,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [6519],
+      "targetIds": [
+        6519
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -870,6 +1108,7 @@
       "id": 80331024,
       "baseShopId": 80331024,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 480,
@@ -885,7 +1124,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -894,7 +1138,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6535],
+      "targetIds": [
+        6535
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -907,6 +1153,7 @@
       "id": 80331025,
       "baseShopId": 80331025,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 490,
@@ -922,7 +1169,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -931,7 +1183,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6514],
+      "targetIds": [
+        6514
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -944,6 +1198,7 @@
       "id": 80331026,
       "baseShopId": 80331026,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 500,
@@ -959,7 +1214,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -968,7 +1228,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6510],
+      "targetIds": [
+        6510
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -981,6 +1243,7 @@
       "id": 80331027,
       "baseShopId": 80331027,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 510,
@@ -996,7 +1259,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1005,7 +1273,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6526],
+      "targetIds": [
+        6526
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1018,6 +1288,7 @@
       "id": 80331028,
       "baseShopId": 80331028,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 520,
@@ -1033,7 +1304,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1042,7 +1318,9 @@
         "amount": 15
       },
       "purchaseType": "item",
-      "targetIds": [6502],
+      "targetIds": [
+        6502
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1055,6 +1333,7 @@
       "id": 80331029,
       "baseShopId": 80331029,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 530,
@@ -1070,7 +1349,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1079,7 +1363,9 @@
         "amount": 10
       },
       "purchaseType": "item",
-      "targetIds": [6549],
+      "targetIds": [
+        6549
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 30,
@@ -1092,6 +1378,7 @@
       "id": 80331030,
       "baseShopId": 80331030,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 540,
@@ -1107,7 +1394,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1116,7 +1408,9 @@
         "amount": 10
       },
       "purchaseType": "item",
-      "targetIds": [6522],
+      "targetIds": [
+        6522
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 30,
@@ -1129,6 +1423,7 @@
       "id": 80331031,
       "baseShopId": 80331031,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 550,
@@ -1144,7 +1439,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1153,7 +1453,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7101],
+      "targetIds": [
+        7101
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1166,6 +1468,7 @@
       "id": 80331032,
       "baseShopId": 80331032,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 560,
@@ -1181,7 +1484,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1190,7 +1498,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7102],
+      "targetIds": [
+        7102
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1203,6 +1513,7 @@
       "id": 80331033,
       "baseShopId": 80331033,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 570,
@@ -1218,7 +1529,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1227,7 +1543,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7103],
+      "targetIds": [
+        7103
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1240,6 +1558,7 @@
       "id": 80331034,
       "baseShopId": 80331034,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 580,
@@ -1255,7 +1574,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1264,7 +1588,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7104],
+      "targetIds": [
+        7104
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1277,6 +1603,7 @@
       "id": 80331035,
       "baseShopId": 80331035,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 590,
@@ -1292,7 +1619,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1301,7 +1633,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7105],
+      "targetIds": [
+        7105
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1314,6 +1648,7 @@
       "id": 80331036,
       "baseShopId": 80331036,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 600,
@@ -1329,7 +1664,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1338,7 +1678,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7106],
+      "targetIds": [
+        7106
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1351,6 +1693,7 @@
       "id": 80331037,
       "baseShopId": 80331037,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 610,
@@ -1366,7 +1709,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1375,7 +1723,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7107],
+      "targetIds": [
+        7107
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1388,6 +1738,7 @@
       "id": 80331038,
       "baseShopId": 80331038,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 620,
@@ -1403,7 +1754,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1412,7 +1768,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7001],
+      "targetIds": [
+        7001
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -1425,6 +1783,20 @@
       "id": 80331039,
       "baseShopId": 80331039,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060403
+          ],
+          "shopId": 80331039,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 110,
@@ -1440,7 +1812,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1449,7 +1826,9 @@
         "amount": 10
       },
       "purchaseType": "item",
-      "targetIds": [94060404],
+      "targetIds": [
+        94060404
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1462,6 +1841,20 @@
       "id": 80331040,
       "baseShopId": 80331040,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060403
+          ],
+          "shopId": 80331040,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 120,
@@ -1477,7 +1870,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1486,7 +1884,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [94060410],
+      "targetIds": [
+        94060410
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1499,6 +1899,20 @@
       "id": 80331041,
       "baseShopId": 80331041,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060404
+          ],
+          "shopId": 80331041,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 130,
@@ -1514,7 +1928,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1523,7 +1942,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [94060411],
+      "targetIds": [
+        94060411
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1536,6 +1957,20 @@
       "id": 80331042,
       "baseShopId": 80331042,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060404
+          ],
+          "shopId": 80331042,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 140,
@@ -1551,7 +1986,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1560,7 +2000,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [94060412],
+      "targetIds": [
+        94060412
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1573,6 +2015,20 @@
       "id": 80331043,
       "baseShopId": 80331043,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060405
+          ],
+          "shopId": 80331043,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 150,
@@ -1588,7 +2044,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1597,7 +2058,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [94060413],
+      "targetIds": [
+        94060413
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1610,6 +2073,20 @@
       "id": 80331044,
       "baseShopId": 80331044,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060405
+          ],
+          "shopId": 80331044,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 160,
@@ -1625,7 +2102,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1634,7 +2116,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [94060414],
+      "targetIds": [
+        94060414
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1647,6 +2131,20 @@
       "id": 80331045,
       "baseShopId": 80331045,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060407
+          ],
+          "shopId": 80331045,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 170,
@@ -1662,7 +2160,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1671,7 +2174,9 @@
         "amount": 40
       },
       "purchaseType": "item",
-      "targetIds": [94060415],
+      "targetIds": [
+        94060415
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1684,6 +2189,20 @@
       "id": 80331046,
       "baseShopId": 80331046,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060407
+          ],
+          "shopId": 80331046,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 180,
@@ -1699,7 +2218,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1708,7 +2232,9 @@
         "amount": 40
       },
       "purchaseType": "item",
-      "targetIds": [94060416],
+      "targetIds": [
+        94060416
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1721,6 +2247,20 @@
       "id": 80331047,
       "baseShopId": 80331047,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060408
+          ],
+          "shopId": 80331047,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 190,
@@ -1736,7 +2276,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1745,7 +2290,9 @@
         "amount": 40
       },
       "purchaseType": "item",
-      "targetIds": [94060417],
+      "targetIds": [
+        94060417
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1758,6 +2305,20 @@
       "id": 80331048,
       "baseShopId": 80331048,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060408
+          ],
+          "shopId": 80331048,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 200,
@@ -1773,7 +2334,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1782,7 +2348,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [94060418],
+      "targetIds": [
+        94060418
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1795,6 +2363,20 @@
       "id": 80331049,
       "baseShopId": 80331049,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060409
+          ],
+          "shopId": 80331049,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 210,
@@ -1810,7 +2392,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1819,7 +2406,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [94060419],
+      "targetIds": [
+        94060419
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1832,6 +2421,20 @@
       "id": 80331050,
       "baseShopId": 80331050,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060409
+          ],
+          "shopId": 80331050,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 220,
@@ -1847,7 +2450,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1856,7 +2464,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [94060420],
+      "targetIds": [
+        94060420
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1869,6 +2479,20 @@
       "id": 80331051,
       "baseShopId": 80331051,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331051,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 230,
@@ -1884,7 +2508,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -1893,7 +2522,9 @@
         "amount": 60
       },
       "purchaseType": "item",
-      "targetIds": [94060421],
+      "targetIds": [
+        94060421
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1906,6 +2537,20 @@
       "id": 80331052,
       "baseShopId": 80331052,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331052,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 240,
@@ -1921,7 +2566,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -1930,7 +2580,9 @@
         "amount": 60
       },
       "purchaseType": "item",
-      "targetIds": [94060422],
+      "targetIds": [
+        94060422
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1943,6 +2595,20 @@
       "id": 80331053,
       "baseShopId": 80331053,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060412
+          ],
+          "shopId": 80331053,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 250,
@@ -1958,7 +2624,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -1967,7 +2638,9 @@
         "amount": 60
       },
       "purchaseType": "item",
-      "targetIds": [94060423],
+      "targetIds": [
+        94060423
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -1980,6 +2653,20 @@
       "id": 80331054,
       "baseShopId": 80331054,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060507
+          ],
+          "shopId": 80331054,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": false,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 260,
@@ -1995,7 +2682,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2004,7 +2696,9 @@
         "amount": 80
       },
       "purchaseType": "item",
-      "targetIds": [94060424],
+      "targetIds": [
+        94060424
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -2017,6 +2711,32 @@
       "id": 80331055,
       "baseShopId": 80331055,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060508
+          ],
+          "shopId": 80331055,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 1,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        },
+        {
+          "condValues": [
+            94060507
+          ],
+          "shopId": 80331055,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 10,
+          "isClosedDisp": false,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 270,
@@ -2032,7 +2752,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -2041,7 +2766,9 @@
         "amount": 80
       },
       "purchaseType": "item",
-      "targetIds": [94060425],
+      "targetIds": [
+        94060425
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -2054,6 +2781,32 @@
       "id": 80331056,
       "baseShopId": 80331056,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060508
+          ],
+          "shopId": 80331056,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 1,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        },
+        {
+          "condValues": [
+            94060507
+          ],
+          "shopId": 80331056,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 10,
+          "isClosedDisp": false,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 280,
@@ -2069,7 +2822,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2078,7 +2836,9 @@
         "amount": 80
       },
       "purchaseType": "item",
-      "targetIds": [94060426],
+      "targetIds": [
+        94060426
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -2091,6 +2851,32 @@
       "id": 80331057,
       "baseShopId": 80331057,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            94060508
+          ],
+          "shopId": 80331057,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 1,
+          "isClosedDisp": true,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        },
+        {
+          "condValues": [
+            94060507
+          ],
+          "shopId": 80331057,
+          "condType": "questClear",
+          "condNum": 1,
+          "priority": 10,
+          "isClosedDisp": false,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 290,
@@ -2106,7 +2892,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -2115,7 +2906,9 @@
         "amount": 80
       },
       "purchaseType": "item",
-      "targetIds": [94060427],
+      "targetIds": [
+        94060427
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -2128,6 +2921,20 @@
       "id": 80331058,
       "baseShopId": 80331058,
       "shopType": "eventItem",
+      "releaseConditions": [
+        {
+          "condValues": [
+            10060401
+          ],
+          "shopId": 80331058,
+          "condType": "commonRelease",
+          "condNum": 1,
+          "priority": 0,
+          "isClosedDisp": false,
+          "closedMessage": "「カルデア・サマーアドベンチャー！」\nのストーリーを進めることで交換可能",
+          "closedItemName": ""
+        }
+      ],
       "eventId": 80331,
       "slot": 2,
       "priority": 300,
@@ -2143,7 +2950,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -2152,7 +2964,9 @@
         "amount": 100
       },
       "purchaseType": "item",
-      "targetIds": [94060428],
+      "targetIds": [
+        94060428
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -2165,6 +2979,7 @@
       "id": 80331059,
       "baseShopId": 80331059,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 630,
@@ -2180,7 +2995,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2189,7 +3009,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7002],
+      "targetIds": [
+        7002
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2202,6 +3024,7 @@
       "id": 80331060,
       "baseShopId": 80331060,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 640,
@@ -2217,7 +3040,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2226,7 +3054,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7003],
+      "targetIds": [
+        7003
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2239,6 +3069,7 @@
       "id": 80331061,
       "baseShopId": 80331061,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 650,
@@ -2254,7 +3085,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2263,7 +3099,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7004],
+      "targetIds": [
+        7004
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2276,6 +3114,7 @@
       "id": 80331062,
       "baseShopId": 80331062,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 660,
@@ -2291,7 +3130,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2300,7 +3144,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7005],
+      "targetIds": [
+        7005
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2313,6 +3159,7 @@
       "id": 80331063,
       "baseShopId": 80331063,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 670,
@@ -2328,7 +3175,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2337,7 +3189,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7006],
+      "targetIds": [
+        7006
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2350,6 +3204,7 @@
       "id": 80331064,
       "baseShopId": 80331064,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 680,
@@ -2365,7 +3220,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2374,7 +3234,9 @@
         "amount": 20
       },
       "purchaseType": "item",
-      "targetIds": [7007],
+      "targetIds": [
+        7007
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -2387,6 +3249,7 @@
       "id": 80331065,
       "baseShopId": 80331065,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 690,
@@ -2402,7 +3265,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、使い込まれたビールジョッキ。\n海賊の粗雑さがうかがい知れるボロボロさ。",
-          "individuality": [{ "id": 10648, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10648,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060402.png",
           "background": "silver",
           "priority": 94060402,
@@ -2411,7 +3279,9 @@
         "amount": 10
       },
       "purchaseType": "item",
-      "targetIds": [94060403],
+      "targetIds": [
+        94060403
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 0,
@@ -2424,6 +3294,7 @@
       "id": 80331066,
       "baseShopId": 80331066,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 700,
@@ -2439,7 +3310,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、ありふれたバンダナ。\n海賊の手下はだいたいこれを巻いている気がする。",
-          "individuality": [{ "id": 10647, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10647,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060401.png",
           "background": "bronze",
           "priority": 94060401,
@@ -2448,7 +3324,9 @@
         "amount": 10
       },
       "purchaseType": "item",
-      "targetIds": [94060402],
+      "targetIds": [
+        94060402
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 0,
@@ -2461,6 +3339,7 @@
       "id": 80331067,
       "baseShopId": 80331067,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80331,
       "slot": 2,
       "priority": 710,
@@ -2476,7 +3355,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "【イベント収集アイテム】\n『カルデア・サマーアドベンチャー！』\nで手に入れた、煌びやかなサーベル。\n海賊の船長が腰に携えていそう。",
-          "individuality": [{ "id": 10649, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10649,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94060403.png",
           "background": "gold",
           "priority": 94060403,
@@ -2485,7 +3369,9 @@
         "amount": 2
       },
       "purchaseType": "item",
-      "targetIds": [1],
+      "targetIds": [
+        1
+      ],
       "itemSet": [],
       "setNum": 10000,
       "limitNum": 0,
@@ -2575,7 +3461,13 @@
       "groupId": 0,
       "point": 2400,
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033104.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033104.png"
@@ -2719,7 +3611,13 @@
       "groupId": 0,
       "point": 7600,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -2833,7 +3731,13 @@
       "groupId": 0,
       "point": 11800,
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033104.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033104.png"
@@ -3127,7 +4031,13 @@
       "groupId": 0,
       "point": 22100,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3196,7 +4106,13 @@
       "groupId": 0,
       "point": 24600,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3295,7 +4211,13 @@
       "groupId": 0,
       "point": 29000,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3394,7 +4316,13 @@
       "groupId": 0,
       "point": 33000,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3418,7 +4346,13 @@
       "groupId": 0,
       "point": 34000,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3532,7 +4466,13 @@
       "groupId": 0,
       "point": 38700,
       "gifts": [
-        { "id": 327, "type": "item", "objectId": 3, "priority": 0, "num": 100 }
+        {
+          "id": 327,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 100
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033102.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033102.png"
@@ -3781,7 +4721,13 @@
       "groupId": 0,
       "point": 49200,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3805,7 +4751,13 @@
       "groupId": 0,
       "point": 50600,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3874,7 +4826,13 @@
       "groupId": 0,
       "point": 53300,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3943,7 +4901,13 @@
       "groupId": 0,
       "point": 56200,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -3982,7 +4946,13 @@
       "groupId": 0,
       "point": 57900,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4066,7 +5036,13 @@
       "groupId": 0,
       "point": 61500,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4105,7 +5081,13 @@
       "groupId": 0,
       "point": 63300,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4159,7 +5141,13 @@
       "groupId": 0,
       "point": 65600,
       "gifts": [
-        { "id": 327, "type": "item", "objectId": 3, "priority": 0, "num": 100 }
+        {
+          "id": 327,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 100
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033102.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033102.png"
@@ -4183,7 +5171,13 @@
       "groupId": 0,
       "point": 67000,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4267,7 +5261,13 @@
       "groupId": 0,
       "point": 70500,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4306,7 +5306,13 @@
       "groupId": 0,
       "point": 72300,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4330,7 +5336,13 @@
       "groupId": 0,
       "point": 73600,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4369,7 +5381,13 @@
       "groupId": 0,
       "point": 75500,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4408,7 +5426,13 @@
       "groupId": 0,
       "point": 77300,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4432,7 +5456,13 @@
       "groupId": 0,
       "point": 78500,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4456,7 +5486,13 @@
       "groupId": 0,
       "point": 79600,
       "gifts": [
-        { "id": 322, "type": "item", "objectId": 3, "priority": 0, "num": 50 }
+        {
+          "id": 322,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 50
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4495,7 +5531,13 @@
       "groupId": 0,
       "point": 81400,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4519,7 +5561,13 @@
       "groupId": 0,
       "point": 82700,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4558,7 +5606,13 @@
       "groupId": 0,
       "point": 84500,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4612,7 +5666,13 @@
       "groupId": 0,
       "point": 87000,
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033103.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033103.png"
@@ -4651,7 +5711,13 @@
       "groupId": 0,
       "point": 88700,
       "gifts": [
-        { "id": 327, "type": "item", "objectId": 3, "priority": 0, "num": 100 }
+        {
+          "id": 327,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 100
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardpoint_8033102.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/JP/EventReward/event_rewardget_8033102.png"

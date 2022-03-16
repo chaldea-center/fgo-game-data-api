@@ -13,12 +13,15 @@
   "endedAt": 1527739199,
   "finishedAt": 1528343999,
   "materialOpenedAt": 1751328000,
-  "warIds": [8099],
+  "warIds": [
+    8099
+  ],
   "shop": [
     {
       "id": 8001800,
       "baseShopId": 8001800,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 10,
@@ -34,7 +37,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -43,7 +51,9 @@
         "amount": 200
       },
       "purchaseType": "servant",
-      "targetIds": [9401460],
+      "targetIds": [
+        9401460
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -56,6 +66,7 @@
       "id": 8001801,
       "baseShopId": 8001801,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 20,
@@ -71,7 +82,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -80,7 +96,9 @@
         "amount": 300
       },
       "purchaseType": "servant",
-      "targetIds": [9401460],
+      "targetIds": [
+        9401460
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -93,6 +111,7 @@
       "id": 8001802,
       "baseShopId": 8001802,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 30,
@@ -108,7 +127,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -117,7 +141,9 @@
         "amount": 400
       },
       "purchaseType": "servant",
-      "targetIds": [9401460],
+      "targetIds": [
+        9401460
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -130,6 +156,7 @@
       "id": 8001803,
       "baseShopId": 8001803,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 40,
@@ -145,7 +172,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -154,7 +186,9 @@
         "amount": 500
       },
       "purchaseType": "servant",
-      "targetIds": [9401460],
+      "targetIds": [
+        9401460
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 1,
@@ -167,6 +201,7 @@
       "id": 8001804,
       "baseShopId": 8001804,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 110,
@@ -182,7 +217,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -191,7 +231,9 @@
         "amount": 5
       },
       "purchaseType": "servant",
-      "targetIds": [9770300],
+      "targetIds": [
+        9770300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 100,
@@ -204,6 +246,7 @@
       "id": 8001805,
       "baseShopId": 8001805,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 100,
@@ -219,7 +262,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -228,7 +276,9 @@
         "amount": 10
       },
       "purchaseType": "servant",
-      "targetIds": [9770400],
+      "targetIds": [
+        9770400
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 100,
@@ -241,6 +291,7 @@
       "id": 8001806,
       "baseShopId": 8001806,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 120,
@@ -256,7 +307,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -265,7 +321,9 @@
         "amount": 30
       },
       "purchaseType": "servant",
-      "targetIds": [9570300],
+      "targetIds": [
+        9570300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -278,6 +336,7 @@
       "id": 8001807,
       "baseShopId": 8001807,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 130,
@@ -293,7 +352,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -302,7 +366,9 @@
         "amount": 30
       },
       "purchaseType": "servant",
-      "targetIds": [9670300],
+      "targetIds": [
+        9670300
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -315,6 +381,7 @@
       "id": 8001808,
       "baseShopId": 8001808,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 210,
@@ -330,7 +397,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -339,7 +411,9 @@
         "amount": 80
       },
       "purchaseType": "item",
-      "targetIds": [6517],
+      "targetIds": [
+        6517
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 10,
@@ -352,6 +426,7 @@
       "id": 8001809,
       "baseShopId": 8001809,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 220,
@@ -367,7 +442,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -376,7 +456,9 @@
         "amount": 60
       },
       "purchaseType": "item",
-      "targetIds": [6520],
+      "targetIds": [
+        6520
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 10,
@@ -389,6 +471,7 @@
       "id": 8001810,
       "baseShopId": 8001810,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 230,
@@ -404,7 +487,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -413,7 +501,9 @@
         "amount": 40
       },
       "purchaseType": "item",
-      "targetIds": [6509],
+      "targetIds": [
+        6509
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -426,6 +516,7 @@
       "id": 8001811,
       "baseShopId": 8001811,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 240,
@@ -441,7 +532,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -450,7 +546,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [6505],
+      "targetIds": [
+        6505
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -463,6 +561,7 @@
       "id": 8001812,
       "baseShopId": 8001812,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 250,
@@ -478,7 +577,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -487,7 +591,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [6512],
+      "targetIds": [
+        6512
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -500,6 +606,7 @@
       "id": 8001813,
       "baseShopId": 8001813,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 340,
@@ -515,7 +622,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -524,7 +636,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [7004],
+      "targetIds": [
+        7004
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -537,6 +651,7 @@
       "id": 8001814,
       "baseShopId": 8001814,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 350,
@@ -552,7 +667,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -561,7 +681,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [7006],
+      "targetIds": [
+        7006
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -574,6 +696,7 @@
       "id": 8001815,
       "baseShopId": 8001815,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 360,
@@ -589,7 +712,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -598,7 +726,9 @@
         "amount": 30
       },
       "purchaseType": "item",
-      "targetIds": [7007],
+      "targetIds": [
+        7007
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -611,6 +741,7 @@
       "id": 8001816,
       "baseShopId": 8001816,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 310,
@@ -626,7 +757,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -635,7 +771,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [7104],
+      "targetIds": [
+        7104
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -648,6 +786,7 @@
       "id": 8001817,
       "baseShopId": 8001817,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 320,
@@ -663,7 +802,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -672,7 +816,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [7106],
+      "targetIds": [
+        7106
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -685,6 +831,7 @@
       "id": 8001818,
       "baseShopId": 8001818,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 330,
@@ -700,7 +847,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -709,7 +861,9 @@
         "amount": 50
       },
       "purchaseType": "item",
-      "targetIds": [7107],
+      "targetIds": [
+        7107
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 20,
@@ -722,6 +876,7 @@
       "id": 8001819,
       "baseShopId": 8001819,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 510,
@@ -737,7 +892,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -746,7 +906,9 @@
         "amount": 3
       },
       "purchaseType": "item",
-      "targetIds": [1],
+      "targetIds": [
+        1
+      ],
       "itemSet": [],
       "setNum": 10000,
       "limitNum": 0,
@@ -759,6 +921,7 @@
       "id": 8001820,
       "baseShopId": 8001820,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 410,
@@ -774,7 +937,12 @@
           "type": "eventItem",
           "uses": [],
           "detail": "\"Event Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA gourd that contains wine said to confuse the hearts of men.\nHas the effect of facilitating the\nsecret desires of whoever drinks it.\nMore than anything, it is a very tasty wine on its own.",
-          "individuality": [{ "id": 10061, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10061,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003702.png",
           "background": "silver",
           "priority": 94003702,
@@ -783,7 +951,9 @@
         "amount": 2
       },
       "purchaseType": "item",
-      "targetIds": [3],
+      "targetIds": [
+        3
+      ],
       "itemSet": [],
       "setNum": 1,
       "limitNum": 500,
@@ -796,6 +966,7 @@
       "id": 8001821,
       "baseShopId": 8001821,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 420,
@@ -811,7 +982,12 @@
           "type": "rpAdd",
           "uses": [],
           "detail": "\"Event BP Recovery Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA golden rice ball fit for the truly golden one.\nCurry-flavored, but mild.\nWhen you eat it, it will make your waist light up, turn your brocade into bamboo grass, or even make your tuft look like a girl's, but only if made with Japanese rice...\nJust what type of rice is this?\nRecovers 8 BP during the Rashomon Raids.",
-          "individuality": [{ "id": 10062, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10062,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003701.png",
           "background": "gold",
           "priority": 94003701,
@@ -820,7 +996,9 @@
         "amount": 1
       },
       "purchaseType": "item",
-      "targetIds": [1],
+      "targetIds": [
+        1
+      ],
       "itemSet": [],
       "setNum": 60000,
       "limitNum": 0,
@@ -833,6 +1011,7 @@
       "id": 8001822,
       "baseShopId": 8001822,
       "shopType": "eventItem",
+      "releaseConditions": [],
       "eventId": 80018,
       "slot": 2,
       "priority": 430,
@@ -848,7 +1027,12 @@
           "type": "rpAdd",
           "uses": [],
           "detail": "\"Event BP Recovery Item\"\nObtained during \"The Demonic Capital: Rashomon.\"\nA rice ball that represents the friendship with the animals of Mt. Ashigara.\nPower will pour out of your body with just one bite!\n\"I'm totally pumped with motivation!\"\nThat was the review of a Rider passing by.\nRecovers 2 BP during the Rashomon Raids.",
-          "individuality": [{ "id": 10060, "name": "unknown" }],
+          "individuality": [
+            {
+              "id": 10060,
+              "name": "unknown"
+            }
+          ],
           "icon": "https://assets.atlasacademy.io/GameData/NA/Items/94003703.png",
           "background": "silver",
           "priority": 94003703,
@@ -857,7 +1041,9 @@
         "amount": 1
       },
       "purchaseType": "item",
-      "targetIds": [1],
+      "targetIds": [
+        1
+      ],
       "itemSet": [],
       "setNum": 10000,
       "limitNum": 0,
@@ -1112,7 +1298,13 @@
       "groupId": 0,
       "point": 12600000,
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardpoint_8001800.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardget_8001800.png"
@@ -1421,7 +1613,13 @@
       "groupId": 0,
       "point": 23300000,
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardpoint_8001800.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardget_8001800.png"
@@ -1955,7 +2153,13 @@
       "groupId": 0,
       "point": 38800000,
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardpoint_8001800.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardget_8001800.png"
@@ -2924,7 +3128,13 @@
       "groupId": 0,
       "point": 77400000,
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardpoint_8001800.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardget_8001800.png"
@@ -3353,7 +3563,13 @@
       "groupId": 0,
       "point": 120000000,
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bgImagePoint": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardpoint_8001800.png",
       "bgImageGet": "https://assets.atlasacademy.io/GameData/NA/EventReward/event_rewardget_8001800.png"
@@ -4041,7 +4257,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [1],
+          "targetIds": [
+            1
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 1\n(By 5-18 16:59 PDT)",
           "closedMessage": "",
@@ -4083,7 +4301,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [1],
+          "targetIds": [
+            1
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 1\n(By 5-18 16:59 PDT)",
           "closedMessage": "",
@@ -4125,7 +4345,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [1],
+          "targetIds": [
+            1
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 1\n(By 5-18 16:59 PDT)",
           "closedMessage": "",
@@ -4146,7 +4368,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4162,7 +4390,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003710, 94003711, 94003712, 94003740, 94003741, 94003742, 94003770
+            94003710,
+            94003711,
+            94003712,
+            94003740,
+            94003741,
+            94003742,
+            94003770
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 1 quests once\n(By 5-18 16:59 PDT)",
@@ -4184,7 +4418,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4200,7 +4440,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003710, 94003711, 94003712, 94003740, 94003741, 94003742, 94003770
+            94003710,
+            94003711,
+            94003712,
+            94003740,
+            94003741,
+            94003742,
+            94003770
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 1 quests 3 times\n(By 5-18 16:59 PDT)",
@@ -4222,7 +4468,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4238,7 +4490,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003710, 94003711, 94003712, 94003740, 94003741, 94003742, 94003770
+            94003710,
+            94003711,
+            94003712,
+            94003740,
+            94003741,
+            94003742,
+            94003770
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 1 quests 5 times\n(By 5-18 16:59 PDT)",
@@ -4281,7 +4539,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4294,7 +4554,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [2],
+          "targetIds": [
+            2
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 2\n(By 5-20 16:59 PDT)",
           "closedMessage": "",
@@ -4336,7 +4598,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4349,7 +4613,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [2],
+          "targetIds": [
+            2
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 2\n(By 5-20 16:59 PDT)",
           "closedMessage": "",
@@ -4391,7 +4657,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4404,7 +4672,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [2],
+          "targetIds": [
+            2
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 2\n(By 5-20 16:59 PDT)",
           "closedMessage": "",
@@ -4446,7 +4716,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4459,7 +4731,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [2],
+          "targetIds": [
+            2
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji on Day 2\n(By 5-20 16:59 PDT)",
           "closedMessage": "",
@@ -4501,7 +4775,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4514,7 +4790,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [2],
+          "targetIds": [
+            2
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji on Day 2\n(By 5-20 16:59 PDT)",
           "closedMessage": "",
@@ -4535,7 +4813,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4550,7 +4834,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4564,7 +4850,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003713, 94003714, 94003715, 94003743, 94003744, 94003745, 94003771
+            94003713,
+            94003714,
+            94003715,
+            94003743,
+            94003744,
+            94003745,
+            94003771
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 2 quests once\n(By 5-20 16:59 PDT)",
@@ -4586,7 +4878,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4601,7 +4899,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4615,7 +4915,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003713, 94003714, 94003715, 94003743, 94003744, 94003745, 94003771
+            94003713,
+            94003714,
+            94003715,
+            94003743,
+            94003744,
+            94003745,
+            94003771
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 2 quests 3 times\n(By 5-20 16:59 PDT)",
@@ -4637,7 +4943,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4652,7 +4964,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1464879600,
           "conditionMessage": "???\n* Unlocks on 5-18 17:00 PDT",
           "closedMessage": "",
@@ -4666,7 +4980,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003713, 94003714, 94003715, 94003743, 94003744, 94003745, 94003771
+            94003713,
+            94003714,
+            94003715,
+            94003743,
+            94003744,
+            94003745,
+            94003771
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 2 quests 5 times\n(By 5-20 16:59 PDT)",
@@ -4709,7 +5029,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4722,7 +5044,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -4764,7 +5088,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4777,7 +5103,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -4819,7 +5147,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4832,7 +5162,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -4874,7 +5206,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4887,7 +5221,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -4929,7 +5265,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4942,7 +5280,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -4963,7 +5303,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -4978,7 +5324,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -4991,7 +5339,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [3],
+          "targetIds": [
+            3
+          ],
           "targetNum": 10000000,
           "conditionMessage": "Deal over 10,000,000 damage to\nIbaraki-Douji on Day 3\n(By 5-22 16:59 PDT)",
           "closedMessage": "",
@@ -5012,7 +5362,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5027,7 +5383,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -5041,7 +5399,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003716, 94003717, 94003718, 94003746, 94003747, 94003748, 94003772
+            94003716,
+            94003717,
+            94003718,
+            94003746,
+            94003747,
+            94003748,
+            94003772
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 3 quests once\n(By 5-22 16:59 PDT)",
@@ -5063,7 +5427,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5078,7 +5448,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -5092,7 +5464,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003716, 94003717, 94003718, 94003746, 94003747, 94003748, 94003772
+            94003716,
+            94003717,
+            94003718,
+            94003746,
+            94003747,
+            94003748,
+            94003772
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 3 quests 3 times\n(By 5-22 16:59 PDT)",
@@ -5114,7 +5492,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5129,7 +5513,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465052400,
           "conditionMessage": "???\n* Unlocks on 5-20 17:00 PDT",
           "closedMessage": "",
@@ -5143,7 +5529,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003716, 94003717, 94003718, 94003746, 94003747, 94003748, 94003772
+            94003716,
+            94003717,
+            94003718,
+            94003746,
+            94003747,
+            94003748,
+            94003772
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 3 quests 5 times\n(By 5-22 16:59 PDT)",
@@ -5186,7 +5578,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5199,7 +5593,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5241,7 +5637,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5254,7 +5652,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5296,7 +5696,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5309,7 +5711,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5351,7 +5755,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5364,7 +5770,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5406,7 +5814,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5419,7 +5829,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5440,7 +5852,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5455,7 +5873,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5468,7 +5888,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 10000000,
           "conditionMessage": "Deal over 10,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5510,7 +5932,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5523,7 +5947,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [4],
+          "targetIds": [
+            4
+          ],
           "targetNum": 15000000,
           "conditionMessage": "Deal over 15,000,000 damage to\nIbaraki-Douji on Day 4\n(By 5-23 16:59 PDT)",
           "closedMessage": "",
@@ -5544,7 +5970,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5559,7 +5991,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5573,7 +6007,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003719, 94003720, 94003721, 94003749, 94003750, 94003751, 94003773
+            94003719,
+            94003720,
+            94003721,
+            94003749,
+            94003750,
+            94003751,
+            94003773
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 4 quests once\n(By 5-23 16:59 PDT)",
@@ -5595,7 +6035,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5610,7 +6056,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5624,7 +6072,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003719, 94003720, 94003721, 94003749, 94003750, 94003751, 94003773
+            94003719,
+            94003720,
+            94003721,
+            94003749,
+            94003750,
+            94003751,
+            94003773
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 4 quests 3 times\n(By 5-23 16:59 PDT)",
@@ -5646,7 +6100,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5661,7 +6121,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465225200,
           "conditionMessage": "???\n* Unlocks on 5-22 17:00 PDT",
           "closedMessage": "",
@@ -5675,7 +6137,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003719, 94003720, 94003721, 94003749, 94003750, 94003751, 94003773
+            94003719,
+            94003720,
+            94003721,
+            94003749,
+            94003750,
+            94003751,
+            94003773
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 4 quests 5 times\n(By 5-23 16:59 PDT)",
@@ -5718,7 +6186,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -5731,7 +6201,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -5773,7 +6245,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -5786,7 +6260,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -5828,7 +6304,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -5841,7 +6319,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -5883,7 +6363,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -5896,7 +6378,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -5938,7 +6422,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -5951,7 +6437,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -5972,7 +6460,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -5987,7 +6481,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6000,7 +6496,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 10000000,
           "conditionMessage": "Deal over 10,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -6042,7 +6540,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6055,7 +6555,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 15000000,
           "conditionMessage": "Deal over 15,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -6097,7 +6599,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6110,7 +6614,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [5],
+          "targetIds": [
+            5
+          ],
           "targetNum": 20000000,
           "conditionMessage": "Deal over 20,000,000 damage to\nIbaraki-Douji on Day 5\n(By 5-24 16:59 PDT)",
           "closedMessage": "",
@@ -6131,7 +6637,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6146,7 +6658,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6160,7 +6674,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003722, 94003723, 94003724, 94003752, 94003753, 94003754, 94003774
+            94003722,
+            94003723,
+            94003724,
+            94003752,
+            94003753,
+            94003754,
+            94003774
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 5 quests once\n(By 5-24 16:59 PDT)",
@@ -6182,7 +6702,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6197,7 +6723,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6211,7 +6739,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003722, 94003723, 94003724, 94003752, 94003753, 94003754, 94003774
+            94003722,
+            94003723,
+            94003724,
+            94003752,
+            94003753,
+            94003754,
+            94003774
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 5 quests 3 times\n(By 5-24 16:59 PDT)",
@@ -6233,7 +6767,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6248,7 +6788,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465311600,
           "conditionMessage": "???\n* Unlocks on 5-23 17:00 PDT",
           "closedMessage": "",
@@ -6262,7 +6804,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003722, 94003723, 94003724, 94003752, 94003753, 94003754, 94003774
+            94003722,
+            94003723,
+            94003724,
+            94003752,
+            94003753,
+            94003754,
+            94003774
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 5 quests 5 times\n(By 5-24 16:59 PDT)",
@@ -6305,7 +6853,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6318,7 +6868,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6360,7 +6912,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6373,7 +6927,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6415,7 +6971,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6428,7 +6986,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6470,7 +7030,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6483,7 +7045,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6525,7 +7089,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6538,7 +7104,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6559,7 +7127,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6574,7 +7148,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6587,7 +7163,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 10000000,
           "conditionMessage": "Deal over 10,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6629,7 +7207,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6642,7 +7222,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 15000000,
           "conditionMessage": "Deal over 15,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6684,7 +7266,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6697,7 +7281,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [6],
+          "targetIds": [
+            6
+          ],
           "targetNum": 20000000,
           "conditionMessage": "Deal over 20,000,000 damage to\nIbaraki-Douji on Day 6\n(By 5-25 16:59 PDT)",
           "closedMessage": "",
@@ -6718,7 +7304,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6733,7 +7325,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6747,7 +7341,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003725, 94003726, 94003727, 94003755, 94003756, 94003757, 94003775
+            94003725,
+            94003726,
+            94003727,
+            94003755,
+            94003756,
+            94003757,
+            94003775
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Day 6 quests once\n(By 5-25 16:59 PDT)",
@@ -6769,7 +7369,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6784,7 +7390,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6798,7 +7406,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003725, 94003726, 94003727, 94003755, 94003756, 94003757, 94003775
+            94003725,
+            94003726,
+            94003727,
+            94003755,
+            94003756,
+            94003757,
+            94003775
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Day 6 quests 3 times\n(By 5-25 16:59 PDT)",
@@ -6820,7 +7434,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -6835,7 +7455,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465398000,
           "conditionMessage": "???\n* Unlocks on 5-24 17:00 PDT",
           "closedMessage": "",
@@ -6849,7 +7471,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003725, 94003726, 94003727, 94003755, 94003756, 94003757, 94003775
+            94003725,
+            94003726,
+            94003727,
+            94003755,
+            94003756,
+            94003757,
+            94003775
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Day 6 quests 5 times\n(By 5-25 16:59 PDT)",
@@ -6892,7 +7520,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -6905,7 +7535,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 500000,
           "conditionMessage": "Deal over 500,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -6947,7 +7579,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -6960,7 +7594,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 1000000,
           "conditionMessage": "Deal over 1,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7002,7 +7638,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7015,7 +7653,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 2000000,
           "conditionMessage": "Deal over 2,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7057,7 +7697,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7070,7 +7712,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 3000000,
           "conditionMessage": "Deal over 3,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7112,7 +7756,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7125,7 +7771,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 5000000,
           "conditionMessage": "Deal over 5,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7146,7 +7794,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 103, "type": "item", "objectId": 4001, "priority": 0, "num": 1 }
+        {
+          "id": 103,
+          "type": "item",
+          "objectId": 4001,
+          "priority": 0,
+          "num": 1
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -7161,7 +7815,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7174,7 +7830,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 10000000,
           "conditionMessage": "Deal over 10,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7216,7 +7874,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7229,7 +7889,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 15000000,
           "conditionMessage": "Deal over 15,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7271,7 +7933,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7284,7 +7948,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 20000000,
           "conditionMessage": "Deal over 20,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7326,7 +7992,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7339,7 +8007,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 25000000,
           "conditionMessage": "Deal over 25,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7381,7 +8051,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7394,7 +8066,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "raidDamage",
-          "targetIds": [7],
+          "targetIds": [
+            7
+          ],
           "targetNum": 30000000,
           "conditionMessage": "Deal over 30,000,000 damage to\nIbaraki-Douji during the Final Day\n(By 5-30 20:59 PDT)",
           "closedMessage": "",
@@ -7415,7 +8089,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 309, "type": "item", "objectId": 3, "priority": 0, "num": 10 }
+        {
+          "id": 309,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 10
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -7430,7 +8110,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7444,7 +8126,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003728, 94003729, 94003730, 94003758, 94003759, 94003760, 94003776
+            94003728,
+            94003729,
+            94003730,
+            94003758,
+            94003759,
+            94003760,
+            94003776
           ],
           "targetNum": 1,
           "conditionMessage": "Clear Final Day quests once\n(By 5-30 20:59 PDT)",
@@ -7466,7 +8154,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 319, "type": "item", "objectId": 3, "priority": 0, "num": 20 }
+        {
+          "id": 319,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 20
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -7481,7 +8175,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7495,7 +8191,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003728, 94003729, 94003730, 94003758, 94003759, 94003760, 94003776
+            94003728,
+            94003729,
+            94003730,
+            94003758,
+            94003759,
+            94003760,
+            94003776
           ],
           "targetNum": 3,
           "conditionMessage": "Clear Final Day quests 3 times\n(By 5-30 20:59 PDT)",
@@ -7517,7 +8219,13 @@
       "closedAt": 1528343999,
       "rewardType": "gift",
       "gifts": [
-        { "id": 320, "type": "item", "objectId": 3, "priority": 0, "num": 30 }
+        {
+          "id": 320,
+          "type": "item",
+          "objectId": 3,
+          "priority": 0,
+          "num": 30
+        }
       ],
       "bannerGroup": 0,
       "priority": 0,
@@ -7532,7 +8240,9 @@
           "missionTargetId": 80018,
           "condGroup": 1,
           "condType": "date",
-          "targetIds": [0],
+          "targetIds": [
+            0
+          ],
           "targetNum": 1465484400,
           "conditionMessage": "???\n* Unlocks on 5-25 17:00 PDT",
           "closedMessage": "",
@@ -7546,7 +8256,13 @@
           "condGroup": 1,
           "condType": "questClearNum",
           "targetIds": [
-            94003728, 94003729, 94003730, 94003758, 94003759, 94003760, 94003776
+            94003728,
+            94003729,
+            94003730,
+            94003758,
+            94003759,
+            94003760,
+            94003776
           ],
           "targetNum": 5,
           "conditionMessage": "Clear Final Day quests 5 times\n(By 5-30 20:59 PDT)",

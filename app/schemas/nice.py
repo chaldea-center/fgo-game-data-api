@@ -127,6 +127,7 @@ class AssetURL:
     eventReward = "{base_url}/{region}/EventReward/{fname}.png"
     mapImg = "{base_url}/{region}/Terminal/MapImgs/img_questmap_{map_id:0>6}/img_questmap_{map_id:0>6}.png"
     spotImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/spot_{spot_id:0>6}.png"
+    spotRoadImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/img_road{war_asset_id:0>4}_00.png"
     script = "{base_url}/{region}/Script/{script_path}.txt"
     bgmLogo = "{base_url}/{region}/MyRoomSound/soundlogo_{logo_id:0>3}.png"
     servantModel = "{base_url}/{region}/Servants/{item_id}/manifest.json"
@@ -252,6 +253,9 @@ class BaseVals(BaseModel):
     CounterOc: int | None = None
     UseTreasureDevice: int | None = None
     SkillReaction: int | None = None
+    BehaveAsFamilyBuff: int | None = None
+    UnSubStateWhileLinkedToOthers: int | None = None
+    NotAccompanyWhenLinkedTargetMoveState: int | None = None
     # Extra dataval from SkillLvEntty.DIC_KEY_APPLY_SUPPORT_SVT
     ApplySupportSvt: Optional[int] = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
@@ -680,6 +684,15 @@ class NiceServantChange(BaseModel):
     battleSvtId: int
 
 
+class NiceServantLimitImage(BaseModel):
+    limitCount: int
+    priority: int = 0
+    defaultLimitCount: int
+    condType: NiceCondType
+    condTargetId: int
+    condNum: int
+
+
 class NiceServantAppendPassiveSkill(BaseModel):
     num: int
     priority: int
@@ -853,9 +866,6 @@ class NiceLore(BaseModel):
     cv: str = ""
     illustrator: str
     stats: Optional[NiceLoreStats] = None
-    costume: dict[int, NiceCostume] = {}
-    comments: list[NiceLoreComment] = []
-    voices: list[NiceVoiceGroup] = []
     costume: dict[int, NiceCostume] = Field(
         {},
         title="Costume Details",
@@ -1032,6 +1042,9 @@ class NiceServant(BaseModelORJson):
     )
     svtChange: list[NiceServantChange] = Field(
         [], title="Servant Change", description="EOR servants' hidden name details."
+    )
+    ascensionImage: list[NiceServantLimitImage] = Field(
+        [], title="Servant Limit Image"
     )
     ascensionMaterials: dict[int, NiceLvlUpMaterial] = Field(
         ...,
@@ -1229,10 +1242,22 @@ class NiceItemSet(BaseModelORJson):
     setNum: int
 
 
+class NiceShopRelease(BaseModelORJson):
+    condValues: list[int] = []
+    shopId: int
+    condType: NiceCondType
+    condNum: int
+    priority: int = 0
+    isClosedDisp: bool
+    closedMessage: str
+    closedItemName: str
+
+
 class NiceShop(BaseModelORJson):
     id: int
     baseShopId: int
     shopType: NiceShopType = NiceShopType.eventItem
+    releaseConditions: list[NiceShopRelease] = []
     eventId: int
     slot: int = Field(..., title="Slot", description="Tab number in the shop")
     priority: int = Field(..., title="Priority", description="Sort order in the shop")
@@ -1775,6 +1800,7 @@ class NiceSpotRoad(BaseModelORJson):
     id: int
     warId: int
     mapId: int
+    image: HttpUrl
     srcSpotId: int
     dstSpotId: int
     dispCondType: NiceCondType

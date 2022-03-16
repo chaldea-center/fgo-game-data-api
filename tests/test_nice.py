@@ -24,6 +24,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
     "servant_JP_collection_servant": ("JP/servant/149", "JP_Tiamat"),
     "servant_JP_costume": ("JP/servant/1", "JP_Mash"),
     "servant_JP_multiple_NPs_space_istar": ("JP/servant/268", "JP_Space_Ishtar"),
+    "svt_material_td_JP": ("JP/svt/404601", "JP_Liz_td_material"),
     "skill_NA_id": ("NA/skill/454650", "NA_Fujino_1st_skill"),
     "skill_NA_reverse": ("NA/skill/19450?reverse=True", "NA_Fionn_1st_skill_reverse"),
     "skill_NA_reverse_basic": (
@@ -488,6 +489,12 @@ class TestServantSpecial:
         assert response.json()["extraAssets"]["charaGraphEx"]["ascension"][
             "4"
         ].endswith("JP/CharaGraph/CharaGraphEx/2800100/2800100b@2.png")
+
+    async def test_charaGraphExCostume(self, client: AsyncClient) -> None:
+        response = await client.get("/nice/JP/servant/247")
+        assert response.json()["extraAssets"]["charaGraphEx"]["costume"][
+            "703330"
+        ].endswith("JP/CharaGraph/CharaGraphEx/703330/703330a.png")
 
     async def test_charaFigureMulti(self, client: AsyncClient) -> None:
         response = await client.get("/nice/JP/servant/327")

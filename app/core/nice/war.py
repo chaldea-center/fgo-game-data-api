@@ -1,5 +1,3 @@
-from typing import Optional
-
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from ...config import Settings
@@ -32,7 +30,7 @@ from ...schemas.raw import (
     QuestEntity,
 )
 from .. import raw
-from ..utils import get_translation
+from ..utils import fmt_url, get_translation
 from .base_script import get_script_url
 from .bgm import get_nice_bgm
 from .quest import get_nice_quest
@@ -41,11 +39,19 @@ from .quest import get_nice_quest
 settings = Settings()
 
 
-def get_nice_spot_road(spot_road: MstSpotRoad) -> NiceSpotRoad:
+def get_nice_spot_road(
+    region: Region, spot_road: MstSpotRoad, war_asset_id: int
+) -> NiceSpotRoad:
     return NiceSpotRoad(
         id=spot_road.id,
         warId=spot_road.warId,
         mapId=spot_road.mapId,
+        image=fmt_url(
+            AssetURL.spotRoadImg,
+            base_url=settings.asset_url,
+            region=region,
+            war_asset_id=war_asset_id,
+        ),
         srcSpotId=spot_road.srcSpotId,
         dstSpotId=spot_road.dstSpotId,
         dispCondType=COND_TYPE_NAME[spot_road.dispCondType],
@@ -67,13 +73,15 @@ def get_nice_map(region: Region, raw_map: MstMap, bgms: list[MstBgm]) -> NiceMap
 
     return NiceMap(
         id=raw_map.id,
-        mapImage=AssetURL.mapImg.format(**base_settings, map_id=raw_map.mapImageId)
+        mapImage=fmt_url(AssetURL.mapImg, **base_settings, map_id=raw_map.mapImageId)
         if raw_map.mapImageId != 0
         else None,
         mapImageW=raw_map.mapImageW,
         mapImageH=raw_map.mapImageH,
-        headerImage=AssetURL.banner.format(
-            **base_settings, banner=f"img_title_header_{raw_map.headerImageId}"
+        headerImage=fmt_url(
+            AssetURL.banner,
+            **base_settings,
+            banner=f"img_title_header_{raw_map.headerImageId}",
         )
         if raw_map.headerImageId != 0
         else None,
@@ -82,13 +90,16 @@ def get_nice_map(region: Region, raw_map: MstMap, bgms: list[MstBgm]) -> NiceMap
 
 
 def get_nice_war_add(region: Region, war_add: MstWarAdd) -> NiceWarAdd:
-    base_settings = {"base_url": settings.asset_url, "region": region}
-    if war_add.type == WarOverwriteType.BANNER:
-        banner_url: Optional[str] = AssetURL.banner.format(
-            **base_settings, banner=f"questboard_cap{war_add.overwriteId:>03}"
+    banner_url = (
+        fmt_url(
+            AssetURL.banner,
+            base_url=settings.asset_url,
+            region=region,
+            banner=f"questboard_cap{war_add.overwriteId:>03}",
         )
-    else:
-        banner_url = None
+        if war_add.type == WarOverwriteType.BANNER
+        else None
+    )
 
     return NiceWarAdd(
         warId=war_add.warId,
@@ -119,7 +130,8 @@ async def get_nice_spot(
         joinSpotIds=raw_spot.joinSpotIds,
         mapId=raw_spot.mapId,
         name=get_translation(lang, raw_spot.name),
-        image=AssetURL.spotImg.format(
+        image=fmt_url(
+            AssetURL.spotImg,
             base_url=settings.asset_url,
             region=region,
             war_asset_id=war_asset_id,
@@ -179,11 +191,13 @@ async def get_nice_war(
         age=raw_war.mstWar.age,
         name=raw_war.mstWar.name,
         longName=get_translation(lang, raw_war.mstWar.longName),
-        banner=AssetURL.banner.format(**base_settings, banner=banner_file)
+        banner=fmt_url(AssetURL.banner, **base_settings, banner=banner_file)
         if raw_war.mstWar.bannerId != 0
         else None,
-        headerImage=AssetURL.banner.format(
-            **base_settings, banner=f"img_title_header_{raw_war.mstWar.headerImageId}"
+        headerImage=fmt_url(
+            AssetURL.banner,
+            **base_settings,
+            banner=f"img_title_header_{raw_war.mstWar.headerImageId}",
         )
         if raw_war.mstWar.headerImageId != 0
         else None,
@@ -199,10 +213,10 @@ async def get_nice_war(
         eventId=raw_war.mstWar.eventId,
         eventName=get_translation(lang, raw_war.mstWar.eventName),
         lastQuestId=raw_war.mstWar.lastQuestId,
-        warAdds=(get_nice_war_add(region, war_add) for war_add in raw_war.mstWarAdd),
-        maps=(
+        warAdds=[get_nice_war_add(region, war_add) for war_add in raw_war.mstWarAdd],
+        maps=[
             get_nice_map(region, raw_map, raw_war.mstBgm) for raw_map in raw_war.mstMap
-        ),
+        ],
         spots=[
             await get_nice_spot(
                 conn,
@@ -215,5 +229,8 @@ async def get_nice_war(
             )
             for raw_spot in raw_war.mstSpot
         ],
-        spotRoads=[get_nice_spot_road(spot_road) for spot_road in raw_war.mstSpotRoad],
+        spotRoads=[
+            get_nice_spot_road(region, spot_road, war_asset_id)
+            for spot_road in raw_war.mstSpotRoad
+        ],
     )

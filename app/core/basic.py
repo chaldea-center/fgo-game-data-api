@@ -29,7 +29,7 @@ from ..schemas.basic import (
     BasicTdReverse,
     BasicWar,
 )
-from ..schemas.common import Language, NiceBuffScript, Region, ReverseDepth
+from ..schemas.common import Language, MCAssets, NiceBuffScript, Region, ReverseDepth
 from ..schemas.enums import (
     ATTRIBUTE_NAME,
     CLASS_NAME,
@@ -66,7 +66,13 @@ from ..schemas.raw import (
     MstTreasureDevice,
     MstWar,
 )
-from .utils import get_nice_trait, get_np_name, get_traits_list, get_translation
+from .utils import (
+    fmt_url,
+    get_nice_trait,
+    get_np_name,
+    get_traits_list,
+    get_translation,
+)
 
 
 settings = Settings()
@@ -127,8 +133,11 @@ async def get_basic_buff_from_raw(
     basic_buff = BasicBuffReverse(
         id=mstBuff.id,
         name=mstBuff.name,
-        icon=AssetURL.buffIcon.format(
-            base_url=settings.asset_url, region=region, item_id=mstBuff.iconId
+        icon=fmt_url(
+            AssetURL.buffIcon,
+            base_url=settings.asset_url,
+            region=region,
+            item_id=mstBuff.iconId,
         ),
         type=BUFF_TYPE_NAME[mstBuff.type],
         script=get_nice_buff_script(mstBuff),
@@ -257,8 +266,11 @@ async def get_basic_skill(
         id=mstSkill.id,
         name=get_translation(lang, mstSkill.name),
         ruby=mstSkill.ruby,
-        icon=AssetURL.skillIcon.format(
-            base_url=settings.asset_url, region=region, item_id=mstSkill.iconId
+        icon=fmt_url(
+            AssetURL.skillIcon,
+            base_url=settings.asset_url,
+            region=region,
+            item_id=mstSkill.iconId,
         ),
     )
 
@@ -336,11 +348,14 @@ async def get_basic_svt(
     if not mstSvt:
         mstSvt = await pydantic_object.fetch_id(redis, region, MstSvt, svt_id)
 
+    if not mstSvt:
+        raise HTTPException(status_code=404, detail="Svt not found")
+
     mstSvtLimit = await pydantic_object.fetch_mstSvtLimit(
-        redis, region, svt_id, svt_limit
+        redis, region, svt_id, svt_limit, mstSvt.isServant()
     )
 
-    if not mstSvt or not mstSvtLimit:
+    if not mstSvtLimit:  # pragma: no cover
         raise HTTPException(status_code=404, detail="Svt not found")
 
     svtExtra = await pydantic_object.fetch_id(redis, region, MstSvtExtra, svt_id)
@@ -364,8 +379,8 @@ async def get_basic_svt(
         basic_servant["valentineEquipOwner"] = svtExtra.valentineEquipOwner
         basic_servant["costume"] = {}
         for costume in svtExtra.costumeLimitSvtIdMap.values():
-            if costume.battleCharaId not in basic_servant["costume"]:
-                basic_servant["costume"][costume.battleCharaId] = {
+            if costume.battleCharaId not in basic_servant["costume"]:  # type: ignore
+                basic_servant["costume"][costume.battleCharaId] = {  # type: ignore
                     "id": costume.id,
                     "costumeCollectionNo": costume.costumeCollectionNo,
                     "battleCharaId": costume.battleCharaId,
@@ -381,24 +396,31 @@ async def get_basic_svt(
         "region": region,
         "item_id": svt_id,
     }
+    if mstSvt.type == SvtType.SVT_MATERIAL_TD:
+        base_settings["item_id"] = mstSvt.baseSvtId
 
-    if svt_limit is not None and mstSvt.type != SvtType.SERVANT_EQUIP:
-        if svtExtra and svt_limit > 10 and svt_limit in svtExtra.costumeLimitSvtIdMap:
-            basic_servant["face"] = AssetURL.face.format(
-                base_url=settings.asset_url,
-                region=region,
-                item_id=svtExtra.costumeLimitSvtIdMap[svt_limit].battleCharaId,
-                i=0,
-            )
-        elif mstSvt.type in (SvtType.ENEMY, SvtType.ENEMY_COLLECTION):
-            basic_servant["face"] = AssetURL.enemy.format(**base_settings, i=svt_limit)
-        else:
-            basic_servant["face"] = AssetURL.face.format(**base_settings, i=svt_limit)
+    if mstSvt.type == SvtType.SERVANT_EQUIP:
+        basic_servant["face"] = AssetURL.face.format(**base_settings, i=0)
+    elif (
+        svtExtra
+        and svt_limit is not None
+        and svt_limit > 10
+        and svt_limit in svtExtra.costumeLimitSvtIdMap
+    ):
+        basic_servant["face"] = AssetURL.face.format(
+            base_url=settings.asset_url,
+            region=region,
+            item_id=svtExtra.costumeLimitSvtIdMap[svt_limit].battleCharaId,
+            i=0,
+        )
+    elif mstSvt.type in (SvtType.ENEMY, SvtType.ENEMY_COLLECTION):
+        basic_servant["face"] = AssetURL.enemy.format(
+            **base_settings, i=mstSvtLimit.limitCount
+        )
     else:
-        if mstSvt.type in (SvtType.ENEMY, SvtType.ENEMY_COLLECTION):
-            basic_servant["face"] = AssetURL.enemy.format(**base_settings, i=1)
-        else:
-            basic_servant["face"] = AssetURL.face.format(**base_settings, i=0)
+        basic_servant["face"] = AssetURL.face.format(
+            **base_settings, i=mstSvtLimit.limitCount
+        )
 
     if region == Region.JP and lang is not None:
         basic_servant["name"] = get_translation(lang, str(basic_servant["name"]))
@@ -454,14 +476,14 @@ def get_basic_mc_from_raw(
     region: Region, mstEquip: MstEquip, lang: Language
 ) -> BasicMysticCode:
     base_settings = {"base_url": settings.asset_url, "region": region}
-    item_assets = {
-        "male": AssetURL.mc["item"].format(
-            **base_settings, item_id=mstEquip.maleImageId
+    item_assets = MCAssets(
+        male=fmt_url(
+            AssetURL.mc["item"], **base_settings, item_id=mstEquip.maleImageId
         ),
-        "female": AssetURL.mc["item"].format(
-            **base_settings, item_id=mstEquip.femaleImageId
+        female=fmt_url(
+            AssetURL.mc["item"], **base_settings, item_id=mstEquip.femaleImageId
         ),
-    }
+    )
 
     basic_mc = BasicMysticCode(
         id=mstEquip.id,
@@ -491,18 +513,17 @@ def get_all_basic_mcs(
 def get_basic_cc_from_raw(
     region: Region, mstCommandCode: MstCommandCode, lang: Language
 ) -> BasicCommandCode:
-    base_settings = {
-        "base_url": settings.asset_url,
-        "region": region,
-        "item_id": mstCommandCode.id,
-    }
-
     basic_cc = BasicCommandCode(
         id=mstCommandCode.id,
         collectionNo=mstCommandCode.collectionNo,
         name=get_translation(lang, mstCommandCode.name),
         rarity=mstCommandCode.rarity,
-        face=AssetURL.commandCode.format(**base_settings),
+        face=fmt_url(
+            AssetURL.commandCode,
+            base_url=settings.asset_url,
+            region=region,
+            item_id=mstCommandCode.id,
+        ),
     )
 
     return basic_cc

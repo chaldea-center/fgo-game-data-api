@@ -2,8 +2,6 @@ from collections import defaultdict
 from typing import Union
 
 import orjson
-from pydantic import HttpUrl
-from pydantic.tools import parse_obj_as
 
 from ....config import Settings
 from ....data.custom_mappings import EXTRA_CHARAFIGURES, EXTRA_IMAGES
@@ -11,14 +9,10 @@ from ....schemas.common import Region
 from ....schemas.gameenums import SvtType
 from ....schemas.nice import AssetURL, ExtraAssets, ExtraAssetsUrl
 from ....schemas.raw import ServantEntity
+from ...utils import fmt_url
 
 
 settings = Settings()
-
-
-def fmt_url(url_fmt: str, **kwargs: Union[int, str]) -> HttpUrl:
-    url: HttpUrl = parse_obj_as(HttpUrl, url_fmt.format(**kwargs))
-    return url
 
 
 def get_svt_extraAssets(
@@ -68,6 +62,19 @@ def get_svt_extraAssets(
             0: fmt_url(AssetURL.charaGraphDefault, **base_settings_id)
         }
         faces.ascension = {0: fmt_url(AssetURL.face, **base_settings_id, i=0)}
+    elif raw_svt.mstSvt.type == SvtType.SVT_MATERIAL_TD:
+        charaGraph.ascension = {
+            1: fmt_url(
+                AssetURL.charaGraph[1],
+                **base_settings,
+                item_id=raw_svt.mstSvt.baseSvtId,
+            )
+        }
+        faces.ascension = {
+            0: fmt_url(
+                AssetURL.face, **base_settings, item_id=raw_svt.mstSvt.baseSvtId, i=0
+            )
+        }
     elif raw_svt.mstSvt.type in (SvtType.ENEMY, SvtType.ENEMY_COLLECTION):
         faces.ascension = {
             limit.limitCount: fmt_url(

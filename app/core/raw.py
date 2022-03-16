@@ -62,6 +62,7 @@ from ..schemas.raw import (
     MstMap,
     MstMasterMission,
     MstShop,
+    MstShopRelease,
     MstShopScript,
     MstSpot,
     MstSpotRoad,
@@ -81,6 +82,7 @@ from ..schemas.raw import (
     MstSvtIndividuality,
     MstSvtLimit,
     MstSvtLimitAdd,
+    MstSvtLimitImage,
     MstSvtMultiPortrait,
     MstSvtPassiveSkill,
     MstSvtScript,
@@ -337,6 +339,7 @@ async def get_servant_entity(
     mstCombineLimit = await fetch.get_all(conn, MstCombineLimit, svt_db.combineLimitId)
     mstCombineCostume = await fetch.get_all(conn, MstCombineCostume, servant_id)
     mstSvtLimitAdd = await fetch.get_all(conn, MstSvtLimitAdd, servant_id)
+    mstSvtLimitImage = await fetch.get_all(conn, MstSvtLimitImage, servant_id)
     mstSvtChange = await fetch.get_all(conn, MstSvtChange, servant_id)
     mstSvtCostume = await fetch.get_all(conn, MstSvtCostume, servant_id)
     mstSvtExp = await fetch.get_all(conn, MstSvtExp, svt_db.expType)
@@ -394,6 +397,7 @@ async def get_servant_entity(
         mstCombineCostume=mstCombineCostume,
         mstCombineMaterial=mstCombineMaterial,
         mstSvtLimitAdd=mstSvtLimitAdd,
+        mstSvtLimitImage=mstSvtLimitImage,
         mstSvtChange=mstSvtChange,
         mstSvtPassiveSkill=mstSvtPassiveSkill,
         mstSvtAppendPassiveSkill=mstSvtAppendPassiveSkill,
@@ -711,6 +715,7 @@ async def get_event_entity(conn: AsyncConnection, event_id: int) -> EventEntity:
 
     shop_ids = [shop.id for shop in shops]
     shop_scripts = await fetch.get_all_multiple(conn, MstShopScript, shop_ids)
+    shop_releases = await fetch.get_all_multiple(conn, MstShopRelease, shop_ids)
 
     rewards = await fetch.get_all(conn, MstEventReward, event_id)
 
@@ -745,6 +750,7 @@ async def get_event_entity(conn: AsyncConnection, event_id: int) -> EventEntity:
         mstWar=await event.get_event_wars(conn, event_id),
         mstShop=shops,
         mstShopScript=shop_scripts,
+        mstShopRelease=shop_releases,
         mstGift=gifts,
         mstSetItem=set_items,
         mstEventReward=rewards,
