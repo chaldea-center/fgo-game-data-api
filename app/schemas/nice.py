@@ -59,6 +59,7 @@ from .gameenums import (
     NicePayType,
     NicePurchaseType,
     NiceQuestAfterClearType,
+    NiceQuestFlag,
     NiceQuestType,
     NiceShopType,
     NiceStatusRank,
@@ -66,6 +67,7 @@ from .gameenums import (
     NiceSvtType,
     NiceSvtVoiceType,
     NiceVoiceCondType,
+    NiceWarFlag,
     NiceWarOverwriteType,
     NiceWarStartType,
 )
@@ -1497,6 +1499,7 @@ class NiceQuest(BaseModelORJson):
     id: int
     name: str
     type: NiceQuestType
+    flags: list[NiceQuestFlag] = []
     consumeType: NiceConsumeType = NiceConsumeType.ap
     consume: int
     consumeItem: list[NiceItemAmount] = []
@@ -1863,6 +1866,7 @@ class NiceWar(BaseModelORJson):
     age: str
     name: str
     longName: str
+    flags: list[NiceWarFlag] = []
     banner: Optional[HttpUrl] = None
     headerImage: Optional[HttpUrl] = None
     priority: int
