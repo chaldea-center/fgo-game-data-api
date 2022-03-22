@@ -125,7 +125,10 @@ test_cases_dict: dict[str, tuple[str, set[int]]] = {
         "NA/skill/search?lvl1coolDown=8&numFunctions=8&type=active",
         {961472, 961475, 961620},
     ),
-    "skill_search_strength": ("JP/skill/search?strengthStatus=2&type=active", {94349}),
+    "skill_search_strength": (
+        "JP/skill/search?strengthStatus=2&type=active",
+        {94349, 136550},
+    ),
     "skill_search_num": (
         "JP/skill/search?strengthStatus=99&type=active&numFunctions=5&num=3",
         {292452, 621675},
@@ -271,6 +274,10 @@ basic_quest_search_test_cases_dict = {
     "quest_overwrite_spot": (
         "NA/quest/phase/search?spotName=Southern Town&type=main",
         {(3000412, 4), (3000412, 5)},
+    ),
+    "quest_flag": (
+        "JP/quest/phase/search?flag=supportSelectAfterScript&flag=branch&warId=8362",
+        {(94057198, 1), (94057199, 1)},
     ),
 }
 basic_quest_phase_test_cases = [
