@@ -47,6 +47,7 @@ from .gameenums import (
     NiceCommonConsumeType,
     NiceCondType,
     NiceConsumeType,
+    NiceEventRewardSceneFlag,
     NiceEventType,
     NiceFuncTargetType,
     NiceFuncType,
@@ -1398,6 +1399,7 @@ class NiceEventTower(BaseModelORJson):
 class NiceEventLotteryBox(BaseModelORJson):
     id: int
     boxIndex: int = 0
+    talkId: int
     no: int
     type: int = 1
     gifts: list[NiceGift]
@@ -1409,6 +1411,15 @@ class NiceEventLotteryBox(BaseModelORJson):
     banner: HttpUrl
 
 
+class NiceEventLotteryTalk(BaseModelORJson):
+    talkId: int
+    no: int
+    guideImageId: int
+    beforeVoiceLines: list[NiceVoiceLine]
+    afterVoiceLines: list[NiceVoiceLine]
+    isRare: bool
+
+
 class NiceEventLottery(BaseModelORJson):
     id: int
     slot: int = 0
@@ -1417,6 +1428,7 @@ class NiceEventLottery(BaseModelORJson):
     priority: int
     limited: bool
     boxes: list[NiceEventLotteryBox]
+    talks: list[NiceEventLotteryTalk]
 
 
 class NiceCommonConsume(BaseModelORJson):
@@ -1444,6 +1456,42 @@ class NiceEventTreasureBox(BaseModelORJson):
     commonConsume: NiceCommonConsume
 
 
+class NiceEventRewardSceneGuide(BaseModelORJson):
+    imageId: int
+    limitCount: int
+    faceId: int | None = None
+    displayName: str | None = None
+    weight: int | None = None
+    unselectedMax: int | None = None
+
+
+class NiceEventRewardScene(BaseModelORJson):
+    slot: int
+    groupId: int
+    type: int = Field(
+        ..., description="See Event Reward Scene Type in app/schemas/enums.py"
+    )
+    guides: list[NiceEventRewardSceneGuide]
+    tabImageId: int
+    imageId: int
+    bgId: int
+    bgmId: int
+    afterBgmId: int
+    flags: list[NiceEventRewardSceneFlag]
+
+
+class NiceEventVoicePlay(BaseModelORJson):
+    slot: int
+    idx: int
+    guideImageId: int
+    voiceLines: list[NiceVoiceLine]
+    confirmVoiceLines: list[NiceVoiceLine]
+    condType: NiceCondType
+    condValue: int = Field(..., description="Event ID")
+    startedAt: int
+    endedAt: int
+
+
 class NiceEvent(BaseModelORJson):
     id: int
     type: NiceEventType
@@ -1462,12 +1510,17 @@ class NiceEvent(BaseModelORJson):
     warIds: list[int] = []
     shop: list[NiceShop] = []
     rewards: list[NiceEventReward] = []
+    rewardScenes: list[NiceEventRewardScene] = []
     pointGroups: list[NiceEventPointGroup] = []
     pointBuffs: list[NiceEventPointBuff] = []
     missions: list[NiceEventMission] = []
     towers: list[NiceEventTower] = []
     lotteries: list[NiceEventLottery] = []
     treasureBoxes: list[NiceEventTreasureBox] = []
+    voicePlays: list[NiceEventVoicePlay] = []
+    voices: list[NiceVoiceGroup] = Field(
+        [], description="All voice lines related to this event"
+    )
 
 
 class NiceMasterMission(BaseModelORJson):
@@ -1948,6 +2001,6 @@ class NiceBgmEntity(BaseModelORJson):
     priority: int
     detail: str
     notReleased: bool
-    shop: Optional[NiceShop]
+    shop: Optional[NiceShop] = None
     logo: HttpUrl
     releaseConditions: list[NiceBgmRelease]
