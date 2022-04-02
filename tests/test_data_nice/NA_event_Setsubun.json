@@ -2,6 +2,7 @@
   "id": 80088,
   "type": "eventQuest",
   "name": "The Tale of Setsubun: Oni Pagoda Festival",
+  "originalName": "The Tale of Setsubun: Oni Pagoda Festival",
   "shortName": "",
   "detail": "The Tale of Setsubun: Oni Pagoda Festival",
   "noticeBanner": "https://assets.atlasacademy.io/GameData/NA/Banner/event_war_80107.png",
@@ -27,6 +28,7 @@
         {
           "imageId": 202100,
           "limitCount": 1,
+          "image": "https://assets.atlasacademy.io/GameData/NA/CharaFigure/2021001/2021001_merged.png",
           "faceId": 0
         }
       ],
@@ -36,6 +38,7 @@
       "bgm": {
         "id": 58,
         "name": "The Demonic Capital Rashomon:\nShop Theme Song",
+        "originalName": "The Demonic Capital Rashomon:\nShop Theme Song",
         "fileName": "BGM_EVENT_19",
         "audioAsset": "https://assets.atlasacademy.io/GameData/NA/Audio/BGM_EVENT_19/BGM_EVENT_19.mp3",
         "priority": 1006003,
@@ -58,6 +61,7 @@
             "item": {
               "id": 6502,
               "name": "Seed of Yggdrasil",
+              "originalName": "Seed of Yggdrasil",
               "type": "skillLvUp",
               "uses": [
                 "skill",
@@ -106,6 +110,7 @@
       "afterBgm": {
         "id": 58,
         "name": "The Demonic Capital Rashomon:\nShop Theme Song",
+        "originalName": "The Demonic Capital Rashomon:\nShop Theme Song",
         "fileName": "BGM_EVENT_19",
         "audioAsset": "https://assets.atlasacademy.io/GameData/NA/Audio/BGM_EVENT_19/BGM_EVENT_19.mp3",
         "priority": 1006003,
@@ -128,6 +133,7 @@
             "item": {
               "id": 6502,
               "name": "Seed of Yggdrasil",
+              "originalName": "Seed of Yggdrasil",
               "type": "skillLvUp",
               "uses": [
                 "skill",
@@ -183,6 +189,7 @@
         {
           "imageId": 202100,
           "limitCount": 0,
+          "image": "https://assets.atlasacademy.io/GameData/NA/CharaFigure/2021000/2021000_merged.png",
           "faceId": 0
         }
       ],
@@ -192,6 +199,7 @@
       "bgm": {
         "id": 58,
         "name": "The Demonic Capital Rashomon:\nShop Theme Song",
+        "originalName": "The Demonic Capital Rashomon:\nShop Theme Song",
         "fileName": "BGM_EVENT_19",
         "audioAsset": "https://assets.atlasacademy.io/GameData/NA/Audio/BGM_EVENT_19/BGM_EVENT_19.mp3",
         "priority": 1006003,
@@ -214,6 +222,7 @@
             "item": {
               "id": 6502,
               "name": "Seed of Yggdrasil",
+              "originalName": "Seed of Yggdrasil",
               "type": "skillLvUp",
               "uses": [
                 "skill",
@@ -262,6 +271,7 @@
       "afterBgm": {
         "id": 58,
         "name": "The Demonic Capital Rashomon:\nShop Theme Song",
+        "originalName": "The Demonic Capital Rashomon:\nShop Theme Song",
         "fileName": "BGM_EVENT_19",
         "audioAsset": "https://assets.atlasacademy.io/GameData/NA/Audio/BGM_EVENT_19/BGM_EVENT_19.mp3",
         "priority": 1006003,
@@ -284,6 +294,7 @@
             "item": {
               "id": 6502,
               "name": "Seed of Yggdrasil",
+              "originalName": "Seed of Yggdrasil",
               "type": "skillLvUp",
               "uses": [
                 "skill",

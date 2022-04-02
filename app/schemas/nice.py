@@ -82,6 +82,12 @@ class AssetURL:
         3: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}b@1.png",
         4: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}b@2.png",
     }
+    charaGraphChange = {
+        0: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}{suffix}@1.png",
+        1: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}{suffix}@2.png",
+        3: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}{suffix}@1.png",
+        4: "{base_url}/{region}/CharaGraph/{item_id}/{item_id}{suffix}@2.png",
+    }
     charaGraphEx = {
         1: "{base_url}/{region}/CharaGraph/CharaGraphEx/{item_id}/{item_id}a@1.png",
         2: "{base_url}/{region}/CharaGraph/CharaGraphEx/{item_id}/{item_id}a@2.png",
@@ -107,6 +113,12 @@ class AssetURL:
         3: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}@2.png",
         4: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}_2@0.png",
     }
+    narrowFigureChange = {
+        0: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}{suffix}@0.png",
+        1: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}{suffix}@1.png",
+        3: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}{suffix}@2.png",
+        4: "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}_2{suffix}@0.png",
+    }
     image = "{base_url}/{region}/Image/{image}/{image}.png"
     narrowFigureDefault = "{base_url}/{region}/NarrowFigure/{item_id}/{item_id}@0.png"
     skillIcon = "{base_url}/{region}/SkillIcons/skill_{item_id:05}.png"
@@ -114,6 +126,7 @@ class AssetURL:
     items = "{base_url}/{region}/Items/{item_id}.png"
     coins = "{base_url}/{region}/Coins/{item_id}.png"
     face = "{base_url}/{region}/Faces/f_{item_id}{i}.png"
+    faceChange = "{base_url}/{region}/Faces/f_{item_id}{i}{suffix}.png"
     equipFace = "{base_url}/{region}/EquipFaces/f_{item_id}{i}.png"
     enemy = "{base_url}/{region}/Enemys/{item_id}{i}.png"
     mcitem = "{base_url}/{region}/Items/masterequip{item_id:05}.png"
@@ -130,6 +143,7 @@ class AssetURL:
     eventUi = "{base_url}/{region}/EventUI/{event}.png"
     eventReward = "{base_url}/{region}/EventReward/{fname}.png"
     mapImg = "{base_url}/{region}/Terminal/MapImgs/img_questmap_{map_id:0>6}/img_questmap_{map_id:0>6}.png"
+    mapGimmickImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/gimmick_{gimmick_id:0>6}.png"
     spotImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/spot_{spot_id:0>6}.png"
     spotRoadImg = "{base_url}/{region}/Terminal/QuestMap/Capter{war_asset_id:0>4}/QMap_Cap{war_asset_id:0>4}_Atlas/img_road{war_asset_id:0>4}_00.png"
     script = "{base_url}/{region}/Script/{script_path}.txt"
@@ -140,6 +154,7 @@ class AssetURL:
 class NiceItem(BaseModelORJson):
     id: int
     name: str
+    originalName: str
     type: NiceItemType
     uses: list[NiceItemUse] = []
     detail: str
@@ -258,7 +273,10 @@ class BaseVals(BaseModel):
     UseTreasureDevice: int | None = None
     SkillReaction: int | None = None
     BehaveAsFamilyBuff: int | None = None
-    UnSubStateWhileLinkedToOthers: int | None = None
+    UnSubStateWhileLinkedToOthers: int | None = Field(
+        default=None,
+        description="The buff with this dataVal is removed if the linked buff is removed.",
+    )
     NotAccompanyWhenLinkedTargetMoveState: int | None = None
     # Extra dataval from SkillLvEntty.DIC_KEY_APPLY_SUPPORT_SVT
     ApplySupportSvt: Optional[int] = None
@@ -497,6 +515,7 @@ class NiceSkill(NiceBaseSkill):
     id: int
     num: int = 0
     name: str
+    originalName: str
     ruby: str
     detail: Optional[str] = None
     unmodifiedDetail: Optional[str] = None
@@ -563,6 +582,7 @@ class NiceMysticCodeCostume(BaseModel):
 class NiceMysticCode(BaseModelORJson):
     id: int
     name: str
+    originalName: str
     detail: str
     maxLv: int
     extraAssets: ExtraMCAssets
@@ -571,12 +591,31 @@ class NiceMysticCode(BaseModelORJson):
     costumes: list[NiceMysticCodeCostume]
 
 
+def get_community_limit(limit_count: int) -> int:
+    return limit_count + 1 if limit_count < 2 else limit_count
+
+
 class ExtraAssetsUrl(BaseModel):
     ascension: Optional[dict[int, HttpUrl]] = None
     story: Optional[dict[int, HttpUrl]] = None
     costume: Optional[dict[int, HttpUrl]] = None
     equip: Optional[dict[int, HttpUrl]] = None
     cc: Optional[dict[int, HttpUrl]] = None
+
+    def set_limit_asset(
+        self, limit_count: int, url: HttpUrl, costume_ids: dict[int, int]
+    ) -> None:
+        if limit_count > 10 and limit_count in costume_ids:
+            if self.costume is None:
+                self.costume = {costume_ids[limit_count]: url}
+            else:
+                self.costume[costume_ids[limit_count]] = url
+        else:
+            community_limit = get_community_limit(limit_count)
+            if self.ascension is None:
+                self.ascension = {community_limit: url}
+            else:
+                self.ascension[community_limit] = url
 
 
 class ExtraCCAssets(BaseModel):
@@ -600,7 +639,10 @@ class ExtraAssets(ExtraCCAssets):
         description="Images that are used in the game scripts. Only the story field will be filled."
         "Since the list comes from JP, the NA asset might not exist and returns 404.",
     )
-    spriteModel: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    spriteModel: ExtraAssetsUrl
+    charaGraphChange: ExtraAssetsUrl
+    narrowFigureChange: ExtraAssetsUrl
+    facesChange: ExtraAssetsUrl
 
 
 class NiceCardDetail(BaseModel):
@@ -630,6 +672,17 @@ class AscensionAddEntryTrait(BaseModel):
     )
     costume: dict[int, list[NiceTrait]] = Field(
         {}, title="Costume changes", description="Mapping <Costume ID, Costume data>."
+    )
+
+
+class AscensionAddEntryCommonRelease(BaseModel):
+    ascension: dict[int, list[NiceCommonRelease]] = Field(
+        ...,
+        title="Ascension changes",
+        description="Mapping <Ascension level, Ascension level data>.",
+    )
+    costume: dict[int, list[NiceCommonRelease]] = Field(
+        ..., title="Costume changes", description="Mapping <Costume ID, Costume data>."
     )
 
 
@@ -664,13 +717,13 @@ class AscensionAdd(BaseModel):
     overWriteTDFileName: AscensionAddEntryHttpUrl = Field(
         AscensionAddEntryHttpUrl, title="NP image URL changes"
     )
-    overWriteTDRank: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr, title="NP rank changes"
-    )
-    overWriteTDTypeText: AscensionAddEntryStr = Field(
-        AscensionAddEntryStr, title="NP type changes"
-    )
-    lvMax: AscensionAddEntryInt = Field(AscensionAddEntryInt, title="Max level")
+    overWriteTDRank: AscensionAddEntryStr = Field(..., title="NP rank changes")
+    overWriteTDTypeText: AscensionAddEntryStr = Field(..., title="NP type changes")
+    lvMax: AscensionAddEntryInt = Field(..., title="Max level")
+    charaGraphChange: AscensionAddEntryHttpUrl
+    charaGraphChangeCommonRelease: AscensionAddEntryCommonRelease
+    faceChange: AscensionAddEntryHttpUrl
+    faceChangeCommonRelease: AscensionAddEntryCommonRelease
 
 
 class NiceServantChange(BaseModel):
@@ -902,6 +955,7 @@ class NiceCommandCode(BaseModelORJson):
     id: int
     collectionNo: int
     name: str
+    originalName: str
     rarity: int
     extraAssets: ExtraCCAssets
     skills: list[NiceSkill]
@@ -925,6 +979,9 @@ class NiceServant(BaseModelORJson):
         "The community usually means this number when they talk about servant or CE IDs.",
     )
     name: str = Field(..., title="svt's name", description="svt's name")
+    originalName: str = Field(
+        ..., title="untranslated svt name", description="untranslated svt name"
+    )
     ruby: str = Field(
         ..., title="svt's name ruby text", description="svt's name ruby text"
     )
@@ -1124,6 +1181,9 @@ class NiceEquip(BaseModelORJson):
         "The community usually means this number when they talk about servant or CE IDs.",
     )
     name: str = Field(..., title="svt's name", description="svt's name")
+    originalName: str = Field(
+        ..., title="untranslated svt name", description="untranslated svt name"
+    )
     type: NiceSvtType = Field(..., title="svt's type", description="svt's type.")
     flag: NiceSvtFlag = Field(
         ..., title="svt's flag", description="Some random flags given to the svt items."
@@ -1319,6 +1379,7 @@ class NiceBgmRelease(BaseModelORJson):
 class NiceBgmEntity(BaseModelORJson):
     id: int
     name: str
+    originalName: str
     fileName: str
     audioAsset: Optional[HttpUrl] = None
     priority: int
@@ -1488,6 +1549,7 @@ class NiceEventTreasureBox(BaseModelORJson):
 class NiceEventRewardSceneGuide(BaseModelORJson):
     imageId: int
     limitCount: int
+    image: HttpUrl
     faceId: int | None = None
     displayName: str | None = None
     weight: int | None = None
@@ -1526,6 +1588,7 @@ class NiceEvent(BaseModelORJson):
     id: int
     type: NiceEventType
     name: str
+    originalName: str
     shortName: str = ""
     detail: str
     noticeBanner: Optional[HttpUrl] = None
@@ -1904,11 +1967,31 @@ class NiceSpotRoad(BaseModelORJson):
     activeTargetValue: int
 
 
+class NiceMapGimmick(BaseModel):
+    id: int
+    image: Optional[HttpUrl]
+    x: int
+    y: int
+    depthOffset: int
+    scale: int
+    dispCondType: NiceCondType
+    dispTargetId: int
+    dispTargetValue: int
+    dispCondType2: NiceCondType
+    dispTargetId2: int
+    dispTargetValue2: int
+    actionAnimTime: int
+    actionEffectId: int
+    startedAt: int
+    endedAt: int
+
+
 class NiceMap(BaseModel):
     id: int
     mapImage: Optional[HttpUrl] = None
     mapImageW: int
     mapImageH: int
+    mapGimmicks: list[NiceMapGimmick] = []
     headerImage: Optional[HttpUrl] = None
     bgm: NiceBgm
 
@@ -1918,6 +2001,7 @@ class NiceSpot(BaseModel):
     joinSpotIds: list[int] = []
     mapId: int
     name: str
+    originalName: str
     image: Optional[HttpUrl] = None
     x: int
     y: int
@@ -1952,7 +2036,9 @@ class NiceWar(BaseModelORJson):
     coordinates: list[list[Decimal]]
     age: str
     name: str
+    originalName: str
     longName: str
+    originalLongName: str
     flags: list[NiceWarFlag] = []
     banner: Optional[HttpUrl] = None
     headerImage: Optional[HttpUrl] = None

@@ -1177,6 +1177,28 @@ class MstMap(BaseModelORJson):
     bgmId: int  # 7
 
 
+class MstMapGimmick(BaseModelORJson):
+    script: dict[str, Any]
+    id: int
+    warId: int
+    mapId: int
+    imageId: int
+    x: int
+    y: int
+    depthOffset: int
+    scale: int
+    dispCondType: int
+    dispTargetId: int
+    dispTargetValue: int
+    dispCondType2: int
+    dispTargetId2: int
+    dispTargetValue2: int
+    actionAnimTime: int
+    actionEffectId: int
+    startedAt: int
+    endedAt: int
+
+
 class MstSpot(BaseModelORJson):
     joinSpotIds: list[int] = []  # []
     id: int  # 10001
@@ -1478,6 +1500,7 @@ class ServantEntity(BaseModelORJson):
     mstSvtAppendPassiveSkillUnlock: list[MstSvtAppendPassiveSkillUnlock]
     mstCombineAppendPassiveSkill: list[MstCombineAppendPassiveSkill]
     mstItem: list[MstItem]
+    mstCommonRelease: list[MstCommonRelease]
     mstSvtCoin: Optional[MstSvtCoin] = None
     mstCv: Optional[MstCv] = None
     mstIllustrator: Optional[MstIllustrator] = None
@@ -1630,6 +1653,7 @@ class WarEntity(BaseModelORJson):
     mstWarAdd: list[MstWarAdd]
     mstMap: list[MstMap]
     mstBgm: list[MstBgm]
+    mstMapGimmick: list[MstMapGimmick]
     mstSpot: list[MstSpot]
     mstQuest: list[QuestEntity]
     mstSpotRoad: list[MstSpotRoad]

@@ -1,5 +1,6 @@
 from typing import Iterable
 
+from pydantic import HttpUrl
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from ...config import Settings
@@ -9,7 +10,7 @@ from ...schemas.gameenums import ITEM_TYPE_NAME, ItemType
 from ...schemas.nice import AssetURL, NiceItem, NiceItemAmount, NiceLvlUpMaterial
 from ...schemas.raw import MstItem
 from ..raw import get_item_entity, get_multiple_items
-from ..utils import get_traits_list, get_translation
+from ..utils import fmt_url, get_traits_list, get_translation
 
 
 settings = Settings()
@@ -39,19 +40,20 @@ async def get_nice_item(
 def get_nice_item_from_raw(
     region: Region, raw_item: MstItem, lang: Language
 ) -> NiceItem:
-    url_format_params = {
+    url_format_params: dict[str, HttpUrl | str | int] = {
         "base_url": settings.asset_url,
         "region": region,
         "item_id": raw_item.imageId,
     }
     if raw_item.type == ItemType.SVT_COIN:
-        icon_url = AssetURL.coins.format(**url_format_params)
+        icon_url = fmt_url(AssetURL.coins, **url_format_params)
     else:
-        icon_url = AssetURL.items.format(**url_format_params)
+        icon_url = fmt_url(AssetURL.items, **url_format_params)
 
     return NiceItem(
         id=raw_item.id,
         name=get_translation(lang, raw_item.name),
+        originalName=raw_item.name,
         type=ITEM_TYPE_NAME[raw_item.type],
         uses=get_item_use(raw_item),
         detail=raw_item.detail,
