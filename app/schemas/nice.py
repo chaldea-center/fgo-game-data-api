@@ -154,7 +154,7 @@ class AssetURL:
 class NiceItem(BaseModelORJson):
     id: int
     name: str
-    originalName: str
+    originalName: str = ""
     type: NiceItemType
     uses: list[NiceItemUse] = []
     detail: str
@@ -515,7 +515,7 @@ class NiceSkill(NiceBaseSkill):
     id: int
     num: int = 0
     name: str
-    originalName: str
+    originalName: str = ""
     ruby: str
     detail: Optional[str] = None
     unmodifiedDetail: Optional[str] = None
@@ -582,7 +582,7 @@ class NiceMysticCodeCostume(BaseModel):
 class NiceMysticCode(BaseModelORJson):
     id: int
     name: str
-    originalName: str
+    originalName: str = ""
     detail: str
     maxLv: int
     extraAssets: ExtraMCAssets
@@ -639,10 +639,10 @@ class ExtraAssets(ExtraCCAssets):
         description="Images that are used in the game scripts. Only the story field will be filled."
         "Since the list comes from JP, the NA asset might not exist and returns 404.",
     )
-    spriteModel: ExtraAssetsUrl
-    charaGraphChange: ExtraAssetsUrl
-    narrowFigureChange: ExtraAssetsUrl
-    facesChange: ExtraAssetsUrl
+    spriteModel: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    charaGraphChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    narrowFigureChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    facesChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
 
 
 class NiceCardDetail(BaseModel):
@@ -677,12 +677,12 @@ class AscensionAddEntryTrait(BaseModel):
 
 class AscensionAddEntryCommonRelease(BaseModel):
     ascension: dict[int, list[NiceCommonRelease]] = Field(
-        ...,
+        {},
         title="Ascension changes",
         description="Mapping <Ascension level, Ascension level data>.",
     )
     costume: dict[int, list[NiceCommonRelease]] = Field(
-        ..., title="Costume changes", description="Mapping <Costume ID, Costume data>."
+        {}, title="Costume changes", description="Mapping <Costume ID, Costume data>."
     )
 
 
@@ -717,13 +717,13 @@ class AscensionAdd(BaseModel):
     overWriteTDFileName: AscensionAddEntryHttpUrl = Field(
         AscensionAddEntryHttpUrl, title="NP image URL changes"
     )
-    overWriteTDRank: AscensionAddEntryStr = Field(..., title="NP rank changes")
-    overWriteTDTypeText: AscensionAddEntryStr = Field(..., title="NP type changes")
-    lvMax: AscensionAddEntryInt = Field(..., title="Max level")
-    charaGraphChange: AscensionAddEntryHttpUrl
-    charaGraphChangeCommonRelease: AscensionAddEntryCommonRelease
-    faceChange: AscensionAddEntryHttpUrl
-    faceChangeCommonRelease: AscensionAddEntryCommonRelease
+    overWriteTDRank: AscensionAddEntryStr = Field(AscensionAddEntryStr, title="NP rank changes")
+    overWriteTDTypeText: AscensionAddEntryStr = Field(AscensionAddEntryStr, title="NP type changes")
+    lvMax: AscensionAddEntryInt = Field(AscensionAddEntryInt, title="Max level")
+    charaGraphChange: AscensionAddEntryHttpUrl = Field(AscensionAddEntryHttpUrl)
+    charaGraphChangeCommonRelease: AscensionAddEntryCommonRelease = Field(AscensionAddEntryCommonRelease)
+    faceChange: AscensionAddEntryHttpUrl = Field(AscensionAddEntryHttpUrl)
+    faceChangeCommonRelease: AscensionAddEntryCommonRelease = Field(AscensionAddEntryCommonRelease)
 
 
 class NiceServantChange(BaseModel):
@@ -955,7 +955,7 @@ class NiceCommandCode(BaseModelORJson):
     id: int
     collectionNo: int
     name: str
-    originalName: str
+    originalName: str = ""
     rarity: int
     extraAssets: ExtraCCAssets
     skills: list[NiceSkill]
@@ -980,7 +980,7 @@ class NiceServant(BaseModelORJson):
     )
     name: str = Field(..., title="svt's name", description="svt's name")
     originalName: str = Field(
-        ..., title="untranslated svt name", description="untranslated svt name"
+        "", title="untranslated svt name", description="untranslated svt name"
     )
     ruby: str = Field(
         ..., title="svt's name ruby text", description="svt's name ruby text"
@@ -1182,7 +1182,7 @@ class NiceEquip(BaseModelORJson):
     )
     name: str = Field(..., title="svt's name", description="svt's name")
     originalName: str = Field(
-        ..., title="untranslated svt name", description="untranslated svt name"
+        "", title="untranslated svt name", description="untranslated svt name"
     )
     type: NiceSvtType = Field(..., title="svt's type", description="svt's type.")
     flag: NiceSvtFlag = Field(
@@ -1379,7 +1379,7 @@ class NiceBgmRelease(BaseModelORJson):
 class NiceBgmEntity(BaseModelORJson):
     id: int
     name: str
-    originalName: str
+    originalName: str = ""
     fileName: str
     audioAsset: Optional[HttpUrl] = None
     priority: int
@@ -1588,7 +1588,7 @@ class NiceEvent(BaseModelORJson):
     id: int
     type: NiceEventType
     name: str
-    originalName: str
+    originalName: str = ""
     shortName: str = ""
     detail: str
     noticeBanner: Optional[HttpUrl] = None
@@ -2001,7 +2001,7 @@ class NiceSpot(BaseModel):
     joinSpotIds: list[int] = []
     mapId: int
     name: str
-    originalName: str
+    originalName: str = ""
     image: Optional[HttpUrl] = None
     x: int
     y: int
@@ -2036,9 +2036,9 @@ class NiceWar(BaseModelORJson):
     coordinates: list[list[Decimal]]
     age: str
     name: str
-    originalName: str
+    originalName: str = ""
     longName: str
-    originalLongName: str
+    originalLongName: str = ""
     flags: list[NiceWarFlag] = []
     banner: Optional[HttpUrl] = None
     headerImage: Optional[HttpUrl] = None
