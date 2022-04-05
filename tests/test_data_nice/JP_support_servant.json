@@ -81,6 +81,7 @@
   "qp": 2900,
   "exp": 1385,
   "bond": 265,
+  "isNpcOnly": true,
   "battleBgId": 63010,
   "extraDetail": {
     "questSelect": [
@@ -2313,11 +2314,23 @@
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteServantBattleName": {
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantBattleName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteTDName": {
+                "ascension": {},
+                "costume": {}
+              },
+              "originalOverWriteTDName": {
                 "ascension": {},
                 "costume": {}
               },
@@ -5783,11 +5796,23 @@
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteServantBattleName": {
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantBattleName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteTDName": {
+                "ascension": {},
+                "costume": {}
+              },
+              "originalOverWriteTDName": {
                 "ascension": {},
                 "costume": {}
               },
@@ -8541,11 +8566,23 @@
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteServantBattleName": {
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantBattleName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteTDName": {
+                "ascension": {},
+                "costume": {}
+              },
+              "originalOverWriteTDName": {
                 "ascension": {},
                 "costume": {}
               },
@@ -11772,11 +11809,23 @@
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteServantBattleName": {
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantBattleName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteTDName": {
+                "ascension": {},
+                "costume": {}
+              },
+              "originalOverWriteTDName": {
                 "ascension": {},
                 "costume": {}
               },

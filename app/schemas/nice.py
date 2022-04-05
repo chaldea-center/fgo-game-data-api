@@ -705,6 +705,7 @@ class AscensionAdd(BaseModel):
     overWriteServantName: AscensionAddEntryStr = Field(
         AscensionAddEntryStr, title="Servant name changes"
     )
+    originalOverWriteServantName: AscensionAddEntryStr = Field(AscensionAddEntryStr)
     overWriteServantBattleName: AscensionAddEntryStr = Field(
         AscensionAddEntryStr, title="Servant battle name changes"
     )
@@ -714,6 +715,10 @@ class AscensionAdd(BaseModel):
     overWriteTDRuby: AscensionAddEntryStr = Field(
         AscensionAddEntryStr, title="NP ruby changes"
     )
+    originalOverWriteServantBattleName: AscensionAddEntryStr = Field(AscensionAddEntryStr)
+    overWriteTDName: AscensionAddEntryStr = Field(..., title="NP name changes")
+    originalOverWriteTDName: AscensionAddEntryStr = Field(AscensionAddEntryStr)
+    overWriteTDRuby: AscensionAddEntryStr = Field(..., title="NP ruby changes")
     overWriteTDFileName: AscensionAddEntryHttpUrl = Field(
         AscensionAddEntryHttpUrl, title="NP image URL changes"
     )
@@ -1548,9 +1553,9 @@ class NiceEventTreasureBox(BaseModelORJson):
 
 class NiceEventRewardSceneGuide(BaseModelORJson):
     imageId: int
-    limitCount: int
+    limitCount: int = 0
     image: HttpUrl
-    faceId: int | None = None
+    faceId: int | None = 0
     displayName: str | None = None
     weight: int | None = None
     unselectedMax: int | None = None
@@ -1926,8 +1931,9 @@ class NiceQuestPhase(NiceQuest):
     qp: int
     exp: int
     bond: int
+    isNpcOnly: bool = False
     battleBgId: int
-    extraDetail: NiceQuestPhaseExtraDetail
+    extraDetail: NiceQuestPhaseExtraDetail = Field(NiceQuestPhaseExtraDetail)
     scripts: list[ScriptLink] = []
     messages: list[NiceQuestMessage] = []
     supportServants: list[SupportServant] = []

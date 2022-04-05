@@ -72,6 +72,7 @@
   "qp": 164000,
   "exp": 56220,
   "bond": 1590,
+  "isNpcOnly": false,
   "battleBgId": 39000,
   "extraDetail": {},
   "scripts": [
@@ -1772,11 +1773,23 @@
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteServantBattleName": {
                 "ascension": {},
                 "costume": {}
               },
+              "originalOverWriteServantBattleName": {
+                "ascension": {},
+                "costume": {}
+              },
               "overWriteTDName": {
+                "ascension": {},
+                "costume": {}
+              },
+              "originalOverWriteTDName": {
                 "ascension": {},
                 "costume": {}
               },
