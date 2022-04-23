@@ -228,6 +228,7 @@
     911100201,
     94026512
   ],
+  "trialQuestIds": [],
   "growthCurve": 15,
   "atkGrowth": [
     1953,
@@ -3291,6 +3292,7 @@
       "num": 1,
       "card": "quick",
       "name": "Enfer Château d'If",
+      "originalName": "Enfer Château d'If",
       "ruby": " ",
       "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/1100200/card_servant_np.png",
       "rank": "A",
@@ -3895,6 +3897,7 @@
       "num": 1,
       "card": "quick",
       "name": "Enfer Château d'If",
+      "originalName": "Enfer Château d'If",
       "ruby": " ",
       "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/1100200/card_servant_np.png",
       "rank": "A+",

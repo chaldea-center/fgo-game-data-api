@@ -6,10 +6,10 @@ from typing import Any, Iterable, Union
 import aiofiles
 import httpx
 import orjson
-from aioredis import Redis
 from fastapi.concurrency import run_in_threadpool
 from git import Repo  # type: ignore
 from pydantic import DirectoryPath
+from redis.asyncio import Redis  # type: ignore
 from sqlalchemy.ext.asyncio import AsyncConnection, AsyncEngine
 
 from .config import Settings, logger, project_root
@@ -207,7 +207,7 @@ async def dump_nice_bgms(
 async def dump_nice_mms(
     util: ExportUtil, mms: list[MstMasterMission]
 ) -> None:  # pragma: no cover
-    all_mm_data = await get_all_nice_mms(util.conn, mms, util.lang)
+    all_mm_data = await get_all_nice_mms(util.conn, util.region, mms, util.lang)
     await util.dump_orjson("nice_master_mission", all_mm_data)
 
 
@@ -408,11 +408,21 @@ async def update_master_repo_info(
             await set_repo_version(redis, region, repo_info)
 
 
-async def clear_bloom_redis_cache(redis: Redis) -> None:  # pragma: no cover
+async def clear_redis_cache(
+    redis: Redis, region_path: dict[Region, DirectoryPath]
+) -> None:  # pragma: no cover
     key_count = 0
-    async for key in redis.scan_iter(match=f"{settings.redis_prefix}:cache*"):
+
+    for region in region_path:
+        key_pattern = f"{settings.redis_prefix}:cache:{region.value}*"
+        async for key in redis.scan_iter(match=key_pattern):
+            await redis.delete(key)
+            key_count += 1
+
+    async for key in redis.scan_iter(match=f"{settings.redis_prefix}:cache::*"):
         await redis.delete(key)
         key_count += 1
+
     logger.info(f"Cleared {key_count} cache redis keys.")
 
 
@@ -447,7 +457,7 @@ async def load_and_export(
         await load_svt_extra(redis, region_path)
     await update_master_repo_info(redis, region_path)
     if settings.clear_redis_cache:
-        await clear_bloom_redis_cache(redis)
+        await clear_redis_cache(redis, region_path)
     await generate_exports(redis, region_path, async_engines)
 
 

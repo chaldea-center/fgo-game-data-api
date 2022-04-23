@@ -1,7 +1,7 @@
-from aioredis import Redis
 from fastapi import APIRouter, Depends, Response
 from fastapi_cache.decorator import cache
 from fastapi_limiter.depends import RateLimiter  # type: ignore
+from redis.asyncio import Redis  # type: ignore
 
 from ..config import Settings
 from ..core import search
@@ -684,7 +684,7 @@ async def get_mm(
     """
     async with get_db(region) as conn:
         return item_response(
-            await mm.get_nice_master_mission(conn, master_mission_id, lang)
+            await mm.get_nice_master_mission(conn, region, master_mission_id, lang)
         )
 
 

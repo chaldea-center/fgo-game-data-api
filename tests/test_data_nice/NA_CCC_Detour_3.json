@@ -21,7 +21,8 @@
       "type": "item",
       "objectId": 6533,
       "priority": 0,
-      "num": 3
+      "num": 3,
+      "giftAdds": []
     }
   ],
   "releaseConditions": [
@@ -293,6 +294,7 @@
               "num": 1,
               "card": "arts",
               "name": "Claws of Unseen Shape",
+              "originalName": "Claws of Unseen Shape",
               "ruby": "-",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/9935900/card_servant_np.png",
               "rank": "None",
@@ -1978,6 +1980,7 @@
               "num": 99,
               "card": "arts",
               "name": "",
+              "originalName": "",
               "ruby": "",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/102000/card_servant_np.png",
               "rank": "None",
@@ -3281,6 +3284,7 @@
               "num": 99,
               "card": "arts",
               "name": "",
+              "originalName": "",
               "ruby": "",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/301900/card_servant_np.png",
               "rank": "None",
@@ -4631,6 +4635,7 @@
               "num": 99,
               "card": "arts",
               "name": "",
+              "originalName": "",
               "ruby": "",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/200800/card_servant_np.png",
               "rank": "None",
@@ -5886,6 +5891,7 @@
               "num": 99,
               "card": "arts",
               "name": "",
+              "originalName": "",
               "ruby": "",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/101200/card_servant_np.png",
               "rank": "None",
@@ -7197,6 +7203,7 @@
               "num": 99,
               "card": "arts",
               "name": "",
+              "originalName": "",
               "ruby": "",
               "icon": "https://assets.atlasacademy.io/GameData/NA/Servants/Commands/301900/card_servant_np.png",
               "rank": "None",

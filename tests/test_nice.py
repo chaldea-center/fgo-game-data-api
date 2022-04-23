@@ -60,6 +60,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
     "equip_JP_collectionNo": ("JP/equip/683", "JP_Aerial_Drive"),
     "equip_JP_id": ("JP/equip/9402750", "JP_Aerial_Drive"),
     "svt_NA_id": ("NA/svt/9939120", "NA_svt_9939120"),
+    "svt_JP_enemy_costume": ("JP/svt/9100101", "JP_svt_9100101"),
     "item_NA_id": ("NA/item/94000201", "NA_item_94000201"),
     "MC_NA_id": ("NA/MC/110", "NA_MC_LB"),
     "MC_JP_costume": ("JP/MC/120?lang=en", "JP_MC_Tropical_Summer"),
@@ -80,6 +81,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
     "quest_JP_support_servant": ("JP/quest/94051406/1", "JP_support_servant"),
     "quest_NA_select_0": ("NA/quest/3000109/1", "NA_quest_LB1_select_0"),
     "quest_NA_select_1": ("NA/quest/3000110/1", "NA_quest_LB1_select_1"),
+    "quest_JP_2_gift_adds": ("JP/quest/94067702", "JP_Teslafest_quest"),
     "ai_beni_cq_monkey_NA": ("NA/ai/svt/94032580", "NA_AI_Beni_CQ_monkey"),
     "kh_cq_JP": ("JP/ai/field/90161870", "JP_KH_CQ_taunt"),
     "bgm_NA_with_shop": ("JP/bgm/138?lang=en", "JP_BGM_Shinjuku"),
@@ -280,7 +282,7 @@ class TestServantSpecial:
     async def test_JP_English_name(self, client: AsyncClient) -> None:
         response = await client.get("/nice/JP/servant/304300?lang=en")
         assert response.status_code == 200
-        assert response.json()["name"] == "Elice Utsumi"
+        assert response.json()["name"] == "Utsumi Erice"
 
         response = await client.get("/nice/JP/equip/1296?lang=en")
         assert response.status_code == 200

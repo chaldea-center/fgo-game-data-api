@@ -6,14 +6,20 @@ from typing import Any, Callable, NamedTuple, Union
 from app.config import Settings
 from app.core.utils import get_traits_list
 from app.schemas.common import Region
-from app.schemas.enums import ATTRIBUTE_NAME, CLASS_NAME
+from app.schemas.enums import ATTRIBUTE_NAME, CLASS_NAME, TRAIT_NAME, Trait
 from app.schemas.gameenums import (
+    AI_COND_CHECK_NAME,
+    AI_COND_NAME,
+    AI_COND_PARAMETER_NAME,
+    AI_COND_REFINE_NAME,
+    AI_COND_TARGET_NAME,
     BUFF_ACTION_NAME,
     BUFF_LIMIT_NAME,
     BUFF_TYPE_NAME,
     CARD_TYPE_NAME,
     GIFT_TYPE_NAME,
     SERVANT_FRAME_TYPE_NAME,
+    AiCond,
     BuffAction,
 )
 
@@ -213,6 +219,29 @@ def get_nice_gift(raw_gift: Any) -> dict[Any, Any]:
     }
 
 
+def get_nice_class(raw_data: Any) -> Any:
+    return [
+        {
+            "id": class_data["id"],
+            "className": CLASS_NAME.get(class_data["id"]),
+            "name": class_data["name"],
+            "individuality": TRAIT_NAME.get(class_data["individuality"], Trait.unknown)
+            if class_data["individuality"]
+            else Trait.unknown,
+            "attackRate": class_data["attackRate"],
+            "imageId": class_data["imageId"],
+            "iconImageId": class_data["iconImageId"],
+            "frameId": class_data["frameId"],
+            "priority": class_data["priority"],
+            "groupType": class_data["groupType"],
+            "relationId": class_data["relationId"],
+            "supportGroup": class_data["supportGroup"],
+            "autoSelSupportType": class_data["autoSelSupportType"],
+        }
+        for class_data in raw_data
+    ]
+
+
 def get_nice_attackrate(raw_data: Any) -> Any:
     return {
         CLASS_NAME[class_data["id"]]: class_data["attackRate"]
@@ -324,6 +353,27 @@ def get_nice_buff_action(raw_data: Any) -> Any:
     return out_data
 
 
+def get_nice_ai_cond(region: Region, export_path: Path) -> None:
+    with open(
+        Path(__file__).parent / "AiConditionInformation.json", "r", encoding="utf-8"
+    ) as fp:
+        data = json.load(fp)
+
+    out_data = {}
+
+    for ai_cond in data:
+        out_item = data[ai_cond]
+        out_item["target"] = AI_COND_TARGET_NAME[out_item["target"]]
+        out_item["paramater"] = AI_COND_PARAMETER_NAME[out_item["paramater"]]
+        out_item["check"] = AI_COND_CHECK_NAME[out_item["check"]]
+        out_item["refine"] = AI_COND_REFINE_NAME[out_item["refine"]]
+        out_data[AI_COND_NAME[AiCond[ai_cond].value]] = out_item
+
+    export_file = export_path / region.value / "NiceAiConditionInformation.json"
+    with open(export_file, "w", encoding="utf-8") as fp:
+        json.dump(out_data, fp, ensure_ascii=False)
+
+
 # pylint: disable=inherit-non-class
 class ExportParam(NamedTuple):
     input: str
@@ -339,6 +389,11 @@ TO_EXPORT = [
         input="mstConstantStr",
         converter=get_nice_constant_str,
         output="NiceConstantStr",
+    ),
+    ExportParam(
+        input="mstClass",
+        converter=get_nice_class,
+        output="NiceClass",
     ),
     ExportParam(
         input="mstClass", converter=get_nice_attackrate, output="NiceClassAttackRate"
@@ -427,6 +482,7 @@ def main() -> None:
         print(region)
         export_constant(region, region_data.gamedata, export_path)
         export_nice_master_lvl(region, region_data.gamedata, export_path)
+        get_nice_ai_cond(region, export_path)
 
 
 if __name__ == "__main__":

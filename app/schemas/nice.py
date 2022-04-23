@@ -517,7 +517,7 @@ class NiceSkill(NiceBaseSkill):
     num: int = 0
     name: str
     originalName: str = ""
-    ruby: str
+    ruby: str = ""
     detail: Optional[str] = None
     unmodifiedDetail: Optional[str] = None
     type: NiceSkillType
@@ -551,7 +551,8 @@ class NiceTd(BaseModelORJson):
     num: int
     card: NiceCardType
     name: str
-    ruby: str
+    originalName: str
+    ruby: str = ""
     icon: Optional[HttpUrl] = None
     rank: str
     type: str
@@ -962,6 +963,7 @@ class NiceCommandCode(BaseModelORJson):
     collectionNo: int
     name: str
     originalName: str = ""
+    ruby: str = ""
     rarity: int
     extraAssets: ExtraCCAssets
     skills: list[NiceSkill]
@@ -989,7 +991,7 @@ class NiceServant(BaseModelORJson):
         "", title="untranslated svt name", description="untranslated svt name"
     )
     ruby: str = Field(
-        ..., title="svt's name ruby text", description="svt's name ruby text"
+        "", title="svt's name ruby text", description="svt's name ruby text"
     )
     className: SvtClass = Field(
         ...,
@@ -1048,6 +1050,7 @@ class NiceServant(BaseModelORJson):
         title="Related quest IDs",
         description="IDs of related quests: rank-ups or interludes.",
     )
+    trialQuestIds: list[int] = Field([], title="Trial quest IDs")
     growthCurve: int = Field(
         ..., title="Growth curve type", description="Growth curve type"
     )
@@ -1189,6 +1192,9 @@ class NiceEquip(BaseModelORJson):
     name: str = Field(..., title="svt's name", description="svt's name")
     originalName: str = Field(
         "", title="untranslated svt name", description="untranslated svt name"
+    )
+    ruby: str = Field(
+        "", title="svt's name ruby text", description="svt's name ruby text"
     )
     type: NiceSvtType = Field(..., title="svt's type", description="svt's type.")
     flag: NiceSvtFlag = Field(
@@ -1396,12 +1402,25 @@ class NiceBgmEntity(BaseModelORJson):
     releaseConditions: list[NiceBgmRelease]
 
 
-class NiceGift(BaseModelORJson):
+class NiceBaseGift(BaseModelORJson):
     id: int
     type: NiceGiftType = NiceGiftType.item
     objectId: int
     priority: int
     num: int
+
+
+class NiceGiftAdd(BaseModelORJson):
+    priority: int
+    replacementGiftIcon: HttpUrl
+    condType: NiceCondType
+    targetId: int
+    targetNum: int
+    replacementGifts: list[NiceBaseGift]
+
+
+class NiceGift(NiceBaseGift):
+    giftAdds: list[NiceGiftAdd] = []
 
 
 class NiceEventReward(BaseModelORJson):

@@ -3,8 +3,8 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Optional, Union
 
-from aioredis import Redis
 from fastapi_cache.decorator import cache
+from redis.asyncio import Redis  # type: ignore
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from ...config import Settings
@@ -37,6 +37,7 @@ from ...schemas.nice import (
 from ...schemas.raw import (
     MstBgm,
     MstClosedMessage,
+    MstGift,
     MstQuestMessage,
     MstQuestRelease,
     MstSpot,
@@ -130,6 +131,10 @@ async def get_nice_quest(
     if not mstSpot:
         mstSpot = await war.get_spot_from_id(conn, raw_quest.mstQuest.spotId)
 
+    gift_maps: dict[int, list[MstGift]] = defaultdict(list)
+    for gift in raw_quest.mstGift:
+        gift_maps[gift.id].append(gift)
+
     nice_data: dict[str, Any] = {
         "id": raw_quest.mstQuest.id,
         "name": get_translation(lang, raw_quest.mstQuest.name),
@@ -154,7 +159,11 @@ async def get_nice_quest(
         "chapterId": raw_quest.mstQuest.chapterId,
         "chapterSubId": raw_quest.mstQuest.chapterSubId,
         "chapterSubStr": raw_quest.mstQuest.chapterSubStr,
-        "gifts": [get_nice_gift(gift) for gift in raw_quest.mstGift],
+        "gifts": [
+            get_nice_gift(region, gift, raw_quest.mstGiftAdd, gift_maps)
+            for gift in raw_quest.mstGift
+            if gift.id == raw_quest.mstQuest.giftId
+        ],
         "releaseConditions": [
             get_nice_quest_release(release, raw_quest.mstClosedMessage)
             for release in raw_quest.mstQuestRelease

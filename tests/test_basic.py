@@ -18,6 +18,10 @@ test_cases_dict: dict[str, tuple[str, str]] = {
         "JP/svt/9935900",
         "JP_Soul_Eater",
     ),  # This one only has limit=3 so the face URL should use 3 instead of 0
+    "svt_JP_limit_costum": (
+        "JP/svt/9100101",
+        "JP_Girl_Ghost",
+    ),  # This one has costume limt=2 so the face URL should use the costume's battleCharaId instead
     "svt_material_td_JP": ("JP/svt/404601", "JP_Liz_td_material"),
     "equip_JP_collectionNo": ("JP/equip/467", "JP_Bitter_Chocolates"),
     "equip_JP_id": ("JP/equip/9805370", "JP_Bitter_Chocolates"),
@@ -133,7 +137,7 @@ class TestBasicSpecial:
 
     async def test_JP_English_name(self, client: AsyncClient) -> None:
         response = await client.get("/basic/JP/servant/304300?lang=en")
-        assert response.json()["name"] == "Elice Utsumi"
+        assert response.json()["name"] == "Utsumi Erice"
 
         response = await client.get("/basic/JP/servant/311?lang=en")
         assert response.json()["name"] == "Fairy Knight Tristan"

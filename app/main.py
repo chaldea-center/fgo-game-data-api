@@ -6,7 +6,6 @@ from typing import Any, Callable, Optional
 import orjson
 import tomli
 import uvicorn  # type: ignore
-from aioredis import Redis
 from fastapi import Depends, FastAPI, HTTPException, Request, Response, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
@@ -16,6 +15,7 @@ from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
 from fastapi_cache.coder import PickleCoder
 from fastapi_limiter import FastAPILimiter  # type: ignore
+from redis.asyncio import Redis  # type: ignore
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from .config import Settings, project_root
@@ -223,6 +223,23 @@ async def limiter_callback(
     )
 
 
+def get_region(args: list[Any], kwargs: dict[str, Any]) -> str:  # pragma: no cover
+    if "region" in kwargs and isinstance(kwargs["region"], Region):
+        return kwargs["region"].value
+    elif "search_param" in kwargs:
+        search_param = kwargs["search_param"]
+        if hasattr(search_param, "region") and isinstance(search_param.region, Region):
+            return search_param.region.value
+    else:
+        for arg in args:
+            if isinstance(arg, Region):
+                return arg.value
+            if hasattr(arg, "region") and isinstance(arg.region, Region):
+                return arg.region.value
+
+    return ""
+
+
 def custom_key_builder(
     func: Callable[..., Any],
     namespace: str,
@@ -240,6 +257,8 @@ def custom_key_builder(
         if not isinstance(arg, AsyncConnection) and not isinstance(arg, Redis)
     ]
 
+    region = get_region(static_args, static_kwargs)
+
     try:
         args_dump = orjson.dumps(static_args).decode("utf-8")
         kwargs_dump = orjson.dumps(static_kwargs).decode("utf-8")
@@ -250,7 +269,7 @@ def custom_key_builder(
     raw_key = f"{func.__module__}:{func.__name__}:{args_dump}:{kwargs_dump}"
     cache_key = hashlib.sha1(raw_key.encode("utf-8")).hexdigest()
 
-    return f"{prefix}:{namespace}:{cache_key}"
+    return f"{prefix}:{region}:{namespace}:{cache_key}"
 
 
 @app.on_event("startup")

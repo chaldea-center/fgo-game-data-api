@@ -410,7 +410,12 @@ async def search_item(
     )
 
     if search_param.name:
-        matches = [item for item in matches if match_name(search_param.name, item.name)]
+        matches = [
+            item
+            for item in matches
+            if match_name(search_param.name, item.name)
+            or match_name(search_param.name, get_translation(Language.en, item.name))
+        ]
 
     return sorted(matches, key=lambda item: item.id)
 
@@ -446,6 +451,8 @@ async def search_quest(
 async def search_script(
     conn: AsyncConnection, search_param: ScriptSearchQueryParams
 ) -> list[ScriptSearchResult]:
+    if not search_param.hasSearchParams():
+        raise HTTPException(status_code=400, detail=INSUFFICIENT_QUERY)
     return await get_script_search(
         conn, search_param.query, search_param.scriptFileName
     )

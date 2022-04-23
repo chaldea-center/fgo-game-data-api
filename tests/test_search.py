@@ -127,7 +127,7 @@ test_cases_dict: dict[str, tuple[str, set[int]]] = {
     ),
     "skill_search_strength": (
         "JP/skill/search?strengthStatus=2&type=active",
-        {94349, 136550},
+        {26250, 94349, 136550},
     ),
     "skill_search_num": (
         "JP/skill/search?strengthStatus=99&type=active&numFunctions=5&num=3",
@@ -310,6 +310,7 @@ nice_raw_test_cases_dict = {
         {6507},
     ),
     "item_type": ("JP/item/search?type=chargeStone", {6}),
+    "item_name_translation": ("JP/item/search?name=Lancer%20Piece", {7003}),
     "script_search": ("JP/script/search?query=存在したでしょう", {"0300051410"}),
     "script_search_name": (
         "NA/script/search?query=gomenasorry&scriptFileName=9401",
@@ -381,3 +382,11 @@ class TestSearchNiceRaw:
     ) -> None:
         response = await client.get(f"/{response_type}/NA/NP/search?minNpNpGain=40")
         assert response.status_code == 403
+
+    async def test_script_search_empty_query(
+        self, client: AsyncClient, response_type: str
+    ) -> None:
+        response = await client.get(
+            f"/{response_type}/NA/script/search?query=+&scriptFileName=10006"
+        )
+        assert response.status_code == 400

@@ -3,6 +3,7 @@
   "num": 1,
   "card": "buster",
   "name": "唯識・歪曲の魔眼",
+  "originalName": "唯識・歪曲の魔眼",
   "ruby": "ゆいしき・わいきょくのまがん",
   "icon": "https://assets.atlasacademy.io/GameData/JP/Servants/Commands/202900/card_servant_np.png",
   "rank": "EX",
@@ -785,6 +786,9 @@
           "hpMax": 11025,
           "relateQuestIds": [
             94059780
+          ],
+          "trialQuestIds": [
+            94021501
           ],
           "growthCurve": 9,
           "atkGrowth": [
@@ -5527,6 +5531,7 @@
               "num": 1,
               "card": "buster",
               "name": "唯識・歪曲の魔眼",
+              "originalName": "唯識・歪曲の魔眼",
               "ruby": "ゆいしき・わいきょくのまがん",
               "icon": "https://assets.atlasacademy.io/GameData/JP/Servants/Commands/202900/card_servant_np.png",
               "rank": "EX",
@@ -6111,6 +6116,7 @@
               "num": 1,
               "card": "buster",
               "name": "唯識・歪曲の魔眼",
+              "originalName": "唯識・歪曲の魔眼",
               "ruby": "ゆいしき・わいきょくのまがん",
               "icon": "https://assets.atlasacademy.io/GameData/JP/Servants/Commands/202900/card_servant_np.png",
               "rank": "EX",

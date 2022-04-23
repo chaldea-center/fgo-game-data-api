@@ -861,6 +861,20 @@ mstGift = Table(
 )
 
 
+mstGiftAdd = Table(
+    "mstGiftAdd",
+    metadata,
+    Column("priorGiftIconIds", ARRAY(Integer)),
+    Column("giftId", Integer, index=True),
+    Column("priority", Integer),
+    Column("condType", Integer),
+    Column("targetId", Integer),
+    Column("targetNum", Integer),
+    Column("priorGiftId", Integer),
+    Column("script", String),
+)
+
+
 mstSetItem = Table(
     "mstSetItem",
     metadata,
@@ -1573,6 +1587,8 @@ npcFollower = Table(
     Column("flag", Integer),
     Column("npcScript", String),
     Column("createdAt", Integer, default=0),
+    Column("openedAt", Integer, default=0),
+    Column("closedAt", Integer, default=0),
 )
 
 
@@ -1639,6 +1655,7 @@ mstAi = Table(
     Column("aiActId", Integer),
     Column("avals", ARRAY(Integer)),
     Column("infoText", String),
+    Column("script", JSONB),
 )
 
 Index("ix_mstAi_avals_first", mstAi.c.avals[1])
@@ -1770,6 +1787,7 @@ TABLES_TO_BE_LOADED = [
     mstCommandCodeSkill,
     mstCommandCodeComment,
     mstGift,
+    mstGiftAdd,
     mstSetItem,
     mstMasterMission,
     mstEventReward,

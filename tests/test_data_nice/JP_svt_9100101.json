@@ -1,0 +1,947 @@
+{
+  "id": 9100101,
+  "collectionNo": 0,
+  "name": "女子高生ゴースト",
+  "originalName": "女子高生ゴースト",
+  "ruby": "-",
+  "className": "rider",
+  "type": "enemy",
+  "flag": "normal",
+  "rarity": 2,
+  "cost": 0,
+  "lvMax": 100,
+  "extraAssets": {
+    "charaGraph": {},
+    "faces": {
+      "ascension": {
+        "2": "https://assets.atlasacademy.io/GameData/JP/Enemys/99402402.png"
+      }
+    },
+    "charaGraphEx": {},
+    "charaGraphName": {},
+    "narrowFigure": {},
+    "charaFigure": {},
+    "charaFigureForm": {},
+    "charaFigureMulti": {},
+    "commands": {},
+    "status": {},
+    "equipFace": {},
+    "image": {
+      "story": {}
+    },
+    "spriteModel": {
+      "ascension": {
+        "2": "https://assets.atlasacademy.io/GameData/JP/Servants/9940240/manifest.json"
+      }
+    },
+    "charaGraphChange": {},
+    "narrowFigureChange": {},
+    "facesChange": {}
+  },
+  "gender": "female",
+  "attribute": "human",
+  "traits": [
+    {
+      "id": 2,
+      "name": "genderFemale"
+    },
+    {
+      "id": 103,
+      "name": "classRider"
+    },
+    {
+      "id": 202,
+      "name": "attributeHuman"
+    },
+    {
+      "id": 1001,
+      "name": "human"
+    },
+    {
+      "id": 1002,
+      "name": "undead"
+    },
+    {
+      "id": 1104,
+      "name": "ghost"
+    },
+    {
+      "id": 2001,
+      "name": "humanoid"
+    },
+    {
+      "id": 2018,
+      "name": "undeadOrDemon"
+    },
+    {
+      "id": 2019,
+      "name": "demonic"
+    },
+    {
+      "id": 2040,
+      "name": "divineOrDemonOrUndead"
+    },
+    {
+      "id": 5000,
+      "name": "canBeInBattle"
+    },
+    {
+      "id": 5010,
+      "name": "notBasedOnServant"
+    }
+  ],
+  "starAbsorb": 0,
+  "starGen": 0,
+  "instantDeathChance": 1000,
+  "cards": [
+    "quick",
+    "quick",
+    "quick",
+    "quick",
+    "quick"
+  ],
+  "hitsDistribution": {
+    "weak": [
+      16,
+      33,
+      51
+    ],
+    "strength": [
+      100
+    ]
+  },
+  "cardDetails": {
+    "weak": {
+      "attackIndividuality": [
+        {
+          "id": 3000,
+          "name": "attackPhysical"
+        }
+      ]
+    },
+    "strength": {
+      "attackIndividuality": [
+        {
+          "id": 3002,
+          "name": "attackMagical"
+        }
+      ]
+    }
+  },
+  "atkBase": 604,
+  "atkMax": 12579,
+  "hpBase": 1094,
+  "hpMax": 55267,
+  "relateQuestIds": [],
+  "trialQuestIds": [],
+  "growthCurve": 9999,
+  "atkGrowth": [
+    604,
+    723,
+    843,
+    963,
+    1083,
+    1202,
+    1322,
+    1442,
+    1562,
+    1681,
+    1813,
+    1933,
+    2052,
+    2172,
+    2292,
+    2412,
+    2531,
+    2651,
+    2771,
+    2891,
+    3022,
+    3142,
+    3262,
+    3382,
+    3501,
+    3621,
+    3741,
+    3861,
+    3980,
+    4100,
+    4232,
+    4352,
+    4471,
+    4591,
+    4711,
+    4831,
+    4950,
+    5070,
+    5190,
+    5310,
+    5441,
+    5561,
+    5681,
+    5801,
+    5920,
+    6040,
+    6160,
+    6280,
+    6399,
+    6519,
+    6651,
+    6771,
+    6890,
+    7010,
+    7130,
+    7250,
+    7369,
+    7489,
+    7609,
+    7729,
+    7860,
+    7980,
+    8100,
+    8220,
+    8339,
+    8459,
+    8579,
+    8699,
+    8818,
+    8938,
+    9070,
+    9190,
+    9309,
+    9429,
+    9549,
+    9669,
+    9788,
+    9908,
+    10028,
+    10148,
+    10279,
+    10399,
+    10519,
+    10639,
+    10758,
+    10878,
+    10998,
+    11118,
+    11237,
+    11357,
+    11489,
+    11609,
+    11728,
+    11848,
+    11968,
+    12088,
+    12207,
+    12327,
+    12447,
+    12579
+  ],
+  "hpGrowth": [
+    1094,
+    1635,
+    2177,
+    2719,
+    3260,
+    3802,
+    4344,
+    4886,
+    5427,
+    5969,
+    6565,
+    7107,
+    7648,
+    8190,
+    8732,
+    9274,
+    9815,
+    10357,
+    10899,
+    11441,
+    12036,
+    12578,
+    13120,
+    13662,
+    14203,
+    14745,
+    15287,
+    15829,
+    16370,
+    16912,
+    17508,
+    18050,
+    18591,
+    19133,
+    19675,
+    20217,
+    20758,
+    21300,
+    21842,
+    22383,
+    22979,
+    23521,
+    24063,
+    24605,
+    25146,
+    25688,
+    26230,
+    26772,
+    27313,
+    27855,
+    28451,
+    28993,
+    29534,
+    30076,
+    30618,
+    31160,
+    31701,
+    32243,
+    32785,
+    33326,
+    33922,
+    34464,
+    35006,
+    35548,
+    36089,
+    36631,
+    37173,
+    37714,
+    38256,
+    38798,
+    39394,
+    39936,
+    40477,
+    41019,
+    41561,
+    42102,
+    42644,
+    43186,
+    43728,
+    44269,
+    44865,
+    45407,
+    45949,
+    46490,
+    47032,
+    47574,
+    48116,
+    48657,
+    49199,
+    49741,
+    50337,
+    50878,
+    51420,
+    51962,
+    52504,
+    53045,
+    53587,
+    54129,
+    54671,
+    55267
+  ],
+  "bondGrowth": [],
+  "expGrowth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "expFeed": [
+    10
+  ],
+  "bondEquip": 0,
+  "valentineEquip": [],
+  "valentineScript": [],
+  "ascensionAdd": {
+    "individuality": {
+      "ascension": {
+        "2": []
+      },
+      "costume": {}
+    },
+    "voicePrefix": {
+      "ascension": {
+        "2": 0
+      },
+      "costume": {}
+    },
+    "overWriteServantName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "originalOverWriteServantName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteServantBattleName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "originalOverWriteServantBattleName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteTDName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "originalOverWriteTDName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteTDRuby": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteTDFileName": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteTDRank": {
+      "ascension": {},
+      "costume": {}
+    },
+    "overWriteTDTypeText": {
+      "ascension": {},
+      "costume": {}
+    },
+    "lvMax": {
+      "ascension": {
+        "2": 100
+      },
+      "costume": {}
+    },
+    "charaGraphChange": {
+      "ascension": {},
+      "costume": {}
+    },
+    "charaGraphChangeCommonRelease": {
+      "ascension": {},
+      "costume": {}
+    },
+    "faceChange": {
+      "ascension": {},
+      "costume": {}
+    },
+    "faceChangeCommonRelease": {
+      "ascension": {},
+      "costume": {}
+    }
+  },
+  "traitAdd": [],
+  "svtChange": [],
+  "ascensionImage": [],
+  "ascensionMaterials": {},
+  "skillMaterials": {},
+  "appendSkillMaterials": {},
+  "costumeMaterials": {},
+  "script": {},
+  "skills": [],
+  "classPassive": [],
+  "extraPassive": [],
+  "appendPassive": [],
+  "noblePhantasms": [
+    {
+      "id": 340,
+      "num": 1,
+      "card": "arts",
+      "name": "魂魄割け",
+      "originalName": "魂魄割け",
+      "ruby": "-",
+      "icon": "https://assets.atlasacademy.io/GameData/JP/Servants/Commands/9100101/card_servant_np.png",
+      "rank": "なし",
+      "type": "",
+      "npGain": {
+        "buster": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "arts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quick": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "defence": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "np": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "npDistribution": [
+        100
+      ],
+      "strengthStatus": 0,
+      "priority": 321,
+      "condQuestId": 0,
+      "condQuestPhase": 0,
+      "individuality": [
+        {
+          "id": 3002,
+          "name": "attackMagical"
+        },
+        {
+          "id": 4007,
+          "name": "cardNP"
+        }
+      ],
+      "script": {},
+      "functions": [
+        {
+          "funcId": 12,
+          "funcType": "damageNp",
+          "funcTargetType": "enemy",
+          "funcTargetTeam": "playerAndEnemy",
+          "funcPopupText": "なし",
+          "functvals": [],
+          "funcquestTvals": [],
+          "funcGroup": [],
+          "buffs": [],
+          "svals": [
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            }
+          ],
+          "svals2": [
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            }
+          ],
+          "svals3": [
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            }
+          ],
+          "svals4": [
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            }
+          ],
+          "svals5": [
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            },
+            {
+              "Rate": 1000,
+              "Value": 3000
+            }
+          ]
+        },
+        {
+          "funcId": 128,
+          "funcType": "addState",
+          "funcTargetType": "enemy",
+          "funcTargetTeam": "playerAndEnemy",
+          "funcPopupText": "クイックダウン",
+          "funcPopupIcon": "https://assets.atlasacademy.io/GameData/JP/BuffIcons/bufficon_515.png",
+          "functvals": [],
+          "funcquestTvals": [],
+          "funcGroup": [],
+          "buffs": [
+            {
+              "id": 112,
+              "name": "Quickダウン",
+              "detail": "Quickカードの性能をダウン",
+              "icon": "https://assets.atlasacademy.io/GameData/JP/BuffIcons/bufficon_515.png",
+              "type": "downCommandall",
+              "buffGroup": 0,
+              "script": {},
+              "vals": [
+                {
+                  "id": 3005,
+                  "name": "buffNegativeEffect"
+                },
+                {
+                  "id": 3008,
+                  "name": "buffDecreaseDamage"
+                }
+              ],
+              "tvals": [
+                {
+                  "id": 5000,
+                  "name": "canBeInBattle"
+                },
+                {
+                  "id": 4003,
+                  "name": "cardQuick"
+                }
+              ],
+              "ckSelfIndv": [
+                {
+                  "id": 4003,
+                  "name": "cardQuick"
+                }
+              ],
+              "ckOpIndv": [],
+              "maxRate": 5000
+            }
+          ],
+          "svals": [
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            }
+          ],
+          "svals2": [
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            }
+          ],
+          "svals3": [
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            }
+          ],
+          "svals4": [
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            }
+          ],
+          "svals5": [
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            },
+            {
+              "Rate": 1000,
+              "Turn": 3,
+              "Count": -1,
+              "Value": 200
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
