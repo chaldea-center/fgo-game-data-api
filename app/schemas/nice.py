@@ -552,7 +552,7 @@ class NiceTd(BaseModelORJson):
     card: NiceCardType
     name: str
     originalName: str
-    ruby: str = ""
+    ruby: str
     icon: Optional[HttpUrl] = None
     rank: str
     type: str
