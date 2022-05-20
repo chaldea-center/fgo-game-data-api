@@ -326,7 +326,7 @@ class NiceBuff(BaseModelORJson):
         "for how this field is used.",
     )
     script: NiceBuffScript = Field(
-        NiceBuffScript,
+        NiceBuffScript(),
         title="Buff script",
         description="Random stuffs that get added to the buff entry. "
         "See each field description for more details.",
@@ -531,7 +531,7 @@ class NiceSkill(NiceBaseSkill):
     icon: Optional[HttpUrl] = None
     coolDown: list[int] = []
     actIndividuality: list[NiceTrait] = []
-    script: NiceSkillScript = Field(NiceSkillScript)
+    script: NiceSkillScript = NiceSkillScript()
     extraPassive: list[ExtraPassive] = []
     skillAdd: list[NiceSkillAdd] = []
     aiIds: Optional[dict[AiType, list[int]]] = None
@@ -557,7 +557,7 @@ class NiceTd(BaseModelORJson):
     icon: Optional[HttpUrl] = None
     rank: str
     type: str
-    effectFlags: list[NiceTdEffectFlag]
+    effectFlags: list[NiceTdEffectFlag] = []
     detail: Optional[str] = None
     unmodifiedDetail: Optional[str] = None
     npGain: NpGain
@@ -567,7 +567,7 @@ class NiceTd(BaseModelORJson):
     condQuestId: int = 0
     condQuestPhase: int = 0
     individuality: list[NiceTrait]
-    script: NiceSkillScript
+    script: NiceSkillScript = NiceSkillScript()
     functions: list[NiceFunction]
 
 
@@ -628,25 +628,25 @@ class ExtraCCAssets(BaseModel):
 
 
 class ExtraAssets(ExtraCCAssets):
-    charaGraphEx: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    charaGraphName: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    narrowFigure: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    charaFigure: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    charaGraphEx: ExtraAssetsUrl = ExtraAssetsUrl()
+    charaGraphName: ExtraAssetsUrl = ExtraAssetsUrl()
+    narrowFigure: ExtraAssetsUrl = ExtraAssetsUrl()
+    charaFigure: ExtraAssetsUrl = ExtraAssetsUrl()
     charaFigureForm: dict[int, ExtraAssetsUrl] = {}
     charaFigureMulti: dict[int, ExtraAssetsUrl] = {}
-    commands: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    status: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    equipFace: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    commands: ExtraAssetsUrl = ExtraAssetsUrl()
+    status: ExtraAssetsUrl = ExtraAssetsUrl()
+    equipFace: ExtraAssetsUrl = ExtraAssetsUrl()
     image: ExtraAssetsUrl = Field(
-        ExtraAssetsUrl,
+        ExtraAssetsUrl(),
         title="Story images",
         description="Images that are used in the game scripts. Only the story field will be filled."
         "Since the list comes from JP, the NA asset might not exist and returns 404.",
     )
-    spriteModel: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    charaGraphChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    narrowFigureChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
-    facesChange: ExtraAssetsUrl = Field(ExtraAssetsUrl)
+    spriteModel: ExtraAssetsUrl = ExtraAssetsUrl()
+    charaGraphChange: ExtraAssetsUrl = ExtraAssetsUrl()
+    narrowFigureChange: ExtraAssetsUrl = ExtraAssetsUrl()
+    facesChange: ExtraAssetsUrl = ExtraAssetsUrl()
 
 
 class NiceCardDetail(BaseModel):
@@ -1860,12 +1860,12 @@ class QuestEnemy(BaseModelORJson):
     recover: int = 0
     chargeTurn: int = 0
     traits: list[NiceTrait] = []
-    skills: EnemySkill = Field(EnemySkill)
-    classPassive: EnemyPassive = Field(EnemyPassive)
-    noblePhantasm: EnemyTd = Field(EnemyTd)
+    skills: EnemySkill = EnemySkill()
+    classPassive: EnemyPassive = EnemyPassive()
+    noblePhantasm: EnemyTd = EnemyTd()
     serverMod: EnemyServerMod
     ai: EnemyAi
-    enemyScript: EnemyScript = Field(EnemyScript)
+    enemyScript: EnemyScript = EnemyScript()
     limit: EnemyLimit
     misc: EnemyMisc
 
@@ -1955,7 +1955,7 @@ class NiceQuestPhase(NiceQuest):
     bond: int
     isNpcOnly: bool = False
     battleBgId: int
-    extraDetail: NiceQuestPhaseExtraDetail = Field(NiceQuestPhaseExtraDetail)
+    extraDetail: NiceQuestPhaseExtraDetail = NiceQuestPhaseExtraDetail()
     scripts: list[ScriptLink] = []
     messages: list[NiceQuestMessage] = []
     supportServants: list[SupportServant] = []
@@ -2073,7 +2073,7 @@ class NiceWar(BaseModelORJson):
     priority: int
     parentWarId: int = 0
     materialParentWarId: int = 0
-    emptyMessage: str = "クエストがありません"
+    emptyMessage: str
     bgm: NiceBgm
     scriptId: str
     script: HttpUrl
@@ -2082,7 +2082,7 @@ class NiceWar(BaseModelORJson):
     eventId: int = 0
     eventName: str = ""
     lastQuestId: int
-    warAdds: list[NiceWarAdd]
+    warAdds: list[NiceWarAdd] = []
     maps: list[NiceMap]
     spots: list[NiceSpot]
     spotRoads: list[NiceSpotRoad]
