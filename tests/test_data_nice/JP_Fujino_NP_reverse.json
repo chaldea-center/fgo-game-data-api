@@ -594,6 +594,8 @@
           "name": "浅上藤乃",
           "originalName": "浅上藤乃",
           "ruby": "アサガミフジノ",
+          "battleName": "浅上藤乃",
+          "originalBattleName": "浅上藤乃",
           "className": "archer",
           "type": "normal",
           "flag": "normal",
@@ -1591,7 +1593,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6529.png",
                     "background": "gold",
-                    "priority": 242,
+                    "priority": 244,
                     "dropPriority": 8504
                   },
                   "amount": 2
@@ -1645,7 +1647,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6529.png",
                     "background": "gold",
-                    "priority": 242,
+                    "priority": 244,
                     "dropPriority": 8504
                   },
                   "amount": 4
@@ -1671,7 +1673,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6520.png",
                     "background": "gold",
-                    "priority": 237,
+                    "priority": 239,
                     "dropPriority": 8402
                   },
                   "amount": 6
@@ -2207,7 +2209,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6529.png",
                     "background": "gold",
-                    "priority": 242,
+                    "priority": 244,
                     "dropPriority": 8504
                   },
                   "amount": 2
@@ -2262,7 +2264,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6529.png",
                     "background": "gold",
-                    "priority": 242,
+                    "priority": 244,
                     "dropPriority": 8504
                   },
                   "amount": 4
@@ -2317,7 +2319,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6520.png",
                     "background": "gold",
-                    "priority": 237,
+                    "priority": 239,
                     "dropPriority": 8402
                   },
                   "amount": 3
@@ -2348,7 +2350,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6520.png",
                     "background": "gold",
-                    "priority": 237,
+                    "priority": 239,
                     "dropPriority": 8402
                   },
                   "amount": 5
@@ -2374,7 +2376,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6541.png",
                     "background": "silver",
-                    "priority": 227,
+                    "priority": 229,
                     "dropPriority": 8315
                   },
                   "amount": 5
@@ -2405,7 +2407,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6541.png",
                     "background": "silver",
-                    "priority": 227,
+                    "priority": 229,
                     "dropPriority": 8315
                   },
                   "amount": 15
@@ -2431,7 +2433,7 @@
                     ],
                     "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6550.png",
                     "background": "silver",
-                    "priority": 231,
+                    "priority": 233,
                     "dropPriority": 8319
                   },
                   "amount": 20
@@ -4271,6 +4273,68 @@
                       "Individuality": 0,
                       "EventId": 80326,
                       "RateCount": 200
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 940246,
+              "name": "アイランド・レスキュー B（陽気なコン）",
+              "originalName": "アイランド・レスキュー B（陽気なコン）",
+              "ruby": "あいらんど・れすきゅー",
+              "detail": "陽気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+              "unmodifiedDetail": "陽気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+              "type": "passive",
+              "icon": "https://assets.atlasacademy.io/GameData/JP/SkillIcons/skill_00200.png",
+              "coolDown": [
+                0
+              ],
+              "actIndividuality": [],
+              "script": {},
+              "extraPassive": [
+                {
+                  "num": 16,
+                  "priority": 169,
+                  "condQuestId": 0,
+                  "condQuestPhase": 0,
+                  "condLv": 0,
+                  "condLimitCount": 0,
+                  "condFriendshipRank": 0,
+                  "eventId": 80364,
+                  "flag": 0,
+                  "startedAt": 1649235600,
+                  "endedAt": 1651031999
+                }
+              ],
+              "skillAdd": [],
+              "functions": [
+                {
+                  "funcId": 8265,
+                  "funcType": "eventDropUp",
+                  "funcTargetType": "self",
+                  "funcTargetTeam": "playerAndEnemy",
+                  "funcPopupText": "なし",
+                  "functvals": [],
+                  "funcquestTvals": [],
+                  "funcGroup": [
+                    {
+                      "eventId": 80364,
+                      "baseFuncId": 0,
+                      "nameTotal": "{0}\n獲得数ボーナス合計",
+                      "name": "{0}獲得数アップ",
+                      "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94068805.png",
+                      "priority": 5000,
+                      "isDispValue": true
+                    }
+                  ],
+                  "traitVals": [],
+                  "buffs": [],
+                  "svals": [
+                    {
+                      "Individuality": 10722,
+                      "EventId": 80364,
+                      "AddCount": 1
                     }
                   ]
                 }

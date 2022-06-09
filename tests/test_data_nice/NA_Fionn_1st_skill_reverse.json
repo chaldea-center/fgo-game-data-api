@@ -237,6 +237,8 @@
           "name": "Fionn mac Cumhaill",
           "originalName": "Fionn mac Cumhaill",
           "ruby": "Fionn mac Cumhaill",
+          "battleName": "Fionn",
+          "originalBattleName": "Fionn",
           "className": "lancer",
           "type": "normal",
           "flag": "normal",

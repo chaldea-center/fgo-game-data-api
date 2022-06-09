@@ -4,6 +4,8 @@
   "name": "宇津見エリセ",
   "originalName": "宇津見エリセ",
   "ruby": "ウツミエリセ",
+  "battleName": "宇津見エリセ",
+  "originalBattleName": "宇津見エリセ",
   "className": "lancer",
   "type": "normal",
   "flag": "ignoreCombineLimitSpecial",
@@ -1204,7 +1206,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6508.png",
             "background": "silver",
-            "priority": 211,
+            "priority": 213,
             "dropPriority": 8300
           },
           "amount": 4
@@ -1235,7 +1237,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6508.png",
             "background": "silver",
-            "priority": 211,
+            "priority": 213,
             "dropPriority": 8300
           },
           "amount": 8
@@ -1318,7 +1320,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6541.png",
             "background": "silver",
-            "priority": 227,
+            "priority": 229,
             "dropPriority": 8315
           },
           "amount": 20
@@ -1596,7 +1598,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6523.png",
             "background": "gold",
-            "priority": 239,
+            "priority": 241,
             "dropPriority": 8404
           },
           "amount": 3
@@ -1627,7 +1629,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6523.png",
             "background": "gold",
-            "priority": 239,
+            "priority": 241,
             "dropPriority": 8404
           },
           "amount": 5
@@ -1653,7 +1655,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6532.png",
             "background": "silver",
-            "priority": 222,
+            "priority": 224,
             "dropPriority": 8310
           },
           "amount": 5
@@ -1684,7 +1686,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6532.png",
             "background": "silver",
-            "priority": 222,
+            "priority": 224,
             "dropPriority": 8310
           },
           "amount": 15
@@ -1710,7 +1712,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6544.png",
             "background": "gold",
-            "priority": 247,
+            "priority": 249,
             "dropPriority": 8508
           },
           "amount": 8
@@ -3623,6 +3625,68 @@
               "Individuality": 0,
               "EventId": 80313,
               "RateCount": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 940245,
+      "name": "アイランド・レスキュー B（元気なコン）",
+      "originalName": "アイランド・レスキュー B（元気なコン）",
+      "ruby": "あいらんど・れすきゅー",
+      "detail": "元気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+      "unmodifiedDetail": "元気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+      "type": "passive",
+      "icon": "https://assets.atlasacademy.io/GameData/JP/SkillIcons/skill_00200.png",
+      "coolDown": [
+        0
+      ],
+      "actIndividuality": [],
+      "script": {},
+      "extraPassive": [
+        {
+          "num": 16,
+          "priority": 169,
+          "condQuestId": 0,
+          "condQuestPhase": 0,
+          "condLv": 0,
+          "condLimitCount": 0,
+          "condFriendshipRank": 0,
+          "eventId": 80364,
+          "flag": 0,
+          "startedAt": 1649235600,
+          "endedAt": 1651031999
+        }
+      ],
+      "skillAdd": [],
+      "functions": [
+        {
+          "funcId": 8264,
+          "funcType": "eventDropUp",
+          "funcTargetType": "self",
+          "funcTargetTeam": "playerAndEnemy",
+          "funcPopupText": "なし",
+          "functvals": [],
+          "funcquestTvals": [],
+          "funcGroup": [
+            {
+              "eventId": 80364,
+              "baseFuncId": 0,
+              "nameTotal": "{0}\n獲得数ボーナス合計",
+              "name": "{0}獲得数アップ",
+              "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94068804.png",
+              "priority": 4000,
+              "isDispValue": true
+            }
+          ],
+          "traitVals": [],
+          "buffs": [],
+          "svals": [
+            {
+              "Individuality": 10721,
+              "EventId": 80364,
+              "AddCount": 1
             }
           ]
         }

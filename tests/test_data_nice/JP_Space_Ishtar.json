@@ -4,6 +4,8 @@
   "name": "スペース・イシュタル",
   "originalName": "スペース・イシュタル",
   "ruby": "スペース・イシュタル",
+  "battleName": "Sイシュタル",
+  "originalBattleName": "Sイシュタル",
   "className": "avenger",
   "type": "normal",
   "flag": "normal",
@@ -926,7 +928,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6515.png",
             "background": "silver",
-            "priority": 212,
+            "priority": 214,
             "dropPriority": 8301
           },
           "amount": 10
@@ -952,7 +954,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6521.png",
             "background": "gold",
-            "priority": 238,
+            "priority": 240,
             "dropPriority": 8403
           },
           "amount": 10
@@ -983,7 +985,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6509.png",
             "background": "silver",
-            "priority": 213,
+            "priority": 215,
             "dropPriority": 8307
           },
           "amount": 10
@@ -1009,7 +1011,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6528.png",
             "background": "gold",
-            "priority": 241,
+            "priority": 243,
             "dropPriority": 8405
           },
           "amount": 10
@@ -1040,7 +1042,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6520.png",
             "background": "gold",
-            "priority": 237,
+            "priority": 239,
             "dropPriority": 8402
           },
           "amount": 10
@@ -1066,7 +1068,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6539.png",
             "background": "gold",
-            "priority": 244,
+            "priority": 246,
             "dropPriority": 8406
           },
           "amount": 10
@@ -1097,7 +1099,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6525.png",
             "background": "gold",
-            "priority": 240,
+            "priority": 242,
             "dropPriority": 8503
           },
           "amount": 10
@@ -1123,7 +1125,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6517.png",
             "background": "gold",
-            "priority": 233,
+            "priority": 235,
             "dropPriority": 8500
           },
           "amount": 10
@@ -1156,7 +1158,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6510.png",
             "background": "silver",
-            "priority": 215,
+            "priority": 217,
             "dropPriority": 8302
           },
           "amount": 10
@@ -1187,7 +1189,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6501.png",
             "background": "silver",
-            "priority": 214,
+            "priority": 216,
             "dropPriority": 8306
           },
           "amount": 10
@@ -1311,7 +1313,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6536.png",
             "background": "silver",
-            "priority": 225,
+            "priority": 227,
             "dropPriority": 8313
           },
           "amount": 15
@@ -1342,7 +1344,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6529.png",
             "background": "gold",
-            "priority": 242,
+            "priority": 244,
             "dropPriority": 8504
           },
           "amount": 15
@@ -1373,7 +1375,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6542.png",
             "background": "gold",
-            "priority": 246,
+            "priority": 248,
             "dropPriority": 8507
           },
           "amount": 15
@@ -1430,7 +1432,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6515.png",
             "background": "silver",
-            "priority": 212,
+            "priority": 214,
             "dropPriority": 8301
           },
           "amount": 10
@@ -1461,7 +1463,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6509.png",
             "background": "silver",
-            "priority": 213,
+            "priority": 215,
             "dropPriority": 8307
           },
           "amount": 10
@@ -1492,7 +1494,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6521.png",
             "background": "gold",
-            "priority": 238,
+            "priority": 240,
             "dropPriority": 8403
           },
           "amount": 12
@@ -1523,7 +1525,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6528.png",
             "background": "gold",
-            "priority": 241,
+            "priority": 243,
             "dropPriority": 8405
           },
           "amount": 12
@@ -1554,7 +1556,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6537.png",
             "background": "silver",
-            "priority": 224,
+            "priority": 226,
             "dropPriority": 8312
           },
           "amount": 12
@@ -1585,7 +1587,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6539.png",
             "background": "gold",
-            "priority": 244,
+            "priority": 246,
             "dropPriority": 8406
           },
           "amount": 15
@@ -1616,7 +1618,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6541.png",
             "background": "silver",
-            "priority": 227,
+            "priority": 229,
             "dropPriority": 8315
           },
           "amount": 15
@@ -1647,7 +1649,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6544.png",
             "background": "gold",
-            "priority": 247,
+            "priority": 249,
             "dropPriority": 8508
           },
           "amount": 15
@@ -1730,7 +1732,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6537.png",
             "background": "silver",
-            "priority": 224,
+            "priority": 226,
             "dropPriority": 8312
           },
           "amount": 5
@@ -1756,7 +1758,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6528.png",
             "background": "gold",
-            "priority": 241,
+            "priority": 243,
             "dropPriority": 8405
           },
           "amount": 5
@@ -1782,7 +1784,7 @@
             ],
             "icon": "https://assets.atlasacademy.io/GameData/JP/Items/6542.png",
             "background": "gold",
-            "priority": 246,
+            "priority": 248,
             "dropPriority": 8507
           },
           "amount": 5
@@ -4762,6 +4764,68 @@
               "Individuality": 0,
               "EventId": 80341,
               "RateCount": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 940247,
+      "name": "アイランド・レスキュー B（健気なコン）",
+      "originalName": "アイランド・レスキュー B（健気なコン）",
+      "ruby": "あいらんど・れすきゅー",
+      "detail": "健気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+      "unmodifiedDetail": "健気なコンのドロップ獲得数を1個増やす【『水怪クライシス 無垢なる者たちの浮島』イベント期間限定】",
+      "type": "passive",
+      "icon": "https://assets.atlasacademy.io/GameData/JP/SkillIcons/skill_00200.png",
+      "coolDown": [
+        0
+      ],
+      "actIndividuality": [],
+      "script": {},
+      "extraPassive": [
+        {
+          "num": 16,
+          "priority": 169,
+          "condQuestId": 0,
+          "condQuestPhase": 0,
+          "condLv": 0,
+          "condLimitCount": 0,
+          "condFriendshipRank": 0,
+          "eventId": 80364,
+          "flag": 0,
+          "startedAt": 1649235600,
+          "endedAt": 1651031999
+        }
+      ],
+      "skillAdd": [],
+      "functions": [
+        {
+          "funcId": 8266,
+          "funcType": "eventDropUp",
+          "funcTargetType": "self",
+          "funcTargetTeam": "playerAndEnemy",
+          "funcPopupText": "なし",
+          "functvals": [],
+          "funcquestTvals": [],
+          "funcGroup": [
+            {
+              "eventId": 80364,
+              "baseFuncId": 0,
+              "nameTotal": "{0}\n獲得数ボーナス合計",
+              "name": "{0}獲得数アップ",
+              "icon": "https://assets.atlasacademy.io/GameData/JP/Items/94068806.png",
+              "priority": 6000,
+              "isDispValue": true
+            }
+          ],
+          "traitVals": [],
+          "buffs": [],
+          "svals": [
+            {
+              "Individuality": 10723,
+              "EventId": 80364,
+              "AddCount": 1
             }
           ]
         }

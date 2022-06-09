@@ -118,6 +118,7 @@
             "id": 9935900,
             "collectionNo": 0,
             "name": "Soul Eater",
+            "originalName": "Soul Eater",
             "type": "enemy",
             "flag": "normal",
             "className": "assassin",
@@ -734,6 +735,7 @@
             "id": 102000,
             "collectionNo": 121,
             "name": "Lancelot",
+            "originalName": "Lancelot",
             "type": "normal",
             "flag": "normal",
             "className": "saber",
@@ -741,7 +743,7 @@
             "rarity": 4,
             "atkMax": 9949,
             "hpMax": 11589,
-            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_1020002.png",
+            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_1020001.png",
             "costume": {}
           },
           "drops": [
@@ -2226,6 +2228,7 @@
             "id": 301900,
             "collectionNo": 78,
             "name": "Altria Pendragon (Alter)",
+            "originalName": "Altria Pendragon (Alter)",
             "type": "normal",
             "flag": "normal",
             "className": "lancer",
@@ -2233,7 +2236,7 @@
             "rarity": 4,
             "atkMax": 9968,
             "hpMax": 11761,
-            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_3019002.png",
+            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_3019001.png",
             "costume": {
               "301900": {
                 "id": 0,
@@ -3535,6 +3538,7 @@
             "id": 200800,
             "collectionNo": 122,
             "name": "Tristan",
+            "originalName": "Tristan",
             "type": "normal",
             "flag": "normal",
             "className": "archer",
@@ -3542,7 +3546,7 @@
             "rarity": 4,
             "atkMax": 9735,
             "hpMax": 11637,
-            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_2008002.png",
+            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_2008001.png",
             "costume": {}
           },
           "drops": [
@@ -4888,6 +4892,7 @@
             "id": 101200,
             "collectionNo": 126,
             "name": "Bedivere",
+            "originalName": "Bedivere",
             "type": "normal",
             "flag": "normal",
             "className": "saber",
@@ -4895,7 +4900,7 @@
             "rarity": 3,
             "atkMax": 7627,
             "hpMax": 9595,
-            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_1012002.png",
+            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_1012001.png",
             "costume": {
               "101230": {
                 "id": 11,
@@ -6144,6 +6149,7 @@
             "id": 301900,
             "collectionNo": 78,
             "name": "Altria Pendragon (Alter)",
+            "originalName": "Altria Pendragon (Alter)",
             "type": "normal",
             "flag": "normal",
             "className": "lancer",
@@ -6151,7 +6157,7 @@
             "rarity": 4,
             "atkMax": 9968,
             "hpMax": 11761,
-            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_3019002.png",
+            "face": "https://assets.atlasacademy.io/GameData/NA/Faces/f_3019001.png",
             "costume": {
               "301900": {
                 "id": 0,
