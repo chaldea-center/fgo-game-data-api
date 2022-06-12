@@ -693,7 +693,7 @@ class ScriptJson(BaseModelORJson):
     overwriteName: Optional[str]
     overwritePriority: Optional[int]
     infos: list[ScriptJsonInfo] = []
-    conds: list[ScriptJsonCond] = []
+    conds: list[ScriptJsonCond] | None = []
     condAddItem: int = 0
     materialOverwriteName: Optional[str] = None
 
@@ -1100,6 +1100,38 @@ class MstTreasureBoxGift(BaseModelORJson):
     idx: int
     giftId: int
     collateralUpperLimit: int
+
+
+class MstEventDigging(BaseModelORJson):
+    eventId: int
+    sizeX: int
+    sizeY: int
+    bgImageId: int
+    eventPointItemId: int
+    resettableDiggedNum: int
+    script: dict[str, Any]
+
+
+class MstEventDiggingBlock(BaseModelORJson):
+    id: int
+    eventId: int
+    imageId: int
+    commonConsumeId: int
+    objectId: int
+    diggingEventPoint: int
+    script: dict[str, Any]
+    consumeHintImageIds: list[int]
+    consumeHintItemNums: list[int]
+    hintEventPoints: list[int]
+
+
+class MstEventDiggingReward(BaseModelORJson):
+    id: int
+    eventId: int
+    giftId: int
+    iconId: int
+    rewardSize: int
+    script: dict[str, Any]
 
 
 class MstCommonConsume(BaseModelORJson):
@@ -1654,6 +1686,9 @@ class EventEntity(BaseModelORJson):
     mstBoxGachaTalk: list[MstBoxGachaTalk]
     mstTreasureBox: list[MstTreasureBox]
     mstTreasureBoxGift: list[MstTreasureBoxGift]
+    mstEventDigging: MstEventDigging | None = None
+    mstEventDiggingBlock: list[MstEventDiggingBlock]
+    mstEventDiggingReward: list[MstEventDiggingReward]
     mstItem: list[MstItem]
     mstCommonConsume: list[MstCommonConsume]
     mstSvtVoice: list[MstSvtVoice]
