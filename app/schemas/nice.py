@@ -152,6 +152,34 @@ class AssetURL:
     servantModel = "{base_url}/{region}/Servants/{item_id}/manifest.json"
 
 
+class NiceBaseGift(BaseModelORJson):
+    id: int
+    type: NiceGiftType = NiceGiftType.item
+    objectId: int
+    priority: int
+    num: int
+
+
+class NiceGiftAdd(BaseModelORJson):
+    priority: int
+    replacementGiftIcon: HttpUrl
+    condType: NiceCondType
+    targetId: int
+    targetNum: int
+    replacementGifts: list[NiceBaseGift]
+
+
+class NiceGift(NiceBaseGift):
+    giftAdds: list[NiceGiftAdd] = []
+
+
+class NiceItemSelect(BaseModelORJson):
+    idx: int
+    gifts: list[NiceGift]
+    requireNum: int
+    detail: str
+
+
 class NiceItem(BaseModelORJson):
     id: int
     name: str
@@ -164,6 +192,7 @@ class NiceItem(BaseModelORJson):
     background: NiceItemBGType
     priority: int
     dropPriority: int
+    itemSelects: list[NiceItemSelect] = []
 
 
 class NiceItemAmount(BaseModel):
@@ -720,20 +749,30 @@ class AscensionAdd(BaseModel):
     overWriteTDRuby: AscensionAddEntryStr = Field(
         AscensionAddEntryStr, title="NP ruby changes"
     )
-    originalOverWriteServantBattleName: AscensionAddEntryStr = Field(AscensionAddEntryStr)
+    originalOverWriteServantBattleName: AscensionAddEntryStr = Field(
+        AscensionAddEntryStr
+    )
     overWriteTDName: AscensionAddEntryStr = Field(..., title="NP name changes")
     originalOverWriteTDName: AscensionAddEntryStr = Field(AscensionAddEntryStr)
     overWriteTDRuby: AscensionAddEntryStr = Field(..., title="NP ruby changes")
     overWriteTDFileName: AscensionAddEntryHttpUrl = Field(
         AscensionAddEntryHttpUrl, title="NP image URL changes"
     )
-    overWriteTDRank: AscensionAddEntryStr = Field(AscensionAddEntryStr, title="NP rank changes")
-    overWriteTDTypeText: AscensionAddEntryStr = Field(AscensionAddEntryStr, title="NP type changes")
+    overWriteTDRank: AscensionAddEntryStr = Field(
+        AscensionAddEntryStr, title="NP rank changes"
+    )
+    overWriteTDTypeText: AscensionAddEntryStr = Field(
+        AscensionAddEntryStr, title="NP type changes"
+    )
     lvMax: AscensionAddEntryInt = Field(AscensionAddEntryInt, title="Max level")
     charaGraphChange: AscensionAddEntryHttpUrl = Field(AscensionAddEntryHttpUrl)
-    charaGraphChangeCommonRelease: AscensionAddEntryCommonRelease = Field(AscensionAddEntryCommonRelease)
+    charaGraphChangeCommonRelease: AscensionAddEntryCommonRelease = Field(
+        AscensionAddEntryCommonRelease
+    )
     faceChange: AscensionAddEntryHttpUrl = Field(AscensionAddEntryHttpUrl)
-    faceChangeCommonRelease: AscensionAddEntryCommonRelease = Field(AscensionAddEntryCommonRelease)
+    faceChangeCommonRelease: AscensionAddEntryCommonRelease = Field(
+        AscensionAddEntryCommonRelease
+    )
 
 
 class NiceServantChange(BaseModel):
@@ -845,7 +884,7 @@ class NiceVoicePlayCond(BaseModel):
     targetId: int = Field(..., title="Voice play condition target ID")
     condValue: int = Field(
         ...,
-        title="[DEPRECIATED, use condValues] Voice play condition target value."
+        title="[DEPRECATED, use condValues] Voice play condition target value."
         "Use condValues since condValues in other places can have multiple values."
         "This value is the first element of condValues.",
     )
@@ -1130,9 +1169,7 @@ class NiceServant(BaseModelORJson):
     svtChange: list[NiceServantChange] = Field(
         [], title="Servant Change", description="EOR servants' hidden name details."
     )
-    ascensionImage: list[NiceServantLimitImage] = Field(
-        [], title="Servant Limit Image"
-    )
+    ascensionImage: list[NiceServantLimitImage] = Field([], title="Servant Limit Image")
     ascensionMaterials: dict[int, NiceLvlUpMaterial] = Field(
         ...,
         title="Ascension Materials",
@@ -1413,27 +1450,6 @@ class NiceBgmEntity(BaseModelORJson):
     shop: Optional[NiceShop] = None
     logo: HttpUrl
     releaseConditions: list[NiceBgmRelease]
-
-
-class NiceBaseGift(BaseModelORJson):
-    id: int
-    type: NiceGiftType = NiceGiftType.item
-    objectId: int
-    priority: int
-    num: int
-
-
-class NiceGiftAdd(BaseModelORJson):
-    priority: int
-    replacementGiftIcon: HttpUrl
-    condType: NiceCondType
-    targetId: int
-    targetNum: int
-    replacementGifts: list[NiceBaseGift]
-
-
-class NiceGift(NiceBaseGift):
-    giftAdds: list[NiceGiftAdd] = []
 
 
 class NiceEventReward(BaseModelORJson):

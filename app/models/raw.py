@@ -794,6 +794,9 @@ mstItem = Table(
     Column("useAppendSkill", Boolean),
     Column("useAscension", Boolean),
     Column("useCostume", Boolean),
+    Column("mstItemSelect", JSONB),
+    Column("mstGift", JSONB),
+    Column("mstGiftAdd", JSONB),
 )
 
 
@@ -853,6 +856,7 @@ mstIllustrator = Table(
 mstGift = Table(
     "mstGift",
     metadata,
+    Column("sort_id", Integer),
     Column("id", Integer, index=True),
     Column("type", Integer),
     Column("objectId", Integer),
@@ -876,6 +880,15 @@ mstGiftAdd = Table(
     Column("script", String),
 )
 
+mstItemSelect = Table(
+    "mstItemSelect",
+    metadata,
+    Column("itemId", Integer, index=True),
+    Column("idx", Integer),
+    Column("candidateGiftId", Integer),
+    Column("requireNum", Integer),
+    Column("detail", String),
+)
 
 mstSetItem = Table(
     "mstSetItem",
@@ -1763,7 +1776,9 @@ AssetStorage = Table(
 )
 
 TABLES_TO_BE_LOADED = [
-    [mstAi, mstAiField, mstAiAct],
+    [mstAiAct],
+    [mstAi],
+    [mstAiField],
     [mstBgm, mstBgmRelease],
     [mstBoxGacha, mstBoxGachaBase, mstBoxGachaTalk],
     [mstClassRelationOverwrite],
@@ -1786,7 +1801,7 @@ TABLES_TO_BE_LOADED = [
     [mstEventTower, mstEventTowerReward],
     [mstEventVoicePlay],
     [mstFriendship],
-    [mstGift, mstGiftAdd],
+    [mstGiftAdd],
     [mstIllustrator],
     [mstMasterMission],
     [mstQuestConsumeItem],
