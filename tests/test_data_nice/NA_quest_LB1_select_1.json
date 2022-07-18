@@ -33,6 +33,14 @@
       "priority": 0,
       "num": 2,
       "giftAdds": []
+    },
+    {
+      "id": 320104,
+      "type": "item",
+      "objectId": 46,
+      "priority": 0,
+      "num": 2,
+      "giftAdds": []
     }
   ],
   "releaseConditions": [
@@ -63,6 +71,7 @@
       ]
     }
   ],
+  "priority": -11,
   "noticeAt": 1522864800,
   "openedAt": 1522864800,
   "closedAt": 1893456000,
@@ -1944,17 +1953,7 @@
       }
     }
   ],
-  "drops": [
-    {
-      "type": "item",
-      "objectId": 6531,
-      "num": 1,
-      "dropCount": 7,
-      "runs": 7,
-      "dropExpected": 1.0,
-      "dropVariance": 0.0
-    }
-  ],
+  "drops": [],
   "stages": [
     {
       "wave": 1,
@@ -1991,17 +1990,7 @@
             "face": "https://assets.atlasacademy.io/GameData/NA/Enemys/99393401.png",
             "costume": {}
           },
-          "drops": [
-            {
-              "type": "item",
-              "objectId": 6531,
-              "num": 1,
-              "dropCount": 0,
-              "runs": 0,
-              "dropExpected": 0,
-              "dropVariance": 0
-            }
-          ],
+          "drops": [],
           "lv": 80,
           "exp": 0,
           "atk": 7739,

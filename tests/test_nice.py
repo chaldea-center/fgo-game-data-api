@@ -62,6 +62,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
     "svt_NA_id": ("NA/svt/9939120", "NA_svt_9939120"),
     "svt_JP_enemy_costume": ("JP/svt/9100101", "JP_svt_9100101"),
     "item_NA_id": ("NA/item/94000201", "NA_item_94000201"),
+    "item_exchange_ticket": ("NA/item/15000", "NA_item_15000"),
     "MC_NA_id": ("NA/MC/110", "NA_MC_LB"),
     "MC_JP_costume": ("JP/MC/120?lang=en", "JP_MC_Tropical_Summer"),
     "JP_CC_id": ("JP/CC/8400550", "JP_CC_8400550"),
@@ -705,6 +706,14 @@ class TestServantSpecial:
         babylonia_reflection_3 = await client.get("/nice/NA/quest/94042403/1")
         idxs = [message["idx"] for message in babylonia_reflection_3.json()["messages"]]
         assert idxs == [0, 1, 2, 3]
+
+    async def test_anni_drop_change(self, client: AsyncClient) -> None:
+        anni_drop_change = (await client.get("/nice/NA/quest/93030706/3")).json()
+        drops = [
+            (drop["type"], drop["objectId"], drop["num"])
+            for drop in anni_drop_change["drops"]
+        ]
+        assert ("item", 1, 20000) in drops
 
 
 @pytest.mark.asyncio

@@ -270,6 +270,7 @@
               ]
             }
           ],
+          "priority": 899770,
           "noticeAt": 1570680000,
           "openedAt": 1570680000,
           "closedAt": 1893456000
@@ -306,6 +307,14 @@
               "id": 315300,
               "type": "item",
               "objectId": 6532,
+              "priority": 0,
+              "num": 1,
+              "giftAdds": []
+            },
+            {
+              "id": 315300,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 1,
               "giftAdds": []
@@ -362,6 +371,7 @@
               ]
             }
           ],
+          "priority": 899769,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -422,6 +432,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499908,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -482,6 +493,14 @@
               "priority": 0,
               "num": 2,
               "giftAdds": []
+            },
+            {
+              "id": 315301,
+              "type": "item",
+              "objectId": 46,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
             }
           ],
           "releaseConditions": [
@@ -532,6 +551,7 @@
               ]
             }
           ],
+          "priority": 899768,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -568,6 +588,14 @@
               "id": 315302,
               "type": "item",
               "objectId": 6532,
+              "priority": 0,
+              "num": 3,
+              "giftAdds": []
+            },
+            {
+              "id": 315302,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 3,
               "giftAdds": []
@@ -651,6 +679,7 @@
               ]
             }
           ],
+          "priority": 899767,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -732,6 +761,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499907,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -792,6 +822,14 @@
               "priority": 0,
               "num": 2,
               "giftAdds": []
+            },
+            {
+              "id": 315303,
+              "type": "item",
+              "objectId": 46,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
             }
           ],
           "releaseConditions": [
@@ -842,6 +880,7 @@
               ]
             }
           ],
+          "priority": 899766,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -878,6 +917,14 @@
               "id": 315312,
               "type": "item",
               "objectId": 6532,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315312,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -931,6 +978,7 @@
               ]
             }
           ],
+          "priority": 899757,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -991,6 +1039,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499906,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1048,6 +1097,14 @@
               "id": 315304,
               "type": "item",
               "objectId": 6508,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315304,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1127,6 +1184,7 @@
               ]
             }
           ],
+          "priority": 899765,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1163,6 +1221,14 @@
               "id": 315305,
               "type": "item",
               "objectId": 6508,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315305,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1242,6 +1308,7 @@
               ]
             }
           ],
+          "priority": 899764,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1278,6 +1345,14 @@
               "id": 315306,
               "type": "item",
               "objectId": 6508,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315306,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1319,6 +1394,7 @@
               ]
             }
           ],
+          "priority": 899763,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1396,6 +1472,7 @@
               ]
             }
           ],
+          "priority": 899754,
           "noticeAt": 1570680000,
           "openedAt": 1570680000,
           "closedAt": 1893456000
@@ -1456,6 +1533,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499905,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1557,6 +1635,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499904,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1614,6 +1693,14 @@
               "id": 315307,
               "type": "item",
               "objectId": 6508,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315307,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1681,6 +1768,7 @@
               ]
             }
           ],
+          "priority": 899762,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1717,6 +1805,14 @@
               "id": 315308,
               "type": "item",
               "objectId": 6531,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315308,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1796,6 +1892,7 @@
               ]
             }
           ],
+          "priority": 899761,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1853,6 +1950,14 @@
               "id": 315309,
               "type": "item",
               "objectId": 6531,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315309,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -1917,6 +2022,7 @@
               ]
             }
           ],
+          "priority": 899760,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -1974,6 +2080,14 @@
               "id": 315310,
               "type": "item",
               "objectId": 6531,
+              "priority": 0,
+              "num": 2,
+              "giftAdds": []
+            },
+            {
+              "id": 315310,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 2,
               "giftAdds": []
@@ -2041,6 +2155,7 @@
               ]
             }
           ],
+          "priority": 899759,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2077,6 +2192,14 @@
               "id": 315311,
               "type": "item",
               "objectId": 6532,
+              "priority": 0,
+              "num": 3,
+              "giftAdds": []
+            },
+            {
+              "id": 315311,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 3,
               "giftAdds": []
@@ -2152,6 +2275,7 @@
               ]
             }
           ],
+          "priority": 899758,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2254,6 +2378,7 @@
               ]
             }
           ],
+          "priority": 639809,
           "noticeAt": 1509645600,
           "openedAt": 1509645600,
           "closedAt": 1893456000
@@ -2314,6 +2439,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499902,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2374,6 +2500,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 899753,
           "noticeAt": 1613534400,
           "openedAt": 1613534400,
           "closedAt": 1893456000
@@ -2431,6 +2558,14 @@
               "id": 315314,
               "type": "item",
               "objectId": 6517,
+              "priority": 0,
+              "num": 5,
+              "giftAdds": []
+            },
+            {
+              "id": 315314,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 5,
               "giftAdds": []
@@ -2525,6 +2660,7 @@
               ]
             }
           ],
+          "priority": 899755,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2606,6 +2742,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499901,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2663,6 +2800,14 @@
               "id": 315313,
               "type": "item",
               "objectId": 6532,
+              "priority": 0,
+              "num": 5,
+              "giftAdds": []
+            },
+            {
+              "id": 315313,
+              "type": "item",
+              "objectId": 46,
               "priority": 0,
               "num": 5,
               "giftAdds": []
@@ -2775,6 +2920,7 @@
               ]
             }
           ],
+          "priority": 899756,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2896,6 +3042,7 @@
           ],
           "phasesNoBattle": [],
           "phaseScripts": [],
+          "priority": 499903,
           "noticeAt": 1508018400,
           "openedAt": 1508018400,
           "closedAt": 1893456000
@@ -2964,6 +3111,7 @@
             1
           ],
           "phaseScripts": [],
+          "priority": 899753,
           "noticeAt": 1570680000,
           "openedAt": 1570680000,
           "closedAt": 1893456000
