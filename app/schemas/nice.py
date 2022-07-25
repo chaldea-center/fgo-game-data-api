@@ -1487,7 +1487,7 @@ class NiceEventMissionConditionDetail(BaseModelORJson):
     addTargetIds: list[int] = []
     targetQuestIndividualities: list[NiceTrait] = []
     conditionLinkType: NiceDetailMissionCondLinkType
-    targetEventIds: Optional[list[int]] = None
+    targetEventIds: Optional[list[int]] = []
 
 
 class NiceEventMissionCondition(BaseModelORJson):
@@ -1977,6 +1977,7 @@ class SupportServantEquip(BaseModelORJson):
 
 class SupportServantScript(BaseModelORJson):
     dispLimitCount: Optional[int] = None
+    eventDeckIndex: int | None = None
 
 
 class SupportServant(BaseModelORJson):
