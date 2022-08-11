@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncConnection
 from ....config import Settings
 from ....schemas.common import Language, Region
 from ....schemas.gameenums import EVENT_TYPE_NAME, NiceSvtVoiceType, NiceVoiceCondType
-from ....schemas.nice import AssetURL, NiceEvent, NiceVoiceGroup
+from ....schemas.nice import AssetURL, NiceEvent, NiceEventCooltime, NiceVoiceGroup
 from ....schemas.raw import MstGift
 from ... import raw
 from ...utils import fmt_url, get_translation
@@ -13,6 +13,7 @@ from ..bgm import get_nice_bgm_entity_from_raw
 from ..gift import GiftData
 from ..item import get_nice_item_from_raw
 from ..svt.voice import get_nice_voice_group
+from .cooltime import get_nice_event_cooltime
 from .digging import get_nice_digging
 from .lottery import get_nice_lottery
 from .mission import get_nice_missions
@@ -49,6 +50,7 @@ async def get_nice_event(
     }
 
     common_consumes = {consume.id: consume for consume in raw_event.mstCommonConsume}
+    common_releases = {release.id: release for release in raw_event.mstCommonRelease}
 
     gift_data = GiftData(raw_event.mstGiftAdd, gift_maps)
 
@@ -228,6 +230,19 @@ async def get_nice_event(
             common_consumes=common_consumes,
         )
         if raw_event.mstEventDigging
+        else None,
+        cooltime=NiceEventCooltime(
+            rewards=[
+                get_nice_event_cooltime(
+                    region,
+                    cooltime,
+                    gift_data,
+                    common_releases[cooltime.commonReleaseId],
+                )
+                for cooltime in raw_event.mstEventCooltimeReward
+            ]
+        )
+        if raw_event.mstEventCooltimeReward
         else None,
         voicePlays=[
             get_nice_event_voice_play(voice_play, voice_groups)

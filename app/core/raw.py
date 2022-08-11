@@ -47,6 +47,7 @@ from ..schemas.raw import (
     MstEquipExp,
     MstEquipSkill,
     MstEvent,
+    MstEventCooltimeReward,
     MstEventDigging,
     MstEventDiggingBlock,
     MstEventDiggingReward,
@@ -55,6 +56,7 @@ from ..schemas.raw import (
     MstEventMissionConditionDetail,
     MstEventPointBuff,
     MstEventPointGroup,
+    MstEventQuestCooltime,
     MstEventReward,
     MstEventRewardScene,
     MstEventRewardSet,
@@ -802,12 +804,19 @@ async def get_event_entity(conn: AsyncConnection, event_id: int) -> EventEntity:
     else:
         digging_blocks = []
         digging_rewards = []
-        digging_gift_ids: set[int] = set()
-        digging_consume_ids: set[int] = set()
+        digging_gift_ids = set()
+        digging_consume_ids = set()
 
     treasure_box_consume_ids = {box.commonConsumeId for box in treasure_boxes}
     common_consumes = await fetch.get_all_multiple(
         conn, MstCommonConsume, digging_consume_ids | treasure_box_consume_ids
+    )
+
+    event_cooltimes = await fetch.get_all(conn, MstEventCooltimeReward, event_id)
+
+    common_release_ids = {cooltime.commonReleaseId for cooltime in event_cooltimes}
+    common_releases = await fetch.get_all_multiple(
+        conn, MstCommonRelease, common_release_ids
     )
 
     gift_ids = (
@@ -817,6 +826,7 @@ async def get_event_entity(conn: AsyncConnection, event_id: int) -> EventEntity:
         | {box.targetId for box in gacha_bases}
         | {box.extraGiftId for box in treasure_boxes}
         | {treasure_box_gift.giftId for treasure_box_gift in box_gifts}
+        | {cooltime.giftId for cooltime in event_cooltimes}
         | digging_gift_ids
     )
 
@@ -865,8 +875,13 @@ async def get_event_entity(conn: AsyncConnection, event_id: int) -> EventEntity:
         mstEventDigging=digging,
         mstEventDiggingBlock=digging_blocks,
         mstEventDiggingReward=digging_rewards,
+        mstEventCooltimeReward=event_cooltimes,
+        mstEventQuestCooltime=await fetch.get_all(
+            conn, MstEventQuestCooltime, event_id
+        ),
         mstItem=mstItem,
         mstCommonConsume=common_consumes,
+        mstCommonRelease=common_releases,
         mstSvtVoice=mstSvtVoice,
         mstVoice=mstVoice,
         mstSvtGroup=mstSvtGroup,

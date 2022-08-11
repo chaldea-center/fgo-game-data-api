@@ -1147,6 +1147,26 @@ class MstEventDiggingReward(BaseModelORJson):
     script: dict[str, Any]
 
 
+class MstEventCooltimeReward(BaseModelORJson):
+    eventId: int
+    spotId: int
+    lv: int
+    name: str
+    commonReleaseId: int
+    cooltime: int
+    addEventPointRate: int
+    giftId: int
+    upperLimitGiftNum: int
+
+
+class MstEventQuestCooltime(BaseModelORJson):
+    eventId: int
+    questId: int
+    phase: int
+    cooltime: int
+    isEnabledInitial: bool
+
+
 class MstCommonConsume(BaseModelORJson):
     id: int
     priority: int
@@ -1702,8 +1722,11 @@ class EventEntity(BaseModelORJson):
     mstEventDigging: MstEventDigging | None = None
     mstEventDiggingBlock: list[MstEventDiggingBlock]
     mstEventDiggingReward: list[MstEventDiggingReward]
+    mstEventCooltimeReward: list[MstEventCooltimeReward]
+    mstEventQuestCooltime: list[MstEventQuestCooltime]
     mstItem: list[MstItem]
     mstCommonConsume: list[MstCommonConsume]
+    mstCommonRelease: list[MstCommonRelease]
     mstSvtVoice: list[MstSvtVoice]
     mstVoice: list[MstVoice]
     mstSvtGroup: list[MstSvtGroup]
