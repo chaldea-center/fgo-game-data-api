@@ -1610,6 +1610,7 @@ class NiceEventTreasureBox(BaseModelORJson):
     maxDrawNumOnce: int
     extraGifts: list[NiceGift]
     commonConsume: NiceCommonConsume
+    consumes: list[NiceCommonConsume]
 
 
 class NiceEventDiggingBlock(BaseModelORJson):
@@ -1617,6 +1618,7 @@ class NiceEventDiggingBlock(BaseModelORJson):
     eventId: int
     image: HttpUrl
     commonConsume: NiceCommonConsume
+    consumes: list[NiceCommonConsume]
     objectId: int
     diggingEventPoint: int
     blockNum: int
@@ -1644,6 +1646,7 @@ class NiceEventCooltimeReward(BaseModelORJson):
     lv: int
     name: str
     commonRelease: NiceCommonRelease
+    releaseConditions: list[NiceCommonRelease]
     cooltime: int
     addEventPointRate: int
     gifts: list[NiceGift]
@@ -1666,6 +1669,26 @@ class NiceEventBulletinBoard(BaseModelORJson):
     message: str
     probability: int | None = None
     releaseConditions: list[NiceEventBulletinBoardRelease]
+
+
+class NiceEventRecipeGift(BaseModelORJson):
+    idx: int
+    displayOrder: int
+    topIconId: int
+    gifts: list[NiceGift]
+
+
+class NiceEventRecipe(BaseModelORJson):
+    id: int
+    icon: HttpUrl
+    name: str
+    maxNum: int
+    eventPointItem: NiceItem
+    eventPointNum: int
+    consumes: list[NiceCommonConsume]
+    releaseConditions: list[NiceCommonRelease]
+    closedMessage: str
+    recipeGifts: list[NiceEventRecipeGift]
 
 
 class NiceEventRewardSceneGuide(BaseModelORJson):
@@ -1733,6 +1756,7 @@ class NiceEvent(BaseModelORJson):
     lotteries: list[NiceEventLottery] = []
     treasureBoxes: list[NiceEventTreasureBox] = []
     bulletinBoards: list[NiceEventBulletinBoard] = []
+    recipes: list[NiceEventRecipe] = []
     digging: NiceEventDigging | None
     cooltime: NiceEventCooltime | None
     voicePlays: list[NiceEventVoicePlay] = []
@@ -1828,7 +1852,7 @@ class EnemyScript(BaseModelORJson):
     call: Optional[list[int]] = Field(None, title="Summon these NPC IDs")
     shift: Optional[list[int]] = Field(None, title="Break bar switch to these NPC IDs")
     shiftPosition: Optional[int] = None
-    shiftClear: Optional[list[NiceTrait]] = Field(
+    shiftClear: list[NiceTrait] | None = Field(
         None, title="Active buff traits to remove with break bar"
     )
     skillShift: Optional[list[int]] = None
@@ -1913,7 +1937,7 @@ class EnemyMisc(BaseModelORJson):
     equipTargetIds: Optional[list[int]] = None
     npcSvtClassId: int = 0
     overwriteSvtId: int = 0
-    userCommandCodeIds: list[int]
+    userCommandCodeIds: list[int] = [-1, -1, -1, -1, -1]
     commandCardParam: Optional[list[int]] = None
     status: int = 0
 
