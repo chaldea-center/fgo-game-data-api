@@ -2184,6 +2184,12 @@ class NiceWarAdd(BaseModelORJson):
     endedAt: int
 
 
+class NiceWarQuestSelection(BaseModelORJson):
+    quest: NiceQuest
+    shortcutBanner: HttpUrl | None = None
+    priority: int
+
+
 class NiceWar(BaseModelORJson):
     id: int
     coordinates: list[list[Decimal]]
@@ -2208,9 +2214,10 @@ class NiceWar(BaseModelORJson):
     eventName: str = ""
     lastQuestId: int
     warAdds: list[NiceWarAdd] = []
-    maps: list[NiceMap]
-    spots: list[NiceSpot]
-    spotRoads: list[NiceSpotRoad]
+    maps: list[NiceMap] = []
+    spots: list[NiceSpot] = []
+    spotRoads: list[NiceSpotRoad] = []
+    questSelections: list[NiceWarQuestSelection] = []
 
 
 class NiceAiAct(BaseModelORJson):
@@ -2221,6 +2228,10 @@ class NiceAiAct(BaseModelORJson):
     skillId: Optional[int] = None
     skillLv: Optional[int] = None
     skill: Optional[NiceSkill] = None
+    noblePhantasmId: Optional[int] = None
+    noblePhantasmLv: Optional[int] = None
+    noblePhantasmOc: Optional[int] = None
+    noblePhantasm: Optional[NiceTd] = None
 
 
 class NiceAi(BaseModelORJson):
