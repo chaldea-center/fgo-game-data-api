@@ -1176,14 +1176,14 @@ class MstEventCampaign(BaseModelORJson):
     value: int
     calcType: int
     entryCondMessage: str
-    createdAt: int
+    createdAt: int | None = None
 
 
 class MstEventQuest(BaseModelORJson):
     eventId: int
     questId: int
     phase: int
-    createdAt: int
+    createdAt: int | None = None
 
 
 class MstEventBulletinBoard(BaseModelORJson):
@@ -1222,6 +1222,40 @@ class MstEventRecipeGift(BaseModelORJson):
     giftId: int
     displayOrder: int
     topIconId: int
+
+
+class MstEventFortification(BaseModelORJson):
+    eventId: int
+    idx: int
+    name: str
+    x: int
+    y: int
+    rewardSceneX: int
+    rewardSceneY: int
+    maxFortificationPoint: int
+    workType: int
+    giftId: int
+    commonReleaseId: int
+
+
+class MstEventFortificationDetail(BaseModelORJson):
+    eventId: int
+    fortificationIdx: int
+    position: int
+    name: str
+    classId: int
+    commonReleaseId: int
+
+
+class MstEventFortificationSvt(BaseModelORJson):
+    eventId: int
+    fortificationIdx: int
+    position: int
+    type: int
+    svtId: int
+    limitCount: int
+    lv: int
+    commonReleaseId: int
 
 
 class MstCommonConsume(BaseModelORJson):
