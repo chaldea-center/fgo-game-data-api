@@ -49,8 +49,10 @@ from .gameenums import (
     NiceCondType,
     NiceConsumeType,
     NiceEventCombineCalc,
+    NiceEventFortificationSvtType,
     NiceEventRewardSceneFlag,
     NiceEventType,
+    NiceEventWorkType,
     NiceFuncTargetType,
     NiceFuncType,
     NiceGender,
@@ -66,6 +68,7 @@ from .gameenums import (
     NiceQuestType,
     NiceShopType,
     NiceStatusRank,
+    NiceSvtClassSupportGroupType,
     NiceSvtFlag,
     NiceSvtType,
     NiceSvtVoiceType,
@@ -1711,6 +1714,37 @@ class NiceEventRecipe(BaseModelORJson):
     recipeGifts: list[NiceEventRecipeGift]
 
 
+class NiceEventFortificationDetail(BaseModelORJson):
+    position: int
+    name: str
+    className: NiceSvtClassSupportGroupType
+    releaseConditions: list[NiceCommonRelease]
+
+
+class NiceEventFortificationSvt(BaseModelORJson):
+    position: int
+    type: NiceEventFortificationSvtType
+    svtId: int
+    limitCount: int
+    lv: int
+    releaseConditions: list[NiceCommonRelease]
+
+
+class NiceEventFortification(BaseModelORJson):
+    idx: int
+    name: str
+    x: int
+    y: int
+    rewardSceneX: int
+    rewardSceneY: int
+    maxFortificationPoint: int
+    workType: NiceEventWorkType
+    gifts: list[NiceGift]
+    releaseConditions: list[NiceCommonRelease]
+    details: list[NiceEventFortificationDetail]
+    servants: list[NiceEventFortificationSvt]
+
+
 class NiceEventRewardSceneGuide(BaseModelORJson):
     imageId: int
     limitCount: int = 0
@@ -1782,6 +1816,7 @@ class NiceEvent(BaseModelORJson):
     campaigns: list[NiceEventCampaign] = []
     campaignQuests: list[NiceEventQuest] = []
     voicePlays: list[NiceEventVoicePlay] = []
+    fortifications: list[NiceEventFortification] = []
     voices: list[NiceVoiceGroup] = Field(
         [], description="All voice lines related to this event"
     )
