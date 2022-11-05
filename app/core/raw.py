@@ -2,12 +2,12 @@ from typing import Iterable, Optional
 
 import orjson
 from fastapi import HTTPException
-from redis.asyncio import Redis  # type: ignore
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from ..data.custom_mappings import EXTRA_CHARAFIGURES
 from ..data.shop import get_shop_cost_item_id
 from ..db.helpers import ai, event, fetch, item, quest, script, skill, svt, td, war
+from ..redis import Redis
 from ..redis.helpers.reverse import RedisReverse, get_reverse_ids
 from ..schemas.common import Region, ReverseDepth
 from ..schemas.enums import FUNC_VALS_NOT_BUFF, DetailMissionCondType
@@ -427,7 +427,13 @@ async def get_servant_entity(
     mstTreasureDevice = await get_td_entity_no_reverse_many(conn, td_ids, expand)
 
     item_ids: set[int] = set()
-    for combine in mstCombineLimit + mstCombineSkill + mstCombineAppendPassiveSkill + mstCombineCostume + mstSvtAppendPassiveSkillUnlock:  # type: ignore
+    for combine in (
+        mstCombineLimit
+        + mstCombineSkill
+        + mstCombineAppendPassiveSkill
+        + mstCombineCostume
+        + mstSvtAppendPassiveSkillUnlock
+    ):
         item_ids.update(combine.itemIds)
     if mstSvtCoin is not None:
         item_ids.add(mstSvtCoin.itemId)
@@ -496,13 +502,19 @@ async def get_servant_entity(
             )
         }
         svt_entity.mstSvt.expandedClassPassive = [
-            expand_skills[skill_id] for skill_id in svt_entity.mstSvt.classPassive
+            expand_skills[skill_id]
+            for skill_id in svt_entity.mstSvt.classPassive
+            if skill_id in expand_skills
         ]
         svt_entity.expandedExtraPassive = [
-            expand_skills[skill.skillId] for skill in mstSvtPassiveSkill
+            expand_skills[skill.skillId]
+            for skill in mstSvtPassiveSkill
+            if skill.skillId in expand_skills
         ]
         svt_entity.expandedAppendPassive = [
-            expand_skills[skill.skillId] for skill in mstSvtAppendPassiveSkill
+            expand_skills[skill.skillId]
+            for skill in mstSvtAppendPassiveSkill
+            if skill.skillId in expand_skills
         ]
 
     if lore:

@@ -5,7 +5,6 @@ from typing import Any, Optional, Union
 
 from fastapi import HTTPException
 from fastapi_cache.decorator import cache
-from redis.asyncio import Redis  # type: ignore
 from sqlalchemy.ext.asyncio import AsyncConnection
 
 from ...config import Settings
@@ -13,6 +12,7 @@ from ...db.helpers import war
 from ...db.helpers.quest import get_questSelect_container
 from ...db.helpers.rayshift import get_rayshift_drops
 from ...rayshift.quest import get_quest_detail
+from ...redis import Redis
 from ...redis.helpers.quest import RayshiftRedisData, get_stages_cache, set_stages_cache
 from ...schemas.common import Language, Region, ScriptLink
 from ...schemas.enums import CLASS_NAME
@@ -34,6 +34,7 @@ from ...schemas.nice import (
     NiceQuestPhaseScript,
     NiceQuestRelease,
     NiceStage,
+    NiceStageStartMovie,
     QuestEnemy,
     SupportServant,
 )
@@ -51,7 +52,7 @@ from ...schemas.raw import (
     ScriptFile,
 )
 from .. import raw
-from ..utils import get_flags, get_traits_list, get_translation
+from ..utils import fmt_url, get_flags, get_traits_list, get_translation
 from .base_script import get_nice_script_link
 from .bgm import get_nice_bgm
 from .enemy import get_nice_drop, get_quest_enemies
@@ -94,15 +95,21 @@ def get_nice_quest_message(message: MstQuestMessage) -> NiceQuestMessage:
 
 
 def get_nice_stage(
-    region: Region, raw_stage: MstStage, enemies: list[QuestEnemy], bgms: list[MstBgm]
+    region: Region,
+    raw_stage: MstStage,
+    enemies: list[QuestEnemy],
+    bgms: list[MstBgm],
+    waveStartMovies: dict[int, list[NiceStageStartMovie]],
 ) -> NiceStage:
     bgm = get_nice_bgm(region, next(bgm for bgm in bgms if bgm.id == raw_stage.bgmId))
+
     return NiceStage(
         wave=raw_stage.wave,
         bgm=bgm,
         fieldAis=raw_stage.script.get("aiFieldIds", []),
         call=raw_stage.script.get("call", []),
         enemyFieldPosCount=raw_stage.script.get("enemyFieldPosCount"),
+        waveStartMovies=waveStartMovies.get(raw_stage.wave, []),
         enemies=enemies,
     )
 
@@ -360,8 +367,28 @@ async def get_nice_quest_phase(
         else:
             save_stages_cache = False
 
+    waveStartMovies: dict[int, list[NiceStageStartMovie]] = defaultdict(list)
+    if (
+        "waveStartMovie" in db_data.raw.mstQuestPhase.script
+        and "movieWave" in db_data.raw.mstQuestPhase.script
+    ):
+        for movie_name, wave in zip(
+            db_data.raw.mstQuestPhase.script["waveStartMovie"],
+            db_data.raw.mstQuestPhase.script["movieWave"],
+        ):
+            waveStartMovies[wave].append(
+                NiceStageStartMovie(
+                    waveStartMovie=fmt_url(
+                        AssetURL.movie,
+                        base_url=settings.asset_url,
+                        region=region,
+                        item_id=movie_name.removesuffix(".usm"),
+                    ),
+                )
+            )
+
     new_nice_stages = [
-        get_nice_stage(region, stage, enemies, db_data.raw.mstBgm)
+        get_nice_stage(region, stage, enemies, db_data.raw.mstBgm, waveStartMovies)
         for stage, enemies in zip(stages, quest_enemies)
     ]
     db_data.nice.stages = new_nice_stages

@@ -15,7 +15,7 @@ from pydantic import (
 )
 from pydantic.main import BaseModel
 from pydantic.tools import parse_obj_as
-from uvicorn.logging import DefaultFormatter  # type: ignore
+from uvicorn.logging import DefaultFormatter
 
 from .schemas.common import Region
 
@@ -40,7 +40,7 @@ class RegionSettings(BaseModel):
     postgresdsn: PostgresDsn
 
 
-# pylint: disable=no-self-argument, no-self-use
+# pylint: disable=no-self-argument
 class Settings(BaseSettings):
     data: dict[Region, RegionSettings] = Field(default=...)
     redisdsn: RedisDsn = Field(default=...)

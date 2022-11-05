@@ -1,5 +1,5 @@
 from decimal import Decimal
-from enum import Enum
+from enum import StrEnum
 from typing import Generic, Optional, TypeVar
 
 from pydantic import BaseModel, Field, HttpUrl
@@ -155,6 +155,7 @@ class AssetURL:
     script = "{base_url}/{region}/Script/{script_path}.txt"
     bgmLogo = "{base_url}/{region}/MyRoomSound/soundlogo_{logo_id:0>3}.png"
     servantModel = "{base_url}/{region}/Servants/{item_id}/manifest.json"
+    movie = "{base_url}/{region}/Movie/{item_id}.mp4"
 
 
 class NiceBaseGift(BaseModelORJson):
@@ -2010,7 +2011,7 @@ class EnemyDrop(BaseModelORJson):
     dropVariance: float
 
 
-class DeckType(str, Enum):
+class DeckType(StrEnum):
     ENEMY = "enemy"
     CALL = "call"
     SHIFT = "shift"
@@ -2057,12 +2058,17 @@ class FieldAi(BaseModelORJson):
     id: int
 
 
+class NiceStageStartMovie(BaseModelORJson):
+    waveStartMovie: HttpUrl
+
+
 class NiceStage(BaseModelORJson):
     wave: int
     bgm: NiceBgm
     fieldAis: list[FieldAi] = []
     call: list[int] = Field([], title="Summon these NPC IDs")
     enemyFieldPosCount: int | None = None
+    waveStartMovies: list[NiceStageStartMovie] = []
     enemies: list[QuestEnemy] = []
 
 
