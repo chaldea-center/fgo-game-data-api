@@ -766,6 +766,7 @@ class Trait(StrEnum):
     buffDisableColorCard = "buffDisableColorCard"
     buffChangeField = "buffChangeField"
     buffIncreaseDefenceAgainstIndividuality = "buffIncreaseDefenceAgainstIndividuality"
+    buffDefUp = "buffDefUp"
     buffInvinciblePierce = "buffInvinciblePierce"
     buffHpRecoveryPerTurn = "buffHpRecoveryPerTurn"
     buffNegativeEffectImmunity = "buffNegativeEffectImmunity"
@@ -787,6 +788,7 @@ class Trait(StrEnum):
     fieldCity = "fieldCity"
     shadowServant = "shadowServant"
     aoeNP = "aoeNP"
+    stNP = "stNP"
     giant = "giant"
     childServant = "childServant"
     buffSpecialInvincible = "buffSpecialInvincible"
@@ -1099,7 +1101,7 @@ TRAIT_NAME: dict[int, Trait] = {
     3055: Trait.buffLockCardsDeck,  # Summer BB
     3056: Trait.buffDisableColorCard,
     3057: Trait.buffChangeField,
-    3058: Trait.buffIncreaseDefenceAgainstIndividuality,  # Unsure
+    3058: Trait.buffDefUp,
     3059: Trait.buffInvinciblePierce,
     3060: Trait.buffHpRecoveryPerTurn,
     3061: Trait.buffNegativeEffectImmunity,
@@ -1121,6 +1123,7 @@ TRAIT_NAME: dict[int, Trait] = {
     4008: Trait.faceCard,  # Normal Buster, Arts, Quick, Extra Attack
     4100: Trait.criticalHit,
     4101: Trait.aoeNP,
+    4102: Trait.stNP,
     5000: Trait.canBeInBattle,  # can be NPC, enemy or playable servant i.e. not CE
     5010: Trait.notBasedOnServant,
     94000015: Trait.eventSaberWars,
@@ -1157,6 +1160,7 @@ OLD_TRAIT_MAPPING = {
     Trait.skyOrEarthExceptPseudoAndDemi: 2037,
     Trait.kingproteaGrowth: 2387,
     Trait.gubijin: 2833,
+    Trait.buffIncreaseDefenceAgainstIndividuality: 3058,
 }
 
 TRAIT_NAME_REVERSE |= OLD_TRAIT_MAPPING
