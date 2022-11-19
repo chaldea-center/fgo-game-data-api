@@ -265,6 +265,7 @@ async def search_skill(
         search_param.lvl1coolDown,
         search_param.numFunctions,
         search_param.svalsContain,
+        search_param.triggerSkillId,
     )
 
     if search_param.name:
@@ -305,6 +306,7 @@ async def search_td(
         search_param.minNpNpGain,
         search_param.maxNpNpGain,
         search_param.svalsContain,
+        search_param.triggerSkillId,
     )
 
     if search_param.name:
@@ -446,6 +448,8 @@ async def search_quest(
         enemy_class={
             CLASS_NAME_REVERSE[svt_class] for svt_class in search_param.enemyClassName
         },
+        enemy_skill=search_param.enemySkillId,
+        enemy_np=search_param.enemyNoblePhantasmId,
     )
 
     return sorted(matches, key=lambda quest: (quest.id, quest.phase))

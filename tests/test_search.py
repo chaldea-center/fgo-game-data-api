@@ -138,6 +138,7 @@ test_cases_dict: dict[str, tuple[str, set[int]]] = {
         {454650},
     ),
     "skill_search_svals_contain": ("JP/skill/search?svalsContain=964096", {706350}),
+    "skill_search_trigger": ("JP/skill/search?triggerSkillId=961313", {450450, 450550}),
     "np_search_minNp_strength": (
         "NA/NP/search?minNpNpGain=220&strengthStatus=2",
         {601002},
@@ -152,6 +153,7 @@ test_cases_dict: dict[str, tuple[str, set[int]]] = {
         {504201},
     ),
     "np_search_svals_contain": ("JP/NP/search?svalsContain=962350", {504101}),
+    "np_search_trigger": ("JP/NP/search?triggerSkillId=962350", {504101}),
     "buff_type_tvals": (
         "NA/buff/search?type=upCommandall&tvals=cardQuick&name=Boost",
         {260, 499},
@@ -279,6 +281,14 @@ basic_quest_search_test_cases_dict = {
     "quest_flag": (
         "JP/quest/phase/search?flag=supportSelectAfterScript&flag=branch&warId=8362",
         {(94057198, 1), (94057199, 1)},
+    ),
+    "quest_enemySkillId": (
+        "JP/quest/phase/search?enemySkillId=968351",
+        {(94073901, 1)},
+    ),
+    "quest_enemyNoblePhantasmId": (
+        "JP/quest/phase/search?enemyNoblePhantasmId=484",
+        {(94060012, 1)},
     ),
 }
 basic_quest_phase_test_cases = [
