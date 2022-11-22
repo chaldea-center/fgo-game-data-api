@@ -1540,6 +1540,7 @@ class NiceEventMissionCondition(BaseModelORJson):
     closedMessage: str = ""
     flag: int = 0
     detail: Optional[NiceEventMissionConditionDetail] = None
+    details: list[NiceEventMissionConditionDetail] | None = None
 
 
 class NiceEventMission(BaseModelORJson):
@@ -1561,6 +1562,14 @@ class NiceEventMission(BaseModelORJson):
     notfyPriority: int
     presentMessageId: int
     conds: list[NiceEventMissionCondition] = []
+
+
+class NiceEventRandomMission(BaseModelORJson):
+    missionId: int
+    missionRank: int
+    condType: NiceCondType
+    condId: int
+    condNum: int
 
 
 class NiceEventTowerReward(BaseModelORJson):
@@ -1808,6 +1817,7 @@ class NiceEvent(BaseModelORJson):
     pointGroups: list[NiceEventPointGroup] = []
     pointBuffs: list[NiceEventPointBuff] = []
     missions: list[NiceEventMission] = []
+    randomMissions: list[NiceEventRandomMission] = []
     towers: list[NiceEventTower] = []
     lotteries: list[NiceEventLottery] = []
     treasureBoxes: list[NiceEventTreasureBox] = []
