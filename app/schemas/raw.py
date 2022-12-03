@@ -1551,6 +1551,32 @@ class MstQuestMessage(BaseModelORJson):
     displayType: int
 
 
+class MstQuestRestriction(BaseModelORJson):
+    questId: int
+    phase: int
+    restrictionId: int
+    frequencyType: int
+    dialogMessage: str
+    noticeMessage: str
+    title: str
+
+
+class MstQuestRestrictionInfo(BaseModelORJson):
+    script: dict[str, Any]
+    questId: int
+    phase: int
+    flag: int
+
+
+class MstRestriction(BaseModelORJson):
+    targetVals: list[int]
+    targetVals2: list[int]
+    id: int
+    name: str
+    type: int
+    rangeType: int
+
+
 class MstStage(BaseModelORJson):
     npcDeckIds: list[int]  # [2, 1000]
     script: dict[str, Any]  # {}
@@ -1785,6 +1811,9 @@ class QuestPhaseEntity(QuestEntity):
     npcFollowerRelease: list[NpcFollowerRelease]
     npcSvtFollower: list[NpcSvtFollower]
     npcSvtEquip: list[NpcSvtEquip]
+    mstQuestRestriction: list[MstQuestRestriction]
+    mstQuestRestrictionInfo: list[MstQuestRestrictionInfo]
+    mstRestriction: list[MstRestriction]
 
 
 class ScriptEntity(BaseModelORJson):
@@ -1864,6 +1893,17 @@ class WarEntity(BaseModelORJson):
     mstQuest: list[QuestEntity]
     mstSpotRoad: list[MstSpotRoad]
     mstWarQuestSelection: list[MstWarQuestSelection]
+
+
+class ShopEntity(BaseModelORJson):
+    mstShop: MstShop
+    mstSetItem: list[MstSetItem]
+    mstShopRelease: list[MstShopRelease]
+    mstShopScript: MstShopScript | None
+    mstItem: list[MstItem]
+    mstGift: list[MstGift]
+    mstGiftAdd: list[MstGiftAdd]
+    mstCommonConsume: list[MstCommonConsume]
 
 
 class MasterMissionEntity(BaseModelORJson):

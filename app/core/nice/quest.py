@@ -18,9 +18,12 @@ from ...schemas.common import Language, Region, ScriptLink
 from ...schemas.enums import CLASS_NAME
 from ...schemas.gameenums import (
     COND_TYPE_NAME,
+    FREQUENCY_TYPE_NAME,
     QUEST_AFTER_CLEAR_NAME,
     QUEST_CONSUME_TYPE_NAME,
     QUEST_TYPE_NAME,
+    RESTRICTION_RANGE_TYPE_NAME,
+    RESTRICTION_TYPE_NAME,
     Quest_FLAG_NAME,
     QuestType,
 )
@@ -31,8 +34,10 @@ from ...schemas.nice import (
     NiceQuest,
     NiceQuestMessage,
     NiceQuestPhase,
+    NiceQuestPhaseRestriction,
     NiceQuestPhaseScript,
     NiceQuestRelease,
+    NiceRestriction,
     NiceStage,
     NiceStageStartMovie,
     QuestEnemy,
@@ -44,6 +49,8 @@ from ...schemas.raw import (
     MstGift,
     MstQuestMessage,
     MstQuestRelease,
+    MstQuestRestriction,
+    MstRestriction,
     MstSpot,
     MstStage,
     MstWar,
@@ -91,6 +98,25 @@ def get_nice_quest_message(message: MstQuestMessage) -> NiceQuestMessage:
         condType=COND_TYPE_NAME[message.condType],
         targetId=message.targetId,
         targetNum=message.targetNum,
+    )
+
+
+def get_nice_quest_restriction(
+    quest_restriction: MstQuestRestriction, restriction: MstRestriction
+) -> NiceQuestPhaseRestriction:
+    return NiceQuestPhaseRestriction(
+        restriction=NiceRestriction(
+            id=restriction.id,
+            name=restriction.name,
+            type=RESTRICTION_TYPE_NAME[restriction.type],
+            rangeType=RESTRICTION_RANGE_TYPE_NAME[restriction.rangeType],
+            targetVals=restriction.targetVals,
+            targetVals2=restriction.targetVals2,
+        ),
+        frequencyType=FREQUENCY_TYPE_NAME[quest_restriction.frequencyType],
+        dialogMessage=quest_restriction.dialogMessage,
+        noticeMessage=quest_restriction.noticeMessage,
+        title=quest_restriction.title,
     )
 
 
@@ -226,17 +252,25 @@ async def get_nice_quest_phase_no_rayshift(
     nice_data = await get_nice_quest(conn, region, raw_quest, lang)
 
     support_servants: list[SupportServant] = []
-    if raw_quest.npcFollower:
-        support_servants = await get_nice_support_servants(
-            conn,
-            redis,
-            region,
-            raw_quest.npcFollower,
-            raw_quest.npcFollowerRelease,
-            raw_quest.npcSvtFollower,
-            raw_quest.npcSvtEquip,
-            lang,
+    if raw_quest.npcFollower or "aiNpc" in raw_quest.mstQuestPhase.script:
+        npcs = await get_nice_support_servants(
+            conn=conn,
+            redis=redis,
+            region=region,
+            npcFollower=raw_quest.npcFollower,
+            npcFollowerRelease=raw_quest.npcFollowerRelease,
+            npcSvtFollower=raw_quest.npcSvtFollower,
+            npcSvtEquip=raw_quest.npcSvtEquip,
+            lang=lang,
+            aiNpcId=raw_quest.mstQuestPhase.script.get("aiNpc", {}).get("npcId"),
         )
+        support_servants = npcs.support_servants
+        if "aiNpc" in raw_quest.mstQuestPhase.script:
+            raw_quest.mstQuestPhase.script["aiNpc"]["npc"] = npcs.ai_npc
+
+    restrictions = {
+        restriction.id: restriction for restriction in raw_quest.mstRestriction
+    }
 
     nice_data |= {
         "phase": raw_quest.mstQuestPhase.phase,
@@ -259,6 +293,12 @@ async def get_nice_quest_phase_no_rayshift(
             for message in sorted(
                 raw_quest.mstQuestMessage, key=lambda script: script.idx
             )
+        ],
+        "restrictions": [
+            get_nice_quest_restriction(
+                quest_restriction, restrictions[quest_restriction.restrictionId]
+            )
+            for quest_restriction in raw_quest.mstQuestRestriction
         ],
         "supportServants": support_servants,
         "stages": [],

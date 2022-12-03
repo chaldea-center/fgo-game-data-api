@@ -10,7 +10,7 @@ from sqlalchemy import (
     text,
 )
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB, TEXT
-from sqlalchemy.sql import func
+from sqlalchemy.sql import cast, func
 
 from .base import metadata
 
@@ -1755,6 +1755,11 @@ mstQuestPhase = Table(
     Column("encountSvtIds", ARRAY(Integer)),
 )
 
+Index(
+    "ix_mstQuestPhase_script_aiNpc_npcId",
+    cast(mstQuestPhase.c.script["aiNpc"]["npcId"], Integer),
+)
+
 
 mstQuestPhaseDetail = Table(
     "mstQuestPhaseDetail",
@@ -1769,6 +1774,40 @@ mstQuestPhaseDetail = Table(
     Column("actConsume", Integer),
     Column("flag", BigInteger),
     Column("recommendLv", String),
+)
+
+
+mstQuestRestriction = Table(
+    "mstQuestRestriction",
+    metadata,
+    Column("questId", Integer, index=True),
+    Column("phase", Integer, index=True),
+    Column("restrictionId", Integer),
+    Column("frequencyType", Integer),
+    Column("dialogMessage", String),
+    Column("noticeMessage", String),
+    Column("title", String),
+)
+
+mstQuestRestrictionInfo = Table(
+    "mstQuestRestrictionInfo",
+    metadata,
+    Column("script", JSONB),
+    Column("questId", Integer, index=True),
+    Column("phase", Integer, index=True),
+    Column("flag", Integer),
+)
+
+
+mstRestriction = Table(
+    "mstRestriction",
+    metadata,
+    Column("targetVals", ARRAY(Integer)),
+    Column("targetVals2", ARRAY(Integer)),
+    Column("id", Integer, index=True),
+    Column("name", String),
+    Column("type", Integer),
+    Column("rangeType", Integer),
 )
 
 
@@ -1986,6 +2025,7 @@ TABLES_TO_BE_LOADED = [
     [mstQuestMessage],
     [mstQuestPhaseDetail],
     [mstQuestRelease],
+    [mstQuestRestriction, mstQuestRestrictionInfo, mstRestriction],
     [mstStage],
     [mstStageRemap],
     [npcFollower],
