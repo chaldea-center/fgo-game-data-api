@@ -1395,7 +1395,7 @@ class NiceItemSet(BaseModelORJson):
     purchaseType: NicePurchaseType
     targetId: int
     setNum: int
-    gifts: list[NiceGift]
+    gifts: list[NiceGift] = []
 
 
 class NiceCommonConsume(BaseModelORJson):
@@ -1434,7 +1434,7 @@ class NiceShop(BaseModelORJson):
     )
     cost: NiceItemAmount
     consumes: list[NiceCommonConsume] = Field(
-        ..., title="Common Consume", description="If payType is commonConsume"
+        [], title="Common Consume", description="If payType is commonConsume"
     )
     purchaseType: NicePurchaseType = Field(
         ..., title="Reward Type", description="Type of items to be received."
