@@ -47,6 +47,7 @@ from ..schemas.raw import (
     MstEquipExp,
     MstEquipSkill,
     MstEvent,
+    MstEventAlloutBattle,
     MstEventBulletinBoard,
     MstEventBulletinBoardRelease,
     MstEventCampaign,
@@ -343,6 +344,15 @@ async def get_svt_scripts(
         return []
 
     return await fetch.get_all_multiple(conn, MstSvtScript, ids)
+
+
+async def get_event_allout(
+    conn: AsyncConnection, event_ids: Iterable[int]
+) -> list[MstEventAlloutBattle]:
+    if not event_ids:
+        return []
+
+    return await fetch.get_all_multiple(conn, MstEventAlloutBattle, event_ids)
 
 
 async def get_voice_from_svtVoice(
@@ -1249,3 +1259,10 @@ async def get_raw_mstShop(conn: AsyncConnection, shop_id: int) -> MstShop:
 async def get_shop_entity(conn: AsyncConnection, shop_id: int) -> ShopEntity:
     shop = await get_raw_mstShop(conn, shop_id)
     return (await get_shop_entities(conn, [shop]))[0]
+
+
+async def get_common_releases(
+    conn: AsyncConnection, release_ids: Iterable[int]
+) -> list[MstCommonRelease]:
+    releases = await fetch.get_all_multiple(conn, MstCommonRelease, release_ids)
+    return releases

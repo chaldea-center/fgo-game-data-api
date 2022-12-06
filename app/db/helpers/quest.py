@@ -360,7 +360,6 @@ JOINED_QUEST_TABLES = (
     .outerjoin(
         mstClosedMessage, mstClosedMessage.c.id == mstQuestRelease.c.closedMessageId
     )
-    .outerjoin(rayshiftQuest, rayshiftQuest.c.questId == mstQuest.c.id)
     .outerjoin(mstGiftAdd, mstGiftAdd.c.giftId == mstQuest.c.giftId)
     .outerjoin(
         mstGift,
@@ -371,13 +370,19 @@ JOINED_QUEST_TABLES = (
 )
 
 
-JOINED_QUEST_ENTITY_TABLES = JOINED_QUEST_TABLES.outerjoin(
-    mstQuestPhaseDetail,
-    and_(
-        mstQuest.c.id == mstQuestPhaseDetail.c.questId,
-        mstQuestPhase.c.phase == mstQuestPhaseDetail.c.phase,
-    ),
-).outerjoin(scripts_cte, mstQuest.c.id == scripts_cte.c.questId)
+JOINED_QUEST_ENTITY_TABLES = (
+    JOINED_QUEST_TABLES.outerjoin(
+        rayshiftQuest, rayshiftQuest.c.questId == mstQuest.c.id
+    )
+    .outerjoin(
+        mstQuestPhaseDetail,
+        and_(
+            mstQuest.c.id == mstQuestPhaseDetail.c.questId,
+            mstQuestPhase.c.phase == mstQuestPhaseDetail.c.phase,
+        ),
+    )
+    .outerjoin(scripts_cte, mstQuest.c.id == scripts_cte.c.questId)
+)
 
 
 phasesWithEnemies = func.to_jsonb(
@@ -523,7 +528,10 @@ async def get_quest_phase_entity(
             mstQuestRestriction,
             and_(
                 mstQuest.c.id == mstQuestRestriction.c.questId,
-                mstQuestPhase.c.phase == mstQuestRestriction.c.phase,
+                or_(
+                    mstQuestPhase.c.phase == mstQuestRestriction.c.phase,
+                    mstQuestRestriction.c.phase == 0,
+                ),
             ),
         )
         .outerjoin(
@@ -537,14 +545,6 @@ async def get_quest_phase_entity(
             mstRestriction,
             mstRestriction.c.id == mstQuestRestriction.c.restrictionId,
         )
-        .outerjoin(
-            npcSvtFollower,
-            or_(
-                npcFollower.c.leaderSvtId == npcSvtFollower.c.id,
-                cast(mstQuestPhase.c.script["aiNpc"]["npcId"], Integer)
-                == npcSvtFollower.c.id,
-            ),
-        )
         .outerjoin(npcSvtEquip, npcFollower.c.svtEquipIds[1] == npcSvtEquip.c.id)
         .outerjoin(mstBgm, mstBgm.c.id == mstStage.c.bgmId)
         .outerjoin(
@@ -555,6 +555,14 @@ async def get_quest_phase_entity(
             ),
         )
         .outerjoin(all_scripts_cte, mstQuest.c.id == all_scripts_cte.c.questId)
+        .outerjoin(
+            npcSvtFollower,
+            or_(
+                npcFollower.c.leaderSvtId == npcSvtFollower.c.id,
+                cast(mstQuestPhase.c.script["aiNpc"]["npcId"], Integer)
+                == npcSvtFollower.c.id,
+            ),
+        )
     )
 
     select_quest_phase = [
@@ -565,7 +573,12 @@ async def get_quest_phase_entity(
         sql_jsonb_agg(mstGift),
         sql_jsonb_agg(mstGiftAdd),
         all_phases_cte.c.phases,
-        phasesWithEnemies,
+        func.coalesce(
+            select(func.array_remove(array_agg(rayshiftQuest.c.phase.distinct()), None))
+            .where(rayshiftQuest.c.questId == quest_id)
+            .scalar_subquery(),
+            [],
+        ).label("phasesWithEnemies"),
         func.to_jsonb(mstQuestPhase.table_valued()).label(mstQuestPhase.name),
         func.to_jsonb(mstQuestPhaseDetail.table_valued()).label(
             mstQuestPhaseDetail.name

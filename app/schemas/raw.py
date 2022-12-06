@@ -1275,6 +1275,12 @@ class MstCommonConsume(BaseModelORJson):
     num: int
 
 
+class MstEventAlloutBattle(BaseModelORJson):
+    eventId: int
+    alloutBattleId: int
+    warId: int
+
+
 class MstEvent(BaseModelORJson):
     script: list[dict[str, str]]  # []
     id: int  # 10083
@@ -1570,7 +1576,7 @@ class MstQuestRestrictionInfo(BaseModelORJson):
 
 class MstRestriction(BaseModelORJson):
     targetVals: list[int]
-    targetVals2: list[int]
+    targetVals2: list[int] | None
     id: int
     name: str
     type: int

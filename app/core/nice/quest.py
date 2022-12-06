@@ -111,7 +111,7 @@ def get_nice_quest_restriction(
             type=RESTRICTION_TYPE_NAME[restriction.type],
             rangeType=RESTRICTION_RANGE_TYPE_NAME[restriction.rangeType],
             targetVals=restriction.targetVals,
-            targetVals2=restriction.targetVals2,
+            targetVals2=restriction.targetVals2 if restriction.targetVals2 else [],
         ),
         frequencyType=FREQUENCY_TYPE_NAME[quest_restriction.frequencyType],
         dialogMessage=quest_restriction.dialogMessage,
@@ -265,7 +265,7 @@ async def get_nice_quest_phase_no_rayshift(
             aiNpcId=raw_quest.mstQuestPhase.script.get("aiNpc", {}).get("npcId"),
         )
         support_servants = npcs.support_servants
-        if "aiNpc" in raw_quest.mstQuestPhase.script:
+        if "aiNpc" in raw_quest.mstQuestPhase.script and npcs.ai_npc is not None:
             raw_quest.mstQuestPhase.script["aiNpc"]["npc"] = npcs.ai_npc
 
     restrictions = {
