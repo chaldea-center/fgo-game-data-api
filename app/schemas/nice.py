@@ -708,7 +708,7 @@ class ExtraAssets(ExtraCCAssets):
 class NiceCardDetail(BaseModel):
     hitsDistribution: list[int]
     attackIndividuality: list[NiceTrait]
-    attackType: AttackType
+    attackType: AttackType = AttackType.ST
 
 
 AscensionAddData = TypeVar("AscensionAddData")
@@ -1005,7 +1005,7 @@ class NiceVoiceGroup(BaseModel):
 class NiceLore(BaseModel):
     cv: str = ""
     illustrator: str
-    stats: Optional[NiceLoreStats] = None
+    stats: Optional[NiceLoreStats] = NiceLoreStats()
     costume: dict[int, NiceCostume] = Field(
         {},
         title="Costume Details",
