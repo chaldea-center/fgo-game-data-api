@@ -910,6 +910,12 @@ class Trait(StrEnum):
     moon = "moon"
 
 
+    @classmethod
+    def _missing_(cls, value: object):
+        return Trait.unknown
+
+
+
 TRAIT_NAME: dict[int, Trait] = {
     1: Trait.genderMale,
     2: Trait.genderFemale,
