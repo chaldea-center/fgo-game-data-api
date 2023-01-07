@@ -908,6 +908,8 @@ class Trait(StrEnum):
     hasGoddessMetamorphosis = "hasGoddessMetamorphosis"
     servantsWithSkyAttribute = "servantsWithSkyAttribute"
     moon = "moon"
+    cardWeak = "cardWeak"
+    cardStrong = "cardStrong"
 
 
     @classmethod
@@ -1157,6 +1159,8 @@ TRAIT_NAME: dict[int, Trait] = {
     4002: Trait.cardBuster,
     4003: Trait.cardQuick,
     4004: Trait.cardExtra,
+    4005: Trait.cardWeak,
+    4006: Trait.cardStrong,
     4007: Trait.cardNP,
     4008: Trait.faceCard,  # Normal Buster, Arts, Quick, Extra Attack
     4100: Trait.criticalHit,
