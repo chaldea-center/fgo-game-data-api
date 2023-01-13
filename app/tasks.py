@@ -469,17 +469,25 @@ async def load_and_export(
     redis: Redis,
     region_path: dict[Region, DirectoryPath],
     async_engines: dict[Region, AsyncEngine],
+    enable_webhook: bool,
 ) -> None:  # pragma: no cover
     if settings.write_postgres_data:
         update_db(region_path)
     if settings.write_redis_data:
         await load_redis_data(redis, region_path)
+        await update_master_repo_info(redis, region_path)
     if settings.write_postgres_data or settings.write_redis_data:
         await load_svt_extra(redis, region_path)
-    await update_master_repo_info(redis, region_path)
+        if enable_webhook:
+            await report_webhooks(region_path, "load")
+
     if settings.clear_redis_cache:
         await clear_redis_cache(redis, region_path)
-    await generate_exports(redis, region_path, async_engines)
+
+    if settings.export_all_nice:
+        await generate_exports(redis, region_path, async_engines)
+        if enable_webhook:
+            await report_webhooks(region_path, "export")
 
 
 def update_data_repo(
@@ -495,12 +503,15 @@ def update_data_repo(
 
 
 async def report_webhooks(
-    region_path: dict[Region, DirectoryPath]
+    region_path: dict[Region, DirectoryPath],
+    event: str,
 ) -> None:  # pragma: no cover
     async with httpx.AsyncClient() as client:
         for index, url in enumerate(settings.webhooks):
             try:
-                await client.post(url, json={"regions": list(region_path.keys())})
+                await client.post(
+                    url, json={"regions": list(region_path.keys()), "event": event}
+                )
             except Exception:  # pylint: disable=broad-except
                 logger.exception(f"Failed to report webhook {index}")
 
@@ -511,5 +522,4 @@ async def pull_and_update(
     redis: Redis,
 ) -> None:  # pragma: no cover
     await run_in_threadpool(lambda: update_data_repo(region_path))
-    await load_and_export(redis, region_path, async_engines)
-    await report_webhooks(region_path)
+    await load_and_export(redis, region_path, async_engines, True)

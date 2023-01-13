@@ -712,6 +712,10 @@ class NiceCardDetail(BaseModel):
     hitsDistribution: list[int]
     attackIndividuality: list[NiceTrait]
     attackType: NiceCommandCardAttackType = NiceCommandCardAttackType.one
+    damageRate: int | None
+    attackNpRate: int | None
+    defenseNpRate: int | None
+    dropStarRate: int | None
 
 
 AscensionAddData = TypeVar("AscensionAddData")
@@ -2075,7 +2079,7 @@ class QuestEnemy(BaseModelORJson):
     noblePhantasm: EnemyTd = EnemyTd()
     serverMod: EnemyServerMod
     ai: EnemyAi
-    enemyScript: EnemyScript = EnemyScript()
+    enemyScript: EnemyScript = Field(EnemyScript)
     limit: EnemyLimit
     misc: EnemyMisc
 
