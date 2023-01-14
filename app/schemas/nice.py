@@ -960,7 +960,7 @@ class NiceVoiceLine(BaseModelORJson):
     )
     id: list[str] = Field(..., title="Voice line IDs", description="Voice line IDs.")
     audioAssets: list[str] = Field(
-        ..., title="Voice line mp3 URLs", description="Voice line mp3 URLs."
+        [], title="Voice line mp3 URLs", description="Voice line mp3 URLs."
     )
     delay: list[Decimal] = Field(
         [],
@@ -2079,9 +2079,9 @@ class QuestEnemy(BaseModelORJson):
     noblePhantasm: EnemyTd = EnemyTd()
     serverMod: EnemyServerMod
     ai: EnemyAi
-    enemyScript: EnemyScript = Field(EnemyScript)
+    enemyScript: EnemyScript = EnemyScript()  # type: ignore
     limit: EnemyLimit
-    misc: EnemyMisc
+    misc: EnemyMisc = EnemyMisc()
 
 
 class FieldAi(BaseModelORJson):
