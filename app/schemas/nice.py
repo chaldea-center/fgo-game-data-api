@@ -1,6 +1,6 @@
 from decimal import Decimal
 from enum import StrEnum
-from typing import Generic, Optional, TypeVar
+from typing import Any, Generic, Optional, TypeVar
 
 from pydantic import BaseModel, Field, HttpUrl
 from pydantic.generics import GenericModel
@@ -1958,6 +1958,10 @@ class EnemyScript(BaseModelORJson):
     NoSkipDead: Optional[bool] = None
 
 
+class EnemyInfoScript(BaseModelORJson):
+    isAddition: bool | None
+
+
 class EnemySkill(BaseModelORJson):
     skillId1: int = 0
     skillId2: int = 0
@@ -2051,6 +2055,7 @@ class DeckType(StrEnum):
     TRANSFORM = "transform"
     SKILL_SHIFT = "skillShift"
     MISSION_TARGET_SKILL_SHIFT = "missionTargetSkillShift"
+    AI_NPC = "aiNpc"
 
 
 class QuestEnemy(BaseModelORJson):
@@ -2080,6 +2085,9 @@ class QuestEnemy(BaseModelORJson):
     serverMod: EnemyServerMod
     ai: EnemyAi
     enemyScript: EnemyScript = EnemyScript()  # type: ignore
+    originalEnemyScript: dict[str, Any] = {}
+    infoScript: EnemyInfoScript = EnemyInfoScript()  # type: ignore
+    originalInfoScript: dict[str, Any] = {}
     limit: EnemyLimit
     misc: EnemyMisc = EnemyMisc()
 
@@ -2176,6 +2184,7 @@ class SupportServant(BaseModelORJson):
 
 class NiceQuestPhaseAiNpc(BaseModelORJson):
     npc: NpcServant
+    detail: QuestEnemy | None = None
     aiIds: list[int]
 
 

@@ -638,7 +638,7 @@ mstSvtScript = Table(
 )
 
 
-Index("ix_mstSvtScript_svtId", mstSvtScript.c.id / 10)
+Index("ix_mstSvtScript_svtId", mstSvtScript.c.id // 10)
 
 
 mstSvtComment = Table(
@@ -1506,6 +1506,7 @@ mstBgm = Table(
     Column("flag", Integer),
     Column("shopId", Integer),
     Column("logoId", Integer),
+    Column("script", String),
 )
 
 

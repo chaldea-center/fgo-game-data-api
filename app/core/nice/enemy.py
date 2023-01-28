@@ -19,6 +19,7 @@ from ...schemas.nice import (
     DeckType,
     EnemyAi,
     EnemyDrop,
+    EnemyInfoScript,
     EnemyLimit,
     EnemyMisc,
     EnemyPassive,
@@ -138,6 +139,15 @@ def get_enemy_script(enemyScript: dict[str, Any]) -> EnemyScript:
         enemy_script["forceDropItem"] = "forceDropItem" in enemyScript
 
     return EnemyScript.parse_obj(enemy_script)
+
+
+def get_enemy_info_script(infoScript: dict[str, Any]) -> EnemyInfoScript:
+    info_script: dict[str, Any] = {}
+
+    if "isAddition" in infoScript:
+        info_script["isAddition"] = "isAddition" in infoScript
+
+    return EnemyInfoScript.parse_obj(info_script)
 
 
 def get_enemy_skills(svt: UserSvt, all_skills: MultipleNiceSkills) -> EnemySkill:
@@ -266,6 +276,11 @@ async def get_quest_enemy(
         enemyScript=get_enemy_script(
             deck_svt.enemyScript if deck_svt.enemyScript else {}
         ),
+        originalEnemyScript=deck_svt.enemyScript or {},
+        infoScript=get_enemy_info_script(
+            deck_svt.infoScript if deck_svt.infoScript else {}
+        ),
+        originalInfoScript=deck_svt.infoScript or {},
         limit=get_enemy_limit(user_svt),
         misc=get_enemy_misc(user_svt),
     )
@@ -334,6 +349,12 @@ def get_enemies_in_stage(
     return stage_enemies
 
 
+@dataclass
+class QuestEnemies:
+    enemy_waves: list[list[QuestEnemy]]
+    ai_npc: QuestEnemy | None = None
+
+
 async def get_quest_enemies(
     conn: AsyncConnection,
     redis: Redis,
@@ -342,7 +363,7 @@ async def get_quest_enemies(
     quest_detail: QuestDetail,
     quest_drop: list[QuestDrop],
     lang: Language = Language.jp,
-) -> list[list[QuestEnemy]]:
+) -> QuestEnemies:
     npc_id_map: dict[DeckType, dict[int, DeckSvt]] = {}
     DECK_LIST: list[tuple[list[Deck], DeckType]] = [
         (quest_detail.enemyDeck, DeckType.ENEMY),
@@ -424,4 +445,19 @@ async def get_quest_enemies(
 
         out_enemies.append(stage_nice_enemies)
 
-    return out_enemies
+    if quest_detail.aiNpcDeck is not None and quest_detail.aiNpcDeck.svts:
+        svt_deck = quest_detail.aiNpcDeck.svts[0]
+        nice_ai_npc = await get_quest_enemy(
+            redis=redis,
+            region=region,
+            deck_svt_info=EnemyDeckInfo(DeckType.AI_NPC, svt_deck),
+            user_svt=user_svt_id[svt_deck.userSvtId],
+            drops=[],
+            all_enemy_skills=all_skills,
+            all_enemy_tds=all_tds,
+            lang=lang,
+        )
+    else:
+        nice_ai_npc = None
+
+    return QuestEnemies(enemy_waves=out_enemies, ai_npc=nice_ai_npc)
