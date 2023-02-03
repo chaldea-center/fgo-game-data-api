@@ -39,6 +39,16 @@ class MstBuff(BaseModelORJson):
     maxRate: int  # 5000
 
 
+class MstBuffConvert(BaseModelORJson):
+    targetIds: list[int]
+    convertBuffIds: list[int]
+    script: dict[str, Any]
+    buffId: int
+    convertType: int
+    targetLimit: int
+    effectId: int
+
+
 class BuffEntityNoReverse(BaseModelORJson):
     mstBuff: MstBuff
 
@@ -1427,6 +1437,17 @@ class MstSpot(BaseModelORJson):
     flag: int  # 0
 
 
+class MstSpotAdd(BaseModelORJson):
+    spotId: int
+    priority: int
+    overrideType: int
+    targetId: int
+    targetText: str | None = None
+    condType: int
+    condTargetId: int
+    condNum: int
+
+
 class MstSpotRoad(BaseModelORJson):
     id: int
     warId: int
@@ -1904,6 +1925,7 @@ class WarEntity(BaseModelORJson):
     mstBgm: list[MstBgm]
     mstMapGimmick: list[MstMapGimmick]
     mstSpot: list[MstSpot]
+    mstSpotAdd: list[MstSpotAdd]
     mstQuest: list[QuestEntity]
     mstSpotRoad: list[MstSpotRoad]
     mstWarQuestSelection: list[MstWarQuestSelection]

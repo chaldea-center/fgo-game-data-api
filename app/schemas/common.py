@@ -1,11 +1,16 @@
 from enum import StrEnum
-from typing import Optional, Union
+from typing import Any, Optional, Union
 
 from pydantic import BaseModel, HttpUrl
 
 from .base import BaseModelORJson
 from .enums import SvtClass, Trait
-from .gameenums import NiceBuffType, NiceClassRelationOverwriteType
+from .gameenums import (
+    NiceBuffConvertLimitType,
+    NiceBuffConvertType,
+    NiceBuffType,
+    NiceClassRelationOverwriteType,
+)
 
 
 class RepoInfo(BaseModelORJson):
@@ -45,9 +50,8 @@ class ReverseDepth(StrEnum):
     servant = "servant"
 
     def order(self) -> int:
-        # https://github.com/PyCQA/pylint/issues/2306
         self_value = str(self.value)
-        if self_value == "function":
+        if self.value == "function":
             return 1
         elif self_value == "skillNp":
             return 2
@@ -85,7 +89,26 @@ class NiceBuffRelationOverwrite(BaseModel):
     defSide: dict[SvtClass, dict[SvtClass, RelationOverwriteDetail]]
 
 
-class NiceBuffScript(BaseModel):
+class BuffConvertScript(BaseModel):
+    OverwritePopupText: list[str]
+
+
+class BuffConvert(BaseModel):
+    """Buff Convert
+
+    Due to a limitation in Pydantic and OpenAPI schema generation, `dict[str, Any]
+    is used in place of either BasicBuff or NiceBuff
+    """
+
+    targetLimit: NiceBuffConvertLimitType
+    convertType: NiceBuffConvertType
+    targets: list[int] | list[NiceTrait] | list[dict[str, Any]]
+    convertBuffs: list[dict[str, Any]]
+    script: BuffConvertScript
+    effectId: int
+
+
+class BuffScript(BaseModel):
     checkIndvType: Optional[int] = None
     CheckOpponentBuffTypes: Optional[list[NiceBuffType]] = None
     relationId: Optional[NiceBuffRelationOverwrite] = None
@@ -95,6 +118,7 @@ class NiceBuffScript(BaseModel):
     INDIVIDUALITIE_COUNT_ABOVE: int | None = None
     UpBuffRateBuffIndiv: Optional[list[NiceTrait]] = None
     HP_LOWER: Optional[int] = None
+    convert: BuffConvert | None = None
 
 
 class ScriptLink(BaseModelORJson):

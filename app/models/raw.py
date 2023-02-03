@@ -67,6 +67,19 @@ mstClassRelationOverwrite = Table(
 )
 
 
+mstBuffConvert = Table(
+    "mstBuffConvert",
+    metadata,
+    Column("targetIds", ARRAY(Integer)),
+    Column("convertBuffIds", ARRAY(Integer)),
+    Column("script", JSONB),
+    Column("buffId", Integer, index=True),
+    Column("convertType", Integer),
+    Column("targetLimit", Integer),
+    Column("effectId", Integer),
+)
+
+
 mstFunc = Table(
     "mstFunc",
     metadata,
@@ -1623,6 +1636,20 @@ mstSpot = Table(
 )
 
 
+mstSpotAdd = Table(
+    "mstSpotAdd",
+    metadata,
+    Column("spotId", Integer, index=True),
+    Column("priority", Integer),
+    Column("overrideType", Integer),
+    Column("targetId", Integer),
+    Column("targetText", String),
+    Column("condType", Integer),
+    Column("condTargetId", Integer),
+    Column("condNum", Integer),
+)
+
+
 mstSpotRoad = Table(
     "mstSpotRoad",
     metadata,
@@ -2018,7 +2045,7 @@ TABLES_TO_BE_LOADED = [
     [mstAiField],
     [mstBgm, mstBgmRelease],
     [mstBoxGacha, mstBoxGachaBase, mstBoxGachaTalk],
-    [mstClassRelationOverwrite],
+    [mstClassRelationOverwrite, mstBuffConvert],
     [mstClosedMessage],
     [mstCombineAppendPassiveSkill],
     [mstCombineCostume],
@@ -2091,7 +2118,7 @@ TABLES_TO_BE_LOADED = [
     [mstVoicePlayCond],
     [mstSvt],
     [mstMap],
-    [mstSpot, mstSpotRoad],
+    [mstSpot, mstSpotAdd, mstSpotRoad],
     [mstMapGimmick],
     [mstWarAdd],
     [mstWarQuestSelection],

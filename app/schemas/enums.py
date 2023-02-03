@@ -620,6 +620,23 @@ SERVANT_PERSONALITY_NAME = {
 }
 
 
+### Skill Script Cond ###
+
+
+class SkillScriptCond(StrEnum):
+    """Skill Script Condition Type"""
+
+    NONE = "NONE"
+    NP_HIGHER = "NP_HIGHER"
+    NP_LOWER = "NP_LOWER"
+    STAR_HIGHER = "STAR_HIGHER"
+    STAR_LOWER = "STAR_LOWER"
+    HP_VAL_HIGHER = "HP_VAL_HIGHER"
+    HP_VAL_LOWER = "HP_VAL_LOWER"
+    HP_PER_HIGHER = "HP_PER_HIGHER"
+    HP_PER_LOWER = "HP_PER_LOWER"
+
+
 ### Trait ###
 
 
@@ -917,6 +934,7 @@ class Trait(StrEnum):
     chenGongNp = "chenGongNp"
     cantBeSacrificed = "cantBeSacrificed"
     gutsBlock = "gutsBlock"
+    classBeastILost = "classBeastILost"
 
 
     @classmethod
@@ -951,6 +969,7 @@ TRAIT_NAME: dict[int, Trait] = {
     119: Trait.classBeastUnknown,
     120: Trait.classPretender,
     121: Trait.classBeastIV,
+    122: Trait.classBeastILost,
     123: Trait.classUOlgaMarie,
     200: Trait.attributeSky,
     201: Trait.attributeEarth,

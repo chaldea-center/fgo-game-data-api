@@ -1,4 +1,3 @@
-# pylint: disable=too-many-public-methods
 import orjson
 import pytest
 from httpx import AsyncClient
@@ -37,6 +36,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
     ),
     "skill_JP_dependFunc": ("JP/skill/671650", "JP_Melt_skill_dependFunc"),
     "skill_JP_dependFunc_colon": ("JP/skill/711550", "JP_Yang_Guifei_skill"),
+    "skill_JP_SelectAddInfo": ("JP/skill/2189551", "JP_skill_2189551"),
     "NP_JP_id": ("JP/NP/301101", "JP_Fionn_NP"),
     "NP_JP_reverse": ("JP/NP/202901?reverse=True", "JP_Fujino_NP_reverse"),
     "NP_CN_without_svtTd": ("CN/NP/603002", "CN_NP_without_svtTd"),
@@ -57,6 +57,7 @@ test_cases_dict: dict[str, tuple[str, str]] = {
         "JP/buff/search?type=specialInvincible&reverse=true&reverseData=basic&reverseDepth=servant&lang=en",
         "JP_buff_special_invincible_reverse",
     ),
+    "buff_convert": ("JP/buff/5326", "JP_buff_convert"),
     "equip_JP_collectionNo": ("JP/equip/683", "JP_Aerial_Drive"),
     "equip_JP_id": ("JP/equip/9402750", "JP_Aerial_Drive"),
     "svt_NA_id": ("NA/svt/9939120", "NA_svt_9939120"),
@@ -488,10 +489,10 @@ class TestServantSpecial:
         third_ascension = {trait["name"] for trait in ascension_traits["3"]}
 
         assert response.status_code == 200
-        assert (
-            "childServant" in zero_ascension and "childServant" not in third_ascension
-        )
-        assert "levitating" not in zero_ascension and "levitating" in third_ascension
+        assert "childServant" in zero_ascension
+        assert "childServant" not in third_ascension
+        assert "levitating" not in zero_ascension
+        assert "levitating" in third_ascension
 
     async def test_servant_change(self, client: AsyncClient) -> None:
         response = await client.get("/nice/NA/servant/184")

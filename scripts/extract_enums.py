@@ -491,6 +491,27 @@ ENUMS: list[tuple[str, str, str, str, str]] = [
         "Command Card Attack Type",
         "COMMAND_CARD_ATK_TYPE_NAME",
     ),
+    (
+        "SpotAddEntity.SpotOverwriteType",
+        "SpotOverwriteType",
+        "NiceSpotOverwriteType",
+        "Spot Overwrite Type",
+        "SPOT_OVERWRITE_TYPE_NAME",
+    ),
+    (
+        "BuffConvertEntity.ConvertType",
+        "BuffConvertType",
+        "NiceBuffConvertType",
+        "Buff Convert Type",
+        "BUFF_CONVERT_TYPE_NAME",
+    ),
+    (
+        "BuffConvertEntity.BuffLimitType",
+        "BuffConvertLimitType",
+        "NiceBuffConvertLimitType",
+        "Buff Convert Limit Type",
+        "BUFF_CONVERT_LIMIT_TYPE_NAME",
+    ),
 ]
 
 

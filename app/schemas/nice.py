@@ -14,8 +14,8 @@ from .basic import (
     BasicServant,
 )
 from .common import (
+    BuffScript,
     MCAssets,
-    NiceBuffScript,
     NiceCostume,
     NiceTrait,
     NiceValentineScript,
@@ -35,6 +35,7 @@ from .enums import (
     NiceSkillType,
     ServantPersonality,
     ServantPolicy,
+    SkillScriptCond,
     SvtClass,
 )
 from .gameenums import (
@@ -71,6 +72,7 @@ from .gameenums import (
     NiceRestrictionRangeType,
     NiceRestrictionType,
     NiceShopType,
+    NiceSpotOverwriteType,
     NiceStatusRank,
     NiceSvtClassSupportGroupType,
     NiceSvtFlag,
@@ -338,13 +340,13 @@ class BaseVals(BaseModel):
     ShiftDeckIndex: int | None = None
     PopValueText: str | None = None
     IsLossHpPerNow: int | None = None
-    CopyTargetFunctionType: int | None = None
+    CopyTargetFunctionType: list[int] | None = None
     CopyFunctionTargetPTOnly: int | None = None
     IgnoreValueUp: int | None = None
-    ApplyValueUp: int | None = None
+    ApplyValueUp: list[str] | None = None
     ActNoDamageBuff: int | None = None
     ActSelectIndex: int | None = None
-    CopyTargetBuffType: int | None = None
+    CopyTargetBuffType: list[int] | None = None
     # Extra dataval from SkillLvEntty.DIC_KEY_APPLY_SUPPORT_SVT
     ApplySupportSvt: Optional[int] = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
@@ -386,12 +388,12 @@ class NiceBuff(BaseModelORJson):
     buffGroup: int = Field(
         0,
         title="Buff group",
-        description="Buff group. "
+        description="Buff group."
         "See https://github.com/atlasacademy/fgo-docs#unstackable-buffs "
         "for how this field is used.",
     )
-    script: NiceBuffScript = Field(
-        NiceBuffScript(),
+    script: BuffScript = Field(
+        BuffScript(),
         title="Buff script",
         description="Random stuffs that get added to the buff entry. "
         "See each field description for more details.",
@@ -541,6 +543,21 @@ class ExtraPassive(BaseModel):
     endedAt: int
 
 
+class NiceSelectAddInfoBtnCond(BaseModel):
+    cond: SkillScriptCond
+    value: int | None = None
+
+
+class NiceSelectAddInfoBtn(BaseModel):
+    name: str
+    conds: list[NiceSelectAddInfoBtnCond]
+
+
+class NiceSelectAddInfo(BaseModel):
+    title: str
+    btn: list[NiceSelectAddInfoBtn]
+
+
 class NiceSkillScript(BaseModel):
     NP_HIGHER: Optional[list[int]] = None
     NP_LOWER: Optional[list[int]] = None
@@ -554,6 +571,7 @@ class NiceSkillScript(BaseModel):
     additionalSkillActorType: Optional[list[int]] = None
     tdTypeChangeIDs: list[int] | None = None
     excludeTdChangeTypes: list[int] | None = None
+    SelectAddInfo: list[NiceSelectAddInfo] | None = None
 
 
 class NiceSkillAdd(BaseModelORJson):
@@ -1088,6 +1106,7 @@ class NiceServant(BaseModelORJson):
         title="untranslated svt's battle name",
         description="untranslated svt's battle name",
     )
+    classId: int = Field(..., title="svt's class ID")
     className: SvtClass = Field(
         ...,
         title="svt's class",
@@ -2300,6 +2319,17 @@ class NiceMap(BaseModel):
     bgm: NiceBgm
 
 
+class NiceSpotAdd(BaseModel):
+    # spotId: int
+    priority: int
+    overrideType: NiceSpotOverwriteType
+    targetId: int
+    targetText: str
+    condType: NiceCondType
+    condTargetId: int
+    condNum: int
+
+
 class NiceSpot(BaseModel):
     id: int
     joinSpotIds: list[int] = []
@@ -2318,6 +2348,7 @@ class NiceSpot(BaseModel):
     nextOfsX: int = 0
     nextOfsY: int = 0
     closedMessage: str = ""
+    spotAdds: list[NiceSpotAdd] = []
     quests: list[NiceQuest] = []
 
 
