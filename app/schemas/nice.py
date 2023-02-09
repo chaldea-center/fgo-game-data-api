@@ -2006,8 +2006,8 @@ class EnemyPassive(BaseModelORJson):
     classPassive: list[NiceSkill] = []
     addPassive: list[NiceSkill] = []
     addPassiveLvs: list[int] | None = None
-    appendPassiveSkillIds: list[int] | None = None
-    appendPassiveSkillLvs: list[int] | None = None
+    appendPassiveSkillIds: list[int] | None = []
+    appendPassiveSkillLvs: list[int] | None = []
 
 
 class EnemyTd(BaseModelORJson):
