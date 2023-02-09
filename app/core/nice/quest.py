@@ -15,7 +15,7 @@ from ...rayshift.quest import get_quest_detail
 from ...redis import Redis
 from ...redis.helpers.quest import RayshiftRedisData, get_stages_cache, set_stages_cache
 from ...schemas.common import Language, Region, ScriptLink
-from ...schemas.enums import CLASS_NAME, SvtClass
+from ...schemas.enums import CLASS_NAME, STAGE_LIMIT_ACT_TYPE_NAME, SvtClass
 from ...schemas.gameenums import (
     COND_TYPE_NAME,
     FREQUENCY_TYPE_NAME,
@@ -138,6 +138,11 @@ def get_nice_stage(
         fieldAis=raw_stage.script.get("aiFieldIds", []),
         call=raw_stage.script.get("call", []),
         enemyFieldPosCount=raw_stage.script.get("enemyFieldPosCount"),
+        enemyActCount=raw_stage.script.get("EnemyActCount"),
+        turn=raw_stage.script.get("turn"),
+        limitAct=STAGE_LIMIT_ACT_TYPE_NAME[raw_stage.script["LimitAct"]]
+        if "LimitAct" in raw_stage.script
+        else None,
         waveStartMovies=waveStartMovies.get(raw_stage.wave, []),
         enemies=enemies,
     )
@@ -254,8 +259,19 @@ async def get_nice_quest_phase_no_rayshift(
     raw_quest = await raw.get_quest_phase_entity(conn, quest_id, phase)
     nice_data = await get_nice_quest(conn, region, raw_quest, lang)
 
+    aiNpcIds: list[int] = []
+    if "aiNpc" in raw_quest.mstQuestPhase.script:
+        aiNpcIds.append(raw_quest.mstQuestPhase.script["aiNpc"]["npcId"])
+    if "aiMultiNpc" in raw_quest.mstQuestPhase.script:
+        for aiNpc in raw_quest.mstQuestPhase.script["aiMultiNpc"]:
+            aiNpcIds.append(aiNpc["npcId"])
+
     support_servants: list[SupportServant] = []
-    if raw_quest.npcFollower or "aiNpc" in raw_quest.mstQuestPhase.script:
+    if (
+        raw_quest.npcFollower
+        or "aiNpc" in raw_quest.mstQuestPhase.script
+        or "aiMultiNpc" in raw_quest.mstQuestPhase.script
+    ):
         npcs = await get_nice_support_servants(
             conn=conn,
             redis=redis,
@@ -265,11 +281,16 @@ async def get_nice_quest_phase_no_rayshift(
             npcSvtFollower=raw_quest.npcSvtFollower,
             npcSvtEquip=raw_quest.npcSvtEquip,
             lang=lang,
-            aiNpcId=raw_quest.mstQuestPhase.script.get("aiNpc", {}).get("npcId"),
+            aiNpcIds=aiNpcIds,
         )
         support_servants = npcs.support_servants
         if "aiNpc" in raw_quest.mstQuestPhase.script and npcs.ai_npc is not None:
-            raw_quest.mstQuestPhase.script["aiNpc"]["npc"] = npcs.ai_npc
+            raw_quest.mstQuestPhase.script["aiNpc"]["npc"] = npcs.ai_npc[
+                raw_quest.mstQuestPhase.script["aiNpc"]["npcId"]
+            ]
+        if "aiMultiNpc" in raw_quest.mstQuestPhase.script:
+            for aiNpc in raw_quest.mstQuestPhase.script["aiMultiNpc"]:
+                aiNpc["npc"] = npcs.ai_npc[aiNpc["npcId"]]
 
     restrictions = {
         restriction.id: restriction for restriction in raw_quest.mstRestriction
@@ -362,16 +383,20 @@ async def get_nice_quest_phase(
         redis, region, quest_id, phase, questSelect, lang
     )
 
+    def set_ai_npc_data(ai_npcs: dict[int, QuestEnemy] | None) -> None:
+        if ai_npcs is not None:
+            if db_data.nice.extraDetail.aiNpc is not None:
+                db_data.nice.extraDetail.aiNpc.detail = ai_npcs[
+                    db_data.nice.extraDetail.aiNpc.npc.npcId
+                ]
+            if db_data.nice.extraDetail.aiMultiNpc is not None:
+                for aiNpc in db_data.nice.extraDetail.aiMultiNpc:
+                    aiNpc.detail = ai_npcs[aiNpc.npc.npcId]
+
     if rayshift_data:
         db_data.nice.stages = rayshift_data.stages
         db_data.nice.drops = rayshift_data.quest_drops
-
-        if (
-            rayshift_data.ai_npc is not None
-            and db_data.nice.extraDetail.aiNpc is not None
-        ):
-            db_data.nice.extraDetail.aiNpc.detail = rayshift_data.ai_npc
-
+        set_ai_npc_data(rayshift_data.ai_npcs)
         return db_data.nice
 
     stages = sorted(db_data.raw.mstStage, key=lambda stage: stage.wave)
@@ -424,8 +449,7 @@ async def get_nice_quest_phase(
         else:
             save_stages_cache = False
 
-    if quest_enemies.ai_npc is not None and db_data.nice.extraDetail.aiNpc is not None:
-        db_data.nice.extraDetail.aiNpc.detail = quest_enemies.ai_npc
+    set_ai_npc_data(quest_enemies.ai_npcs)
 
     waveStartMovies: dict[int, list[NiceStageStartMovie]] = defaultdict(list)
     if (
@@ -460,7 +484,7 @@ async def get_nice_quest_phase(
         cache_data = RayshiftRedisData(
             quest_drops=nice_quest_drops,
             stages=new_nice_stages,
-            ai_npc=quest_enemies.ai_npc,
+            ai_npcs=quest_enemies.ai_npcs,
         )
         long_ttl = time.time() > db_data.nice.closedAt
         await set_stages_cache(

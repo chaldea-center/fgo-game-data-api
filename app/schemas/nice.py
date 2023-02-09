@@ -36,6 +36,7 @@ from .enums import (
     ServantPersonality,
     ServantPolicy,
     SkillScriptCond,
+    StageLimitActType,
     SvtClass,
 )
 from .gameenums import (
@@ -2004,6 +2005,9 @@ class EnemySkill(BaseModelORJson):
 class EnemyPassive(BaseModelORJson):
     classPassive: list[NiceSkill] = []
     addPassive: list[NiceSkill] = []
+    addPassiveLvs: list[int] | None = None
+    appendPassiveSkillIds: list[int] | None = None
+    appendPassiveSkillLvs: list[int] | None = None
 
 
 class EnemyTd(BaseModelORJson):
@@ -2011,6 +2015,8 @@ class EnemyTd(BaseModelORJson):
     noblePhantasm: Optional[NiceTd] = None
     noblePhantasmLv: int = 0
     noblePhantasmLv1: int = 0
+    noblePhantasmLv2: int | None = None
+    noblePhantasmLv3: int | None = None
 
 
 class EnemyLimit(BaseModelORJson):
@@ -2049,6 +2055,7 @@ class EnemyAi(BaseModelORJson):
     aiId: int
     actPriority: int
     maxActNum: int
+    minActNum: int | None = None
 
 
 class EnemyMisc(BaseModelORJson):
@@ -2062,6 +2069,9 @@ class EnemyMisc(BaseModelORJson):
     userCommandCodeIds: list[int] = [-1, -1, -1, -1, -1]
     commandCardParam: Optional[list[int]] = None
     status: int = 0
+    hpGaugeType: int | None = None
+    imageSvtId: int | None = None
+    condVal: int | None = None
 
 
 class EnemyDrop(BaseModelORJson):
@@ -2135,6 +2145,11 @@ class NiceStage(BaseModelORJson):
     fieldAis: list[FieldAi] = []
     call: list[int] = Field([], title="Summon these NPC IDs")
     enemyFieldPosCount: int | None = None
+    enemyActCount: int | None = None
+    turn: int | None = Field(None, title="Turn countdown")
+    limitAct: StageLimitActType | None = Field(
+        None, title="Action after turn countdown is over"
+    )
     waveStartMovies: list[NiceStageStartMovie] = []
     enemies: list[QuestEnemy] = []
 
@@ -2180,6 +2195,7 @@ class SupportServantScript(BaseModelORJson):
 
 
 class NpcServant(BaseModelORJson):
+    npcId: int
     name: str
     svt: BasicServant
     lv: int
@@ -2221,6 +2237,7 @@ class NiceQuestPhaseExtraDetail(BaseModelORJson):
     hintTitle: str | None = None
     hintMessage: str | None = None
     aiNpc: NiceQuestPhaseAiNpc | None = None
+    aiMultiNpc: list[NiceQuestPhaseAiNpc] | None = None
 
 
 class NiceRestriction(BaseModelORJson):

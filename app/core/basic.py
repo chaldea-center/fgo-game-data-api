@@ -108,13 +108,23 @@ def get_nice_buff_script(
             relationId[side][atkClass][defClass] = relationDetail
         script["relationId"] = relationId
 
-    for script_item in (
+    for script_item in {
         "ReleaseText",
         "DamageRelease",
         "checkIndvType",
         "HP_LOWER",
         "INDIVIDUALITIE_COUNT_ABOVE",
-    ):
+        "HP_HIGHER",
+        "CounterMessage",
+        "avoidanceText",
+        "gutsText",
+        "missText",
+        "AppId",
+        "IncludeIgnoreIndividuality",
+        "ProgressSelfTurn",
+        "TargetIndiv",
+        "extendLowerLimit",
+    }:
         if script_item in mstBuff.script:
             script[script_item] = mstBuff.script[script_item]
 
@@ -133,24 +143,27 @@ def get_nice_buff_script(
             for buffType in mstBuff.script["CheckOpponentBuffTypes"].split(",")
         ]
 
-    if "convert" in mstBuff.script:
-        script["convert"] = mstBuff.script["convert"]
+    if "TargetIndiv" in mstBuff.script:
+        script["TargetIndiv"] = get_nice_trait(mstBuff.script["TargetIndiv"])
 
     if "convert" in mstBuff.script:
         convert = mstBuff.script["convert"]
 
         if convert["convertType"] == BuffConvertType.BUFF:
-            convert["targets"] = [raw_to_out(buff) for buff in convert["targetBuffs"]]
+            targets = [raw_to_out(buff) for buff in convert["targetBuffs"]]
         elif convert["convertType"] == BuffConvertType.INDIVIDUALITY:
-            convert["targets"] = get_traits_list(convert["targetIds"])
+            targets = get_traits_list(convert["targetIds"])
         else:
-            convert["targets"] = []
+            targets = []
 
-        convert["convertType"] = BUFF_CONVERT_TYPE_NAME[convert["convertType"]]
-        convert["targetLimit"] = BUFF_CONVERT_LIMIT_TYPE_NAME[convert["targetLimit"]]
-        convert["convertBuffs"] = [raw_to_out(buff) for buff in convert["convertBuffs"]]
-
-        script["convert"] = convert
+        script["convert"] = {
+            "targetLimit": BUFF_CONVERT_LIMIT_TYPE_NAME[convert["targetLimit"]],
+            "convertType": BUFF_CONVERT_TYPE_NAME[convert["convertType"]],
+            "targets": targets,
+            "convertBuffs": [raw_to_out(buff) for buff in convert["convertBuffs"]],
+            "script": convert["script"],
+            "effectId": convert["effectId"],
+        }
 
     return script
 
