@@ -165,6 +165,11 @@ class AssetURL:
     movie = "{base_url}/{region}/Movie/{item_id}.mp4"
 
 
+COSTUME_LIMIT_NO_LESS_THAN = 11
+LIMIT_TO_FACE_ID = {0: 0, 1: 1, 2: 1, 3: 2, 4: 3}
+LIMIT_TO_FIGURE_ID = {0: 0, 1: 1, 2: 1, 3: 2, 4: 2}
+
+
 class NiceBaseGift(BaseModelORJson):
     id: int
     type: NiceGiftType = NiceGiftType.item
@@ -582,6 +587,20 @@ class NiceSkillAdd(BaseModelORJson):
     ruby: str
 
 
+class NiceSkillGroupOverwrite(BaseModelORJson):
+    level: int
+    skillGroupId: int
+    startedAt: int
+    endedAt: int
+    icon: Optional[HttpUrl] = None
+    detail: str
+    unmodifiedDetail: str
+    functions: list[NiceFunction] = Field(
+        ...,
+        description="Since each skill level has their own group overwrite, the svals field only contains data for 1 level.",
+    )
+
+
 class NiceBaseSkill(BaseModelORJson):
     id: int
     name: str
@@ -621,6 +640,7 @@ class NiceSkill(NiceBaseSkill):
     extraPassive: list[ExtraPassive] = []
     skillAdd: list[NiceSkillAdd] = []
     aiIds: Optional[dict[AiType, list[int]]] = None
+    groupOverwrites: list[NiceSkillGroupOverwrite] | None = None
     functions: list[NiceFunction]
 
 
