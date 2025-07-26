@@ -648,8 +648,9 @@ class BaseVals(BaseModel):
     IgnoreShiftWhiteFade: int | None = None
     BackStepTargets: list[int] | None = None
     ReplacePositionTargets: list[int] | None = None
-    # Extra dataval from SkillLvEntty.DIC_KEY_APPLY_SUPPORT_SVT
-    ApplySupportSvt: Optional[int] = None
+    ApplySupportSvt: int | None = None
+    ApplyHighestValueInFieldGroup: int | None = None
+    IsClassIconChangeSaveGrand: int | None = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
     Individuality: Optional[int] = None
     EventId: Optional[int] = None

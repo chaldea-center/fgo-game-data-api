@@ -579,6 +579,7 @@ class FuncTargetType(IntEnum):
     HAND_COMMANDCARD_RANDOM_ONE = 31
     FIELD_ALL = 32
     NO_TARGET = 33
+    FIELD_RANDOM = 34
 
 
 class NiceFuncTargetType(StrEnum):
@@ -618,6 +619,7 @@ class NiceFuncTargetType(StrEnum):
     handCommandcardRandomOne = "handCommandcardRandomOne"
     fieldAll = "fieldAll"
     noTarget = "noTarget"
+    fieldRandom = "fieldRandom"
 
 
 FUNC_TARGETTYPE_NAME: dict[int, NiceFuncTargetType] = {
@@ -655,6 +657,7 @@ FUNC_TARGETTYPE_NAME: dict[int, NiceFuncTargetType] = {
     31: NiceFuncTargetType.handCommandcardRandomOne,
     32: NiceFuncTargetType.fieldAll,
     33: NiceFuncTargetType.noTarget,
+    34: NiceFuncTargetType.fieldRandom,
 }
 
 
@@ -2105,6 +2108,9 @@ class DataValsType(IntEnum):
     IgnoreShiftWhiteFade = 233
     BackStepTargets = 234
     ReplacePositionTargets = 235
+    ApplySupportSvt = 236
+    ApplyHighestValueInFieldGroup = 237
+    IsClassIconChangeSaveGrand = 238
 
 
 class ClassRelationOverwriteType(IntEnum):
@@ -6861,4 +6867,31 @@ class NiceQuestExtensionSubType(StrEnum):
 QUEST_EXTENSION_SUB_TYPE_NAME: dict[int, NiceQuestExtensionSubType] = {
     0: NiceQuestExtensionSubType.none,
     1: NiceQuestExtensionSubType.svtCoin,
+}
+
+
+class BuffConditionType(IntEnum):
+    HP_HIGHER = 0
+    HP_LOWER = 1
+    INDIVIDUALITIE = 2
+    INDIVIDUALITIE_OR = 3
+    INDIVIDUALITIE_AND = 4
+
+
+class NiceBuffConditionType(StrEnum):
+    """Condition Type for Conditional Battle Buff"""
+
+    hpHigher = "hpHigher"
+    hpLower = "hpLower"
+    individualitie = "individualitie"
+    individualitieOr = "individualitieOr"
+    individualitieAnd = "individualitieAnd"
+
+
+BUFF_CONDITION_TYPE: dict[int, NiceBuffConditionType] = {
+    0: NiceBuffConditionType.hpHigher,
+    1: NiceBuffConditionType.hpLower,
+    2: NiceBuffConditionType.individualitie,
+    3: NiceBuffConditionType.individualitieOr,
+    4: NiceBuffConditionType.individualitieAnd,
 }
