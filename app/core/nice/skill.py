@@ -6,9 +6,15 @@ from sqlalchemy.ext.asyncio import AsyncConnection
 from ...config import Settings
 from ...schemas.common import Language, Region
 from ...schemas.enums import SKILL_TYPE_NAME, SkillScriptCond
-from ...schemas.gameenums import CARD_TYPE_NAME, COND_TYPE_NAME
+from ...schemas.gameenums import (
+    BATTLE_BRANCH_SKILL_COND_BRANCH_TYPE_NAME,
+    CARD_TYPE_NAME,
+    COND_TYPE_NAME,
+    BattleBranchSkillCondBranchType,
+)
 from ...schemas.nice import (
     AssetURL,
+    CondBranchSkillInfo,
     ExtraPassive,
     NiceSelectAddInfoBtnCond,
     NiceSkill,
@@ -220,6 +226,20 @@ async def get_nice_skill_with_svt(
         ]
         for scriptKey in skillEntity.mstSkillLv[0].script
     }
+
+    if "condBranchSkillInfo" in skillEntity.mstSkill.script:
+        nice_skill["script"]["condBranchSkillInfo"] = [
+            CondBranchSkillInfo(
+                condType=BATTLE_BRANCH_SKILL_COND_BRANCH_TYPE_NAME[
+                    BattleBranchSkillCondBranchType[info["condType"]].value
+                ],
+                condValue=info["condValue"],
+                skillId=info["skillId"],
+                detailText=info["detailText"],
+                iconBuffId=info["iconBuffId"],
+            )
+            for info in skillEntity.mstSkill.script["condBranchSkillInfo"]
+        ]
 
     if "IgnoreValueUp" in skillEntity.mstSkill.script:
         nice_skill["script"]["IgnoreValueUp"] = [

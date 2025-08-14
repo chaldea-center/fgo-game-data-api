@@ -44,6 +44,7 @@ from .gameenums import (
     NiceAiActType,
     NiceAiAllocationSvtFlag,
     NiceAiCond,
+    NiceBattleBranchSkillCondBranchType,
     NiceBattleFieldEnvironmentGrantType,
     NiceBattlePointFlag,
     NiceBuffType,
@@ -635,11 +636,11 @@ class BaseVals(BaseModel):
     CondParamAddType: int | None = None
     CondParamAddValue: int | None = None
     CondParamAddMaxValue: int | None = None
-    CondParamAddTargetId: int | None = None
+    CondParamAddTargetId: list[int] | None = None
     CondParamRangeType: int | None = None
     CondParamRangeMaxCount: int | None = None
     CondParamRangeMaxValue: int | None = None
-    CondParamRangeTargetId: int | None = None
+    CondParamRangeTargetId: list[int] | None = None
     ExecOnce: int | None = None
     ApplyBuffIndividuality: list[list[int]] | None = None
     ExecWhenCanNotAttack: int | None = None
@@ -754,6 +755,14 @@ class SelectTreasureDeviceInfo(BaseModel):
     messageOnSelected: str
 
 
+class CondBranchSkillInfo(BaseModel):
+    condType: NiceBattleBranchSkillCondBranchType
+    condValue: list[int]
+    skillId: int
+    detailText: str
+    iconBuffId: int
+
+
 class NiceSkillScript(BaseModel):
     NP_HIGHER: Optional[list[int]] = None
     NP_LOWER: Optional[list[int]] = None
@@ -774,6 +783,7 @@ class NiceSkillScript(BaseModel):
     IgnoreBattlePointUp: list[list[int]] | None = None
     tdChangeByBattlePoint: list[TdChangeByBattlePoint] | None = None
     selectTreasureDeviceInfo: list[SelectTreasureDeviceInfo] | None = None
+    condBranchSkillInfo: list[CondBranchSkillInfo] | None = None
 
 
 class NiceSkillAdd(BaseModelORJson):
