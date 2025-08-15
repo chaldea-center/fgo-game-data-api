@@ -652,6 +652,7 @@ class BaseVals(BaseModel):
     ApplySupportSvt: int | None = None
     ApplyHighestValueInFieldGroup: int | None = None
     IsClassIconChangeSaveGrand: int | None = None
+    ExecuteEffectId: int | None = None
     PriorityUpHate: int | None = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
     Individuality: Optional[int] = None
@@ -727,8 +728,9 @@ class NiceSelectAddInfoBtnCond(BaseModel):
 
 
 class NiceSelectAddInfoBtn(BaseModel):
-    name: str
+    name: str | None = None
     conds: list[NiceSelectAddInfoBtnCond]
+    image: str | None = None
 
 
 class NiceSelectAddInfo(BaseModel):
@@ -3312,6 +3314,7 @@ class NiceGacha(BaseModelORJson):
     pickupId: int = 0
     drawNum1: int
     drawNum2: int
+    freeDrawFlag: int = 0
     maxDrawNum: int = 0
     openedAt: int
     closedAt: int
