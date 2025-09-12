@@ -349,7 +349,7 @@ class NiceFuncType(StrEnum):
     shortenUserEquipSkill = "shortenUserEquipSkill"
     quickChangeBg = "quickChangeBg"
     shiftServant = "shiftServant"
-    damageNpAndOrCheckIndividuality = "damageNpAndCheckIndividuality"
+    damageNpAndOrCheckIndividuality = "damageNpAndOrCheckIndividuality"
     absorbNpturn = "absorbNpturn"
     overwriteDeadType = "overwriteDeadType"
     forceAllBuffNoact = "forceAllBuffNoact"
@@ -1547,7 +1547,7 @@ class NiceBuffAction(StrEnum):
     damage = "damage"
     damageIndividuality = "damageIndividuality"
     damageIndividualityActiveonly = "damageIndividualityActiveonly"
-    damageDef = "selfdamage"
+    damageDef = "damageDef"
     criticalDamage = "criticalDamage"
     npdamage = "npdamage"
     givenDamage = "givenDamage"
@@ -2584,7 +2584,7 @@ class CardType(IntEnum):
     WEAKALT1 = 21
     WEAKALT2 = 22
     BUSTERALT1 = 60
-    ADDATTACK2 = 104
+    EXTRA2 = 104
 
 
 class NiceCardType(StrEnum):
@@ -2601,7 +2601,7 @@ class NiceCardType(StrEnum):
     weakalt1 = "weakalt1"
     weakalt2 = "weakalt2"
     busteralt1 = "busteralt1"
-    addattack2 = "addattack2"
+    extra2 = "extra2"
 
 
 CARD_TYPE_NAME: dict[int, NiceCardType] = {
@@ -2616,7 +2616,7 @@ CARD_TYPE_NAME: dict[int, NiceCardType] = {
     21: NiceCardType.weakalt1,
     22: NiceCardType.weakalt2,
     60: NiceCardType.busteralt1,
-    104: NiceCardType.addattack2,
+    104: NiceCardType.extra2,
 }
 
 
@@ -6958,4 +6958,43 @@ BUFF_CONDITION_TYPE: dict[int, NiceBuffConditionType] = {
     2: NiceBuffConditionType.individualitie,
     3: NiceBuffConditionType.individualitieOr,
     4: NiceBuffConditionType.individualitieAnd,
+}
+
+
+class BuffConditionTargetType(IntEnum):
+    NONE = 0
+    PT_ALL = 1
+    ENEMY_ALL = 2
+    FIELD_ALL = 3
+    PT_FULL = 4
+    ENEMY_FULL = 5
+    PT_OTHER_ALL = 6
+    PT_OTHER_FULL = 7
+    FIELD_OTHER_ALL = 8
+
+
+class NiceBuffConditionTargetType(StrEnum):
+    """Buff Condition Target Type"""
+
+    none = "none"
+    ptAll = "ptAll"
+    enemyAll = "enemyAll"
+    fieldAll = "fieldAll"
+    ptFull = "ptFull"
+    enemyFull = "enemyFull"
+    ptOtherAll = "ptOtherAll"
+    ptOtherFull = "ptOtherFull"
+    fieldOtherAll = "fieldOtherAll"
+
+
+BUFF_CONDITION_TARGET_TYPE: dict[int, NiceBuffConditionTargetType] = {
+    0: NiceBuffConditionTargetType.none,
+    1: NiceBuffConditionTargetType.ptAll,
+    2: NiceBuffConditionTargetType.enemyAll,
+    3: NiceBuffConditionTargetType.fieldAll,
+    4: NiceBuffConditionTargetType.ptFull,
+    5: NiceBuffConditionTargetType.enemyFull,
+    6: NiceBuffConditionTargetType.ptOtherAll,
+    7: NiceBuffConditionTargetType.ptOtherFull,
+    8: NiceBuffConditionTargetType.fieldOtherAll,
 }

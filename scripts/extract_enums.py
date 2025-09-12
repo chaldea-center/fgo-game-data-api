@@ -35,7 +35,7 @@ RAW_NAME_OVERRIDE = {
 
 
 RAW_EXTRA_ITEMS = {
-    "CardType": {104: "ADDATTACK2", 21: "WEAKALT1", 22: "WEAKALT2", 60: "BUSTERALT1"}
+    "CardType": {104: "EXTRA2", 21: "WEAKALT1", 22: "WEAKALT2", 60: "BUSTERALT1"}
 }
 
 
@@ -95,10 +95,6 @@ EXTRA_STR_NAME = {
 
 
 STR_NAME_OVERRIDE = {
-    "NiceFuncType": {
-        "damageNpAndOrCheckIndividuality": "damageNpAndCheckIndividuality"
-    },
-    "NiceBuffAction": {"damageDef": "selfdamage"},
     "NiceCardType": {"addattack": "extra"},
     "NiceGender": {"other": "unknown"},
     "Attribute": {"ground": "earth"},
@@ -787,6 +783,13 @@ ENUMS: list[tuple[str, str, str, str, str]] = [
         "NiceBuffConditionType",
         "Condition Type for Conditional Battle Buff",
         "BUFF_CONDITION_TYPE",
+    ),
+    (
+        "BuffList.ConditionTargetType",
+        "BuffConditionTargetType",
+        "NiceBuffConditionTargetType",
+        "Buff Condition Target Type",
+        "BUFF_CONDITION_TARGET_TYPE",
     ),
 ]
 

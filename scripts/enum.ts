@@ -105,7 +105,7 @@ export enum NiceFuncType {
     SHORTEN_USER_EQUIP_SKILL = "shortenUserEquipSkill",
     QUICK_CHANGE_BG = "quickChangeBg",
     SHIFT_SERVANT = "shiftServant",
-    DAMAGE_NP_AND_OR_CHECK_INDIVIDUALITY = "damageNpAndCheckIndividuality",
+    DAMAGE_NP_AND_OR_CHECK_INDIVIDUALITY = "damageNpAndOrCheckIndividuality",
     ABSORB_NPTURN = "absorbNpturn",
     OVERWRITE_DEAD_TYPE = "overwriteDeadType",
     FORCE_ALL_BUFF_NOACT = "forceAllBuffNoact",
@@ -460,7 +460,7 @@ export enum NiceBuffAction {
     DAMAGE = "damage",
     DAMAGE_INDIVIDUALITY = "damageIndividuality",
     DAMAGE_INDIVIDUALITY_ACTIVEONLY = "damageIndividualityActiveonly",
-    DAMAGE_DEF = "selfdamage",
+    DAMAGE_DEF = "damageDef",
     CRITICAL_DAMAGE = "criticalDamage",
     NPDAMAGE = "npdamage",
     GIVEN_DAMAGE = "givenDamage",
@@ -1018,7 +1018,7 @@ export enum NiceCardType {
     WEAKALT1 = "weakalt1",
     WEAKALT2 = "weakalt2",
     BUSTERALT1 = "busteralt1",
-    ADDATTACK2 = "addattack2",
+    EXTRA2 = "extra2",
 }
 
 export enum NiceCondType {
@@ -2393,4 +2393,16 @@ export enum NiceBuffConditionType {
     INDIVIDUALITIE = "individualitie",
     INDIVIDUALITIE_OR = "individualitieOr",
     INDIVIDUALITIE_AND = "individualitieAnd",
+}
+
+export enum NiceBuffConditionTargetType {
+    NONE = "none",
+    PT_ALL = "ptAll",
+    ENEMY_ALL = "enemyAll",
+    FIELD_ALL = "fieldAll",
+    PT_FULL = "ptFull",
+    ENEMY_FULL = "enemyFull",
+    PT_OTHER_ALL = "ptOtherAll",
+    PT_OTHER_FULL = "ptOtherFull",
+    FIELD_OTHER_ALL = "fieldOtherAll",
 }
