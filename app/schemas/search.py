@@ -25,6 +25,7 @@ from .gameenums import (
     NiceGender,
     NiceItemType,
     NicePayType,
+    NicePurchaseType,
     NiceQuestFlag,
     NiceQuestType,
     NiceShopType,
@@ -522,6 +523,8 @@ class ShopSearchQueryParams:
     eventId: list[int] = Query([])
     type: list[NiceShopType] = Query([])
     payType: list[NicePayType] = Query([])
+    purchaseType: list[NicePurchaseType] = Query([])
+    limit: int = Query(10000, le=10000)
 
     def hasSearchParams(self) -> bool:
         return any(
@@ -530,6 +533,7 @@ class ShopSearchQueryParams:
                 self.eventId,
                 self.type,
                 self.payType,
+                self.purchaseType,
             ]
         )
 

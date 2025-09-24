@@ -30,6 +30,7 @@ from ..schemas.enums import (
     ITEM_BG_TYPE_REVERSE,
     ITEM_TYPE_REVERSE,
     PAY_TYPE_NAME_REVERSE,
+    PURCHASE_TYPE_NAME_REVERSE,
     QUEST_FLAG_REVERSE,
     QUEST_TYPE_REVERSE,
     SHOP_TYPE_NAME_REVERSE,
@@ -488,7 +489,6 @@ async def search_script(
 async def search_shop(
     conn: AsyncConnection,
     search_param: ShopSearchQueryParams,
-    limit: int = 100,
 ) -> list[MstShop]:
     if not search_param.hasSearchParams():
         raise HTTPException(status_code=400, detail=INSUFFICIENT_QUERY)
@@ -499,19 +499,22 @@ async def search_shop(
     pay_type_ints = {
         PAY_TYPE_NAME_REVERSE[pay_type] for pay_type in search_param.payType
     }
+    purchase_type_ints = {
+        PURCHASE_TYPE_NAME_REVERSE[purchase_type]
+        for purchase_type in search_param.purchaseType
+    }
 
     matches = await get_shop_search(
         conn,
         event_ids=search_param.eventId,
         shop_type_ints=shop_type_ints,
         pay_type_ints=pay_type_ints,
+        purchase_type_ints=purchase_type_ints,
+        limit=search_param.limit,
     )
 
     if search_param.name:
         matches = [item for item in matches if match_name(search_param.name, item.name)]
-
-    if len(matches) > limit:  # pragma: no cover
-        raise HTTPException(status_code=403, detail=TOO_MANY_RESULTS.format(limit))
 
     return sorted(matches, key=lambda shop: shop.id)
 
