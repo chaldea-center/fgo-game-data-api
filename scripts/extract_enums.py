@@ -96,7 +96,6 @@ EXTRA_STR_NAME = {
 
 
 STR_NAME_OVERRIDE = {
-    "NiceCardType": {"addattack": "extra"},
     "NiceGender": {"other": "unknown"},
     "Attribute": {"ground": "earth"},
     "NiceStatusRank": {
@@ -180,11 +179,17 @@ def out_strenum(
 
     for enumstr in deduped_original_list + extra_str_names:
         json_name = convert_name(enumstr)
-        str_name = (
-            STR_NAME_OVERRIDE.get(nice_class, {})
-            .get(json_name, json_name)
-            .removesuffix("_")
-        )
+
+        if nice_class == "NiceCardType":
+            input_dict_reverse = {v: k for k, v in input_dict.items()}
+            str_name = str(input_dict_reverse[enumstr])
+        else:
+            str_name = (
+                STR_NAME_OVERRIDE.get(nice_class, {})
+                .get(json_name, json_name)
+                .removesuffix("_")
+            )
+
         strenum_lines.append(f'    {json_name} = "{str_name}"\n')
     return strenum_lines
 
@@ -309,7 +314,7 @@ ENUMS: list[tuple[str, str, str, str, str]] = [
         "DATA_VALS_TYPE_NAME",
     ),
     (
-        "ClassRelationOverwriteEntity",
+        "ClassRelationOverwriteEntity.TYPE",
         "ClassRelationOverwriteType",
         "NiceClassRelationOverwriteType",
         "Class Relation Overwrite Type Enum",
@@ -792,6 +797,13 @@ ENUMS: list[tuple[str, str, str, str, str]] = [
         "Buff Condition Target Type",
         "BUFF_CONDITION_TARGET_TYPE",
     ),
+    (
+        "QuestAfterAction.COMMAND",
+        "QuestAfterActionCommand",
+        "NiceQuestAfterActionCommand",
+        "Quest After Action Command",
+        "QUEST_AFTER_ACTION_COMMAND",
+    ),
 ]
 
 
@@ -813,7 +825,7 @@ def main(dump_path: str, gameenums_path: str, typescript_path: str = "") -> None
     for line in lines:
         if not in_recording_mode:
             for signature in cs_signatures:
-                if line.startswith(signature):
+                if line.strip() == signature:
                     in_recording_signature = cs_signatures[signature]
                     print(f"Found {in_recording_signature}")
                     enum_lines = []

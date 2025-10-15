@@ -48,7 +48,6 @@ from .gameenums import (
     NiceBattleFieldEnvironmentGrantType,
     NiceBattlePointFlag,
     NiceBuffType,
-    NiceCardType,
     NiceClassBoardSkillType,
     NiceClassBoardSquareFlag,
     NiceCombineAdjustTarget,
@@ -657,6 +656,23 @@ class BaseVals(BaseModel):
     IsClassIconChangeSaveGrand: int | None = None
     ExecuteEffectId: int | None = None
     PriorityUpHate: int | None = None
+    JudgeUseEveryTime: int | None = None
+    IgnoreDeathRate: int | None = None
+    SubstituteRate: int | None = None
+    SubstituteResist: int | None = None
+    UseSvtResistRate: int | None = None
+    UseBuffResistRate: int | None = None
+    SubstituteSkillId: int | None = None
+    SubstituteSkillLv: int | None = None
+    ResistSkillId: int | None = None
+    ResistSkillLv: int | None = None
+    SubstitutePopupText: str | None = None
+    SubstitutePopupIconId: int | None = None
+    ResistPopupText: str | None = None
+    ResistPopupIconId: int | None = None
+    SubstituteEffectList: list[int] | None = None
+    ResistEffectList: list[int] | None = None
+    EnablePassiveBuffConvert: int | None = None
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
     Individuality: Optional[int] = None
     EventId: Optional[int] = None
@@ -750,7 +766,7 @@ class TdChangeByBattlePoint(BaseModel):
 
 class SelectTreasureDeviceInfoTreasureDevice(BaseModel):
     id: int
-    type: NiceCardType
+    type: str
     message: str
 
 
@@ -891,7 +907,7 @@ class NiceTdSvt(BaseModelORJson):
     condLv: int = 0
     condFriendshipRank: int = 0
     motion: int = 0
-    card: NiceCardType
+    card: str
     releaseConditions: list[NiceSvtSkillRelease] = []
 
 
@@ -899,7 +915,7 @@ class NiceTd(BaseModelORJson):
     id: int
     num: int = 1
     npNum: int = 1
-    card: NiceCardType
+    card: str
     name: str
     originalName: str
     ruby: str
@@ -1544,13 +1560,13 @@ class NiceServant(BaseModelORJson):
     instantDeathChance: int = Field(
         ..., title="Instant death chance", description="Instant death chance."
     )
-    cards: list[NiceCardType] = Field(..., title="Card deck", description="Card deck.")
-    hitsDistribution: dict[NiceCardType, list[int]] = Field(
+    cards: list[str] = Field(..., title="Card deck", description="Card deck.")
+    hitsDistribution: dict[str, list[int]] = Field(
         ...,
         title="Hits distribution",
         description="[DEPRECATED] Use the `cardDetails` field. Mapping <Card type, Hits distribution>.",
     )
-    cardDetails: dict[NiceCardType, NiceCardDetail] = Field(
+    cardDetails: dict[str, NiceCardDetail] = Field(
         ...,
         title="Card detail",
         description="Mapping <Card type, Card detail>, containing attack traits.",
@@ -2319,7 +2335,7 @@ class NiceEventCommandAssist(BaseModelORJson):
     priority: int
     lv: int
     name: str
-    assistCard: NiceCardType
+    assistCard: str
     image: HttpUrl
     skill: NiceSkill
     skillLv: int
@@ -2920,6 +2936,11 @@ class NiceQuestPhaseOverwriteEquipSkills(BaseModelORJson):
     skills: list[NiceQuestPhaseOverwriteEquipSkill]
 
 
+class NiceQuestPhaseFixedMasterEquip(BaseModelORJson):
+    equipId: int
+    defaultLv: int | None = None
+
+
 class NiceQuestPhaseExtraDetail(BaseModelORJson):
     questSelect: list[int] | None = None
     singleForceSvtId: int | None = None
@@ -2939,6 +2960,7 @@ class NiceQuestPhaseExtraDetail(BaseModelORJson):
     isUseGrandBoard: int | None = None
     turn: int | None = None
     LimitAct: StageLimitActType | None = None
+    fixedMasterEquip: NiceQuestPhaseFixedMasterEquip | None = None
 
 
 class NiceRestriction(BaseModelORJson):
