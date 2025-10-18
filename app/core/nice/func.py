@@ -21,7 +21,6 @@ from ..raw import get_func_entity_no_reverse
 from ..utils import fmt_url, get_traits_list, get_traits_list_list
 from .buff import get_nice_buff
 
-
 settings = Settings()
 
 
@@ -76,6 +75,8 @@ LIST_DATAVALS = {
     "TriggeredFuncIndexAndCheckList",
     "CondParamAddTargetId",
     "CondParamRangeTargetId",
+    "SubstituteEffectList",
+    "ResistEffectList",
 }
 LIST_2D_DATAVALS = {
     "ParamAddSelfIndividualityAndCheck",
@@ -93,6 +94,8 @@ STRING_DATAVALS = {
     "TriggeredTargetHpRange",
     "TriggeredTargetHpRateRange",
     "DisplayNoEffectCauses",
+    "SubstitutePopupText",
+    "ResistPopupText",
 }
 STRING_LIST_DATAVALS = {"ApplyValueUp", "CheckOverChargeStageRange"}
 

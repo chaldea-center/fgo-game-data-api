@@ -2,7 +2,6 @@ import argparse
 
 from black import FileMode, format_str
 
-
 PYTHON_NAME_JSON_NAME_OVERRIDE = {
     "UPPER": "upper_",
     "LOWER": "lower_",
@@ -803,6 +802,13 @@ ENUMS: list[tuple[str, str, str, str, str]] = [
         "NiceQuestAfterActionCommand",
         "Quest After Action Command",
         "QUEST_AFTER_ACTION_COMMAND",
+    ),
+    (
+        "UserServantEntity.StatusFlag",
+        "UserSvtStatusFlag",
+        "NiceUserSvtStatusFlag",
+        "User Servant Status Flag",
+        "USER_SVT_STATUS_FLAG",
     ),
 ]
 
