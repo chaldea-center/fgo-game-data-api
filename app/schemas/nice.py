@@ -3342,7 +3342,7 @@ class NiceGacha(BaseModelORJson):
     id: int
     name: str
     imageId: int
-    type: NicePayType = NicePayType.stone
+    type: NicePayType | int = 1
     adjustId: int = 0
     pickupId: int = 0
     drawNum1: int
@@ -3351,7 +3351,7 @@ class NiceGacha(BaseModelORJson):
     maxDrawNum: int = 0
     openedAt: int
     closedAt: int
-    detailUrl: str
+    detailUrl: str = ""
     flags: list[NiceGachaFlag] = []
     storyAdjusts: list[GachaStoryAdjust] = []
     gachaSubs: list[NiceGachaSub] = []
