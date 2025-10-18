@@ -3331,6 +3331,13 @@ class NiceGachaSub(BaseModelORJson):
     script: dict[str, Any] | None = None
 
 
+class NiceGachaRelease(BaseModelORJson):
+    # gachaId: int
+    type: NiceCondType
+    targetId: int
+    value: int
+
+
 class NiceGacha(BaseModelORJson):
     id: int
     name: str
@@ -3349,3 +3356,4 @@ class NiceGacha(BaseModelORJson):
     storyAdjusts: list[GachaStoryAdjust] = []
     gachaSubs: list[NiceGachaSub] = []
     featuredSvtIds: list[int] = []
+    releaseConditions: list[NiceGachaRelease] = []
