@@ -5760,6 +5760,8 @@ class CombineAdjustTargetType(IntEnum):
     EXCHANGE_SVT = 34
     QUEST_ITEM_FIRST_TIME = 35
     QUEST_USE_REWARD_ADD_ITEM = 36
+    QUEST_EQUIP_EXP = 37
+    QUEST_PASSIVE_SKILL = 38
 
 
 class NiceCombineAdjustTarget(StrEnum):
@@ -5801,7 +5803,8 @@ class NiceCombineAdjustTarget(StrEnum):
     exchangeSvt = "exchangeSvt"
     questItemFirstTime = "questItemFirstTime"
     questUseRewardAddItem = "questUseRewardAddItem"
-    equipExp = "equipExp"
+    questEquipExp = "questEquipExp"
+    questPassiveSkill = "questPassiveSkill"
 
 
 COMBINE_ADJUST_TARGET_TYPE_NAME: dict[int, NiceCombineAdjustTarget] = {
@@ -5841,7 +5844,8 @@ COMBINE_ADJUST_TARGET_TYPE_NAME: dict[int, NiceCombineAdjustTarget] = {
     34: NiceCombineAdjustTarget.exchangeSvt,
     35: NiceCombineAdjustTarget.questItemFirstTime,
     36: NiceCombineAdjustTarget.questUseRewardAddItem,
-    37: NiceCombineAdjustTarget.equipExp,
+    37: NiceCombineAdjustTarget.questEquipExp,
+    38: NiceCombineAdjustTarget.questPassiveSkill,
 }
 
 
@@ -5849,6 +5853,7 @@ class EventCombineEntityCalcType(IntEnum):
     ADDITION = 1
     MULTIPLICATION = 2
     FIXED_VALUE = 3
+    NONE = 4
 
 
 class NiceEventCombineCalc(StrEnum):
@@ -5857,12 +5862,14 @@ class NiceEventCombineCalc(StrEnum):
     addition = "addition"
     multiplication = "multiplication"
     fixedValue = "fixedValue"
+    none = "none"
 
 
 EVENT_COMBINE_CALC_TYPE_NAME: dict[int, NiceEventCombineCalc] = {
     1: NiceEventCombineCalc.addition,
     2: NiceEventCombineCalc.multiplication,
     3: NiceEventCombineCalc.fixedValue,
+    4: NiceEventCombineCalc.none,
 }
 
 
