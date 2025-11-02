@@ -2387,17 +2387,17 @@ class NiceEventAdd(BaseModelORJson):
 
 
 class NiceEventDetail(BaseModelORJson):
-    flags: list[NiceEventFlag]
-    pointImageId: int
+    flags: list[NiceEventFlag] = []
+    pointImageId: int = 0
     # rewardButtonImageId: int
     # eventGaugeType: int
-    condQuestId: int
-    condQuestPhase: int
-    condMessage: str
-    shopCondQuestId: int
-    shopCondQuestPhase: int
-    shopCondMessage: str
-    entryCondMessage: str
+    condQuestId: int = 0
+    condQuestPhase: int = 0
+    condMessage: str = ""
+    shopCondQuestId: int = 0
+    shopCondQuestPhase: int = 0
+    shopCondMessage: str = ""
+    entryCondMessage: str = ""
     # tutorialImageIds: list[str]
     # script: dict[str, Any]
 
@@ -3358,8 +3358,8 @@ class NiceGachaSub(BaseModelORJson):
     adjustAddId: int
     openedAt: int
     closedAt: int
-    releaseConditions: list[NiceCommonRelease]
-    script: dict[str, Any] | None = None
+    releaseConditions: list[NiceCommonRelease] = []
+    script: dict[str, Any] | None = {}
 
 
 class NiceGachaRelease(BaseModelORJson):
