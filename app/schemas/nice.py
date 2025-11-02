@@ -56,6 +56,7 @@ from .gameenums import (
     NiceCondType,
     NiceConsumeType,
     NiceEventCombineCalc,
+    NiceEventFlag,
     NiceEventFortificationSvtType,
     NiceEventOverwriteType,
     NiceEventRewardSceneFlag,
@@ -1981,7 +1982,7 @@ class NiceEventQuest(BaseModelORJson):
 
 class NiceEventCampaignScript(BaseModelORJson):
     # isNotDispEntryCondMessage: int | None = None
-    # OnlyMaxFuncGroupId: int | None = None
+    OnlyMaxFuncGroupId: int | None = None
     # showBoardMessageOnWarGroupId: int | None = None
     addPassiveIconOrganization: str | None = None
     addPassiveContentOrganization: str | None = None
@@ -2385,6 +2386,22 @@ class NiceEventAdd(BaseModelORJson):
     endedAt: int
 
 
+class NiceEventDetail(BaseModelORJson):
+    flags: list[NiceEventFlag]
+    pointImageId: int
+    # rewardButtonImageId: int
+    # eventGaugeType: int
+    condQuestId: int
+    condQuestPhase: int
+    condMessage: str
+    shopCondQuestId: int
+    shopCondQuestPhase: int
+    shopCondMessage: str
+    entryCondMessage: str
+    # tutorialImageIds: list[str]
+    # script: dict[str, Any]
+
+
 class NiceEventSvtScript(BaseModelORJson):
     addGetMessage: str | None = None
     addMessageReleaseConditions: list[NiceCommonRelease] | None = None
@@ -2455,6 +2472,7 @@ class NiceEvent(BaseModelORJson):
     finishedAt: int
     materialOpenedAt: int
     warIds: list[int] = []
+    eventDetail: NiceEventDetail | None = None
     eventAdds: list[NiceEventAdd] = []
     svts: list[NiceEventSvt] = []
     shop: list[NiceShop] = []
