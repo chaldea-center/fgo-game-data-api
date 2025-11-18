@@ -61,6 +61,7 @@ from .gameenums import (
     NiceEventOverwriteType,
     NiceEventRewardSceneFlag,
     NiceEventSvtType,
+    NiceEventTradeGoodsBoardType,
     NiceEventType,
     NiceEventWorkType,
     NiceFrequencyType,
@@ -2290,6 +2291,7 @@ class NiceEventTradePickup(BaseModelORJson):
 
 class NiceEventTradeGoods(BaseModelORJson):
     id: int
+    boardType: NiceEventTradeGoodsBoardType = NiceEventTradeGoodsBoardType.trade
     name: str
     goodsIcon: HttpUrl
     gifts: list[NiceGift]
