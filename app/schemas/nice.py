@@ -229,6 +229,13 @@ class NiceItemSelect(BaseModelORJson):
     detail: str
 
 
+class NiceItemScript(BaseModelORJson):
+    eventId: int | None = None
+    eventGroupId: int | None = None
+    maxNum: int | None = None
+    validClassIds: list[int] | None = None
+
+
 class NiceItem(BaseModelORJson):
     id: int
     name: str
@@ -247,6 +254,7 @@ class NiceItem(BaseModelORJson):
     startedAt: int
     endedAt: int
     itemSelects: list[NiceItemSelect] = []
+    script: NiceItemScript = NiceItemScript()
 
 
 class NiceItemAmount(BaseModel):
@@ -676,6 +684,12 @@ class BaseVals(BaseModel):
     ResistEffectList: list[int] | None = None
     EnablePassiveBuffConvert: int | None = None
     FieldBuffApplyTarget: int | None = None
+    MaxGainNp: int | None = None
+    MaxHastenNpTurn: int | None = None
+    FunctionTriggerActorTargetFlag: int | None = None
+    IsTurnProgressWithoutGrantActor: int | None = None
+    IsFuncCheckFieldIndividuality: int | None = None
+
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
     Individuality: Optional[int] = None
     EventId: Optional[int] = None
@@ -729,6 +743,11 @@ class NiceFunction(NiceBaseFunction):
     )
 
 
+class SvtPassiveSkillScript(BaseModel):
+    condIndividuality: list[int] | None = None
+    otherValidEventId: int | None = None
+
+
 class ExtraPassive(BaseModel):
     num: int
     priority: int
@@ -742,6 +761,7 @@ class ExtraPassive(BaseModel):
     releaseConditions: list[NiceCommonRelease] = []
     startedAt: int
     endedAt: int
+    script: SvtPassiveSkillScript = SvtPassiveSkillScript()
 
 
 class NiceSelectAddInfoBtnCond(BaseModel):
@@ -3008,10 +3028,12 @@ class NiceRestriction(BaseModelORJson):
 
 class NiceQuestPhaseRestriction(BaseModelORJson):
     restriction: NiceRestriction
+    priority: int = 0
     frequencyType: NiceFrequencyType
     dialogMessage: str
     noticeMessage: str
     title: str
+    # script:
 
 
 class NiceQuestPhase(NiceQuest):
