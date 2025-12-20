@@ -2059,7 +2059,7 @@ class MstQuestPhase(BaseModelORJson):
     isNpcOnly: bool  # true,
     battleBgId: int  # 13400,
     battleBgType: int  # 0,
-    qp: int | None = 0  # 1900,
+    qp: int | None = None  # 1900,
     playerExp: int  # 550,
     friendshipExp: int  # 165
     giftId: int = 0
@@ -2104,7 +2104,7 @@ class MstQuestRestriction(BaseModelORJson):
     questId: int
     phase: int
     restrictionId: int
-    priority: int = 0
+    priority: int | None = None
     frequencyType: int
     dialogMessage: str
     noticeMessage: str
