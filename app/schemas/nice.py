@@ -1505,6 +1505,8 @@ class NiceServantScript(BaseModel):
     )
     maleImage: ExtraAssets | None = None
     imagePartsGroup: list[NiceImagePartsGroup] | None = None
+    saveTransform: int | None = None
+    saveTransformDefault: int | None = None
 
 
 class NiceCommandCode(BaseModelORJson):
@@ -3058,7 +3060,7 @@ class NiceQuestPhase(NiceQuest):
     className: list[SvtClass | str] = []
     individuality: list[NiceTrait] = []
     phaseIndividuality: list[NiceTrait] | None = []
-    qp: int = 0
+    qp: int = 0  # deprecated
     exp: int
     bond: int
     isNpcOnly: bool = False
