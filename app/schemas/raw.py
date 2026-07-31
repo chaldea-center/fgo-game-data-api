@@ -2051,6 +2051,15 @@ class MstBattleMessageGroup(BaseModelORJson):
     probability: int
 
 
+
+class MstBattleScript(BaseModelORJson):
+    id: int
+    playOrder: int
+    idx: int
+    battleScriptAction: int
+    script: dict[str, Any]
+
+
 class MstQuestPhase(BaseModelORJson):
     classIds: list[int]  # [7],
     individuality: list[int]  # [2038, 2039, 94000046],
@@ -2255,7 +2264,7 @@ class MstAi(BaseModelORJson):
 class MstAiAct(BaseModelORJson):
     targetIndividuality: list[int]  # [0]
     skillVals: list[int]  # [961075, 1]
-    script: dict[str, Any] | None = None
+    script: dict[str, Any]
     id: int  # 94016184
     type: int  # 40
     target: int  # 0
@@ -2289,6 +2298,11 @@ class BattleMessageGroupEntity(BaseModelORJson):
     mstBattleMessageGroup: list[MstBattleMessageGroup]
     mstBattleMessage: list[MstBattleMessage]
     mstCommonRelease: list[MstCommonRelease]
+
+
+
+class BattleScriptEntity(BaseModelORJson):
+    mstBattleScript: list[MstBattleScript]
 
 
 class Master(BaseModelORJson):

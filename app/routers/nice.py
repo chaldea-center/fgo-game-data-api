@@ -7,6 +7,7 @@ from ..core import search
 from ..core.nice import (
     ai,
     battle_message,
+    battle_script,
     bgm,
     cc,
     class_board,
@@ -33,11 +34,13 @@ from ..redis import Redis
 from ..schemas.common import Language, Region, ReverseData, ReverseDepth
 from ..schemas.enums import AiType
 from ..schemas.nice import (
+    NiceAiAct,
     NiceAiCollection,
     NiceBaseFunctionReverse,
     NiceBattleMasterImage,
     NiceBattleMessage,
     NiceBattleMessageGroup,
+    NiceBattleScript,
     NiceBgmEntity,
     NiceBuffReverse,
     NiceClassBoard,
@@ -913,6 +916,28 @@ async def get_ai_field(
 
 
 @router.get(
+    "/{region}/ai-act/{ai_act_id}",
+    summary="Get AI Act data",
+    response_description="Nice AI Act Entity",
+    response_model=NiceAiAct,
+    response_model_exclude_unset=True,
+    responses=get_error_code([404]),
+)
+@cache()
+async def get_ai_act(
+    region: Region,
+    ai_act_id: int,
+    lang: Language = Depends(language_parameter),
+) -> Response:
+    """
+    Get the nice AI Act data from the given AI Act ID
+    """
+    async with get_db(region) as conn:
+        ai_entity = await ai.get_nice_ai_act_from_id(conn, region, ai_act_id, lang)
+        return item_response(ai_entity)
+
+
+@router.get(
     "/{region}/bgm/{bgm_id}",
     summary="Get Nice BGM data",
     response_description="BGM Entity",
@@ -1069,6 +1094,25 @@ async def get_battle_message_group(
     async with get_db(region) as conn:
         return list_response(
             await battle_message.get_nice_battle_message_groups(conn, group_id)
+        )
+
+
+@router.get(
+    "/{region}/battle-script/{script_id}",
+    summary="Get Battle Script data",
+    response_description="Nice Battle Script Entity",
+    response_model=list[NiceBattleScript],
+    response_model_exclude_unset=True,
+    responses=get_error_code([404]),
+)
+@cache()
+async def get_battle_script(
+    region: Region,
+    script_id: int,
+) -> Response:
+    async with get_db(region) as conn:
+        return list_response(
+            await battle_script.get_nice_battle_scripts(conn, script_id)
         )
 
 

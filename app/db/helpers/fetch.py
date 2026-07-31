@@ -7,11 +7,13 @@ from sqlalchemy.sql import ColumnElement, select
 
 from ...models.raw import (
     AssetStorage,
+    mstAiAct,
     mstBattleMasterImage,
     mstBattleMessage,
     mstBattleMessageGroup,
     mstBattlePoint,
     mstBattlePointPhase,
+    mstBattleScript,
     mstBgm,
     mstBgmRelease,
     mstBlankEarthSpot,
@@ -147,11 +149,13 @@ from ...models.raw import (
 from ...schemas.base import BaseModelORJson
 from ...schemas.raw import (
     AssetStorageLine,
+    MstAiAct,
     MstBattleMasterImage,
     MstBattleMessage,
     MstBattleMessageGroup,
     MstBattlePoint,
     MstBattlePointPhase,
+    MstBattleScript,
     MstBgm,
     MstBgmRelease,
     MstBlankEarthSpot,
@@ -316,6 +320,7 @@ schema_map_fetch_one: dict[  # type:ignore
     MstClassBoardBase: (mstClassBoardBase, mstClassBoardBase.c.id),
     MstGrandGraph: (mstGrandGraph, mstGrandGraph.c.id),
     MstGacha: (mstGacha, mstGacha.c.id),
+    MstAiAct: (mstAiAct, mstAiAct.c.id),
 }
 
 TFetchOne = TypeVar("TFetchOne", bound=BaseModelORJson)
@@ -702,6 +707,11 @@ schema_table_fetch_all_multiple: dict[  # type:ignore
         mstBattleMessage,
         mstBattleMessage.c.id,
         [mstBattleMessage.c.id, mstBattleMessage.c.idx],
+    ),
+    MstBattleScript: (
+        mstBattleScript,
+        mstBattleScript.c.id,
+        [mstBattleScript.c.id, mstBattleScript.c.playOrder, mstBattleScript.c.idx],
     ),
     MstShop: (mstShop, mstShop.c.id, [mstShop.c.id]),
     MstQuest: (mstQuest, mstQuest.c.id, [mstQuest.c.id]),

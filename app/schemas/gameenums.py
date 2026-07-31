@@ -296,6 +296,7 @@ class FuncType(IntEnum):
     HASTEN_NPTURN_FROM_OTHER_USED_NPTURN = 163
     DAMAGE_FUNC_TYPE_164 = 164
     DAMAGE_FUNC_TYPE_165 = 165
+    SET_BATTLE_MISSION_VALUE_AS_MAX = 168
 
 
 class NiceFuncType(StrEnum):
@@ -430,6 +431,7 @@ class NiceFuncType(StrEnum):
     hastenNpturnFromOtherUsedNpturn = "hastenNpturnFromOtherUsedNpturn"
     damageFuncType164 = "damageFuncType164"
     damageFuncType165 = "damageFuncType165"
+    setBattleMissionValueAsMax = "setBattleMissionValueAsMax"
 
 
 FUNC_TYPE_NAME: dict[int, NiceFuncType] = {
@@ -562,6 +564,7 @@ FUNC_TYPE_NAME: dict[int, NiceFuncType] = {
     163: NiceFuncType.hastenNpturnFromOtherUsedNpturn,
     164: NiceFuncType.damageFuncType164,
     165: NiceFuncType.damageFuncType165,
+    168: NiceFuncType.setBattleMissionValueAsMax,
 }
 
 
@@ -936,6 +939,7 @@ class BuffType(IntEnum):
     MULTI_GUTS_BEFORE_FUNCTION = 245
     LIMIT_MAX_NP = 246
     LIMIT_MIN_NP = 247
+    LAST_SELFTURNPROGRESS_FUNCTION = 248
     TO_FIELD_CHANGE_FIELD = 10001
     TO_FIELD_AVOID_BUFF = 10002
     TO_FIELD_SUB_INDIVIDUALITY_FIELD = 10003
@@ -1172,6 +1176,7 @@ class NiceBuffType(StrEnum):
     multiGutsBeforeFunction = "multiGutsBeforeFunction"
     limitMaxNp = "limitMaxNp"
     limitMinNp = "limitMinNp"
+    lastSelfturnprogressFunction = "lastSelfturnprogressFunction"
     toFieldChangeField = "toFieldChangeField"
     toFieldAvoidBuff = "toFieldAvoidBuff"
     toFieldSubIndividualityField = "toFieldSubIndividualityField"
@@ -1409,6 +1414,7 @@ BUFF_TYPE_NAME: dict[int, NiceBuffType] = {
     245: NiceBuffType.multiGutsBeforeFunction,
     246: NiceBuffType.limitMaxNp,
     247: NiceBuffType.limitMinNp,
+    248: NiceBuffType.lastSelfturnprogressFunction,
     10001: NiceBuffType.toFieldChangeField,
     10002: NiceBuffType.toFieldAvoidBuff,
     10003: NiceBuffType.toFieldSubIndividualityField,
@@ -2254,6 +2260,10 @@ class DataValsType(IntEnum):
     NotActIfAlreadyAvoidStateBuff = 271
     AvoidFieldBuff = 272
     UseUserSpecifiedLimitCount = 273
+    ParamAddOpCheckDead = 274
+    ResultAggregateGroupId = 275
+    SelfTurnProgressGroup = 276
+    EnemyCountWaitTimeAfterEffect = 277
 
 
 class ClassRelationOverwriteType(IntEnum):
@@ -2500,6 +2510,8 @@ class ShopType(IntEnum):
     EVENT_SVT_EQUIP = 16
     EXCHANGE_SVT_COIN = 17
     CLASS_BOARD_RESET = 18
+    EX_ROOM_SHOP = 19
+    EX_ROOM_SHOP_DAILY = 20
 
 
 class NiceShopType(StrEnum):
@@ -2524,6 +2536,8 @@ class NiceShopType(StrEnum):
     eventSvtEquip = "eventSvtEquip"
     exchangeSvtCoin = "exchangeSvtCoin"
     classBoardReset = "classBoardReset"
+    exRoomShop = "exRoomShop"
+    exRoomShopDaily = "exRoomShopDaily"
 
 
 SHOP_TYPE_NAME: dict[int, NiceShopType] = {
@@ -2546,6 +2560,8 @@ SHOP_TYPE_NAME: dict[int, NiceShopType] = {
     16: NiceShopType.eventSvtEquip,
     17: NiceShopType.exchangeSvtCoin,
     18: NiceShopType.classBoardReset,
+    19: NiceShopType.exRoomShop,
+    20: NiceShopType.exRoomShopDaily,
 }
 
 
@@ -3014,6 +3030,11 @@ class CondType(IntEnum):
     BATTLE_ENTRY_ENEMY_TOTAL_COUNT_ABOVE = 283
     BATTLE_ENTRY_ENEMY_TOTAL_COUNT_BELOW = 284
     BATTLE_ENTRY_ENEMY_TOTAL_COUNT_EQUAL = 285
+    JOB_MAX_LEVEL_NUM_ABOVE = 286
+    JOB_MAX_LEVEL_NUM_BELOW = 287
+    JOB_MAX_LEVEL_NUM_EQUAL = 288
+    SVT_HP_REACH_NUM = 289
+    SVT_ATK_REACH_NUM = 290
 
 
 class NiceCondType(StrEnum):
@@ -3295,6 +3316,11 @@ class NiceCondType(StrEnum):
     battleEntryEnemyTotalCountAbove = "battleEntryEnemyTotalCountAbove"
     battleEntryEnemyTotalCountBelow = "battleEntryEnemyTotalCountBelow"
     battleEntryEnemyTotalCountEqual = "battleEntryEnemyTotalCountEqual"
+    jobMaxLevelNumAbove = "jobMaxLevelNumAbove"
+    jobMaxLevelNumBelow = "jobMaxLevelNumBelow"
+    jobMaxLevelNumEqual = "jobMaxLevelNumEqual"
+    svtHpReachNum = "svtHpReachNum"
+    svtAtkReachNum = "svtAtkReachNum"
 
 
 COND_TYPE_NAME: dict[int, NiceCondType] = {
@@ -3574,6 +3600,11 @@ COND_TYPE_NAME: dict[int, NiceCondType] = {
     283: NiceCondType.battleEntryEnemyTotalCountAbove,
     284: NiceCondType.battleEntryEnemyTotalCountBelow,
     285: NiceCondType.battleEntryEnemyTotalCountEqual,
+    286: NiceCondType.jobMaxLevelNumAbove,
+    287: NiceCondType.jobMaxLevelNumBelow,
+    288: NiceCondType.jobMaxLevelNumEqual,
+    289: NiceCondType.svtHpReachNum,
+    290: NiceCondType.svtAtkReachNum,
 }
 
 
@@ -5402,6 +5433,7 @@ class AiActType(IntEnum):
     MESSAGE_GROUP = 73
     OVERWRITE_FIELD_MOTION = 74
     OVERWRITE_ADD_UNIQUE_CAMERA = 75
+    GIMMICK_SKILL = 76
     NOBLE_PHANTASM = 80
     BATTLE_END = 90
     LOSE_END = 91
@@ -5440,6 +5472,7 @@ class NiceAiActType(StrEnum):
     messageGroup = "messageGroup"
     overwriteFieldMotion = "overwriteFieldMotion"
     overwriteAddUniqueCamera = "overwriteAddUniqueCamera"
+    gimmickSkill = "gimmickSkill"
     noblePhantasm = "noblePhantasm"
     battleEnd = "battleEnd"
     loseEnd = "loseEnd"
@@ -5478,6 +5511,7 @@ AI_ACT_TYPE_NAME: dict[int, NiceAiActType] = {
     73: NiceAiActType.messageGroup,
     74: NiceAiActType.overwriteFieldMotion,
     75: NiceAiActType.overwriteAddUniqueCamera,
+    76: NiceAiActType.gimmickSkill,
     80: NiceAiActType.noblePhantasm,
     90: NiceAiActType.battleEnd,
     91: NiceAiActType.loseEnd,
@@ -5637,7 +5671,7 @@ class MissionType(IntEnum):
     LIMITED = 5
     COMPLETE = 6
     RANDOM = 7
-    SERVANT = 8
+    EX_ROOM = 8
 
 
 class NiceMissionType(StrEnum):
@@ -5651,7 +5685,7 @@ class NiceMissionType(StrEnum):
     limited = "limited"
     complete = "complete"
     random = "random"
-    servant = "servant"
+    exRoom = "exRoom"
 
 
 MISSION_TYPE_NAME: dict[int, NiceMissionType] = {
@@ -5663,7 +5697,7 @@ MISSION_TYPE_NAME: dict[int, NiceMissionType] = {
     5: NiceMissionType.limited,
     6: NiceMissionType.complete,
     7: NiceMissionType.random,
-    8: NiceMissionType.servant,
+    8: NiceMissionType.exRoom,
 }
 
 
@@ -7082,6 +7116,9 @@ class ItemTransitionType(IntEnum):
     REVIVAL_ITEM = 17
     BLANK_EARTH_SCENARIO = 18
     LOGIN_BONUS = 19
+    EX_ROOM_QUEST = 20
+    EX_ROOM_MISSION = 21
+    EX_ROOM_SHOP = 22
 
 
 class NiceItemTransitionType(StrEnum):
@@ -7107,6 +7144,9 @@ class NiceItemTransitionType(StrEnum):
     revivalItem = "revivalItem"
     blankEarthScenario = "blankEarthScenario"
     loginBonus = "loginBonus"
+    exRoomQuest = "exRoomQuest"
+    exRoomMission = "exRoomMission"
+    exRoomShop = "exRoomShop"
 
 
 ITEM_TRANSITION_TYPE_NAME: dict[int, NiceItemTransitionType] = {
@@ -7130,6 +7170,9 @@ ITEM_TRANSITION_TYPE_NAME: dict[int, NiceItemTransitionType] = {
     17: NiceItemTransitionType.revivalItem,
     18: NiceItemTransitionType.blankEarthScenario,
     19: NiceItemTransitionType.loginBonus,
+    20: NiceItemTransitionType.exRoomQuest,
+    21: NiceItemTransitionType.exRoomMission,
+    22: NiceItemTransitionType.exRoomShop,
 }
 
 
@@ -7288,6 +7331,26 @@ class EventMissionCondDetailType(IntEnum):
     PURCHASE_SHOP_NUM = 41
     ITEM_USE_QUEST_NUM = 42
     BATTLE_MISSION_VALUE = 43
+    MAP_GIMMICK_COUNT_ONCE = 44
+    QUEST_CLEAR_TURN_NUM_BELOW = 45
+    QUEST_CLEAR_TURN_NUM_ABOVE = 46
+    QUEST_CLEAR_WITH_SVT_INDIVIDUALITY_ONLY = 47
+    QUEST_CLEAR_WITH_MY_DECK_SVT_NUM_EQUAL = 48
+    QUEST_CLEAR_WITH_MY_DECK_SVT_NUM_ABOVE = 49
+    QUEST_CLEAR_WITH_MY_DECK_SVT_NUM_BELOW = 50
+    QUEST_CLEAR_WITH_SVT_RARITY_EQUAL = 51
+    QUEST_CLEAR_WITH_SVT_RARITY_ABOVE = 52
+    QUEST_CLEAR_WITH_SVT_RARITY_BELOW = 53
+    QUEST_CLEAR_WITH_TOTAL_COST_ABOVE = 54
+    QUEST_CLEAR_WITH_TOTAL_COST_BELOW = 55
+    QUEST_CLEAR_WITH_TREASURE_DEVICE_TYPE_SVT_ONLY = 56
+    QUEST_CLEAR_WITH_SVT_FRIENDSHIP_RANK_ABOVE = 57
+    QUEST_CLEAR_WITH_SVT_INDIVIDUALITY_NUM_ABOVE_ONLY_STARTING_MEMBER = 58
+    QUEST_CLEAR_WITH_SVT_RARITY_EQUAL_NUM_ABOVE_ONLY_STARTING_MEMBER = 59
+    QUEST_CLEAR_WITH_SVT_RARITY_ABOVE_NUM_ABOVE_ONLY_STARTING_MEMBER = 60
+    QUEST_CLEAR_WITH_SVT_RARITY_BELOW_NUM_ABOVE_ONLY_STARTING_MEMBER = 61
+    QUEST_CLEAR_WITH_SVT_FRIENDSHIP_RANK_ABOVE_NUM_ABOVE_ONLY_STARTING_MEMBER = 62
+    QUEST_CLEAR_WITH_EQUIP = 63
 
 
 class NiceEventMissionCondDetailType(StrEnum):
@@ -7337,6 +7400,36 @@ class NiceEventMissionCondDetailType(StrEnum):
     purchaseShopNum = "purchaseShopNum"
     itemUseQuestNum = "itemUseQuestNum"
     battleMissionValue = "battleMissionValue"
+    mapGimmickCountOnce = "mapGimmickCountOnce"
+    questClearTurnNumBelow = "questClearTurnNumBelow"
+    questClearTurnNumAbove = "questClearTurnNumAbove"
+    questClearWithSvtIndividualityOnly = "questClearWithSvtIndividualityOnly"
+    questClearWithMyDeckSvtNumEqual = "questClearWithMyDeckSvtNumEqual"
+    questClearWithMyDeckSvtNumAbove = "questClearWithMyDeckSvtNumAbove"
+    questClearWithMyDeckSvtNumBelow = "questClearWithMyDeckSvtNumBelow"
+    questClearWithSvtRarityEqual = "questClearWithSvtRarityEqual"
+    questClearWithSvtRarityAbove = "questClearWithSvtRarityAbove"
+    questClearWithSvtRarityBelow = "questClearWithSvtRarityBelow"
+    questClearWithTotalCostAbove = "questClearWithTotalCostAbove"
+    questClearWithTotalCostBelow = "questClearWithTotalCostBelow"
+    questClearWithTreasureDeviceTypeSvtOnly = "questClearWithTreasureDeviceTypeSvtOnly"
+    questClearWithSvtFriendshipRankAbove = "questClearWithSvtFriendshipRankAbove"
+    questClearWithSvtIndividualityNumAboveOnlyStartingMember = (
+        "questClearWithSvtIndividualityNumAboveOnlyStartingMember"
+    )
+    questClearWithSvtRarityEqualNumAboveOnlyStartingMember = (
+        "questClearWithSvtRarityEqualNumAboveOnlyStartingMember"
+    )
+    questClearWithSvtRarityAboveNumAboveOnlyStartingMember = (
+        "questClearWithSvtRarityAboveNumAboveOnlyStartingMember"
+    )
+    questClearWithSvtRarityBelowNumAboveOnlyStartingMember = (
+        "questClearWithSvtRarityBelowNumAboveOnlyStartingMember"
+    )
+    questClearWithSvtFriendshipRankAboveNumAboveOnlyStartingMember = (
+        "questClearWithSvtFriendshipRankAboveNumAboveOnlyStartingMember"
+    )
+    questClearWithEquip = "questClearWithEquip"
 
 
 EVENT_MISSION_COND_DETAIL_TYPE_NAME: dict[int, NiceEventMissionCondDetailType] = {
@@ -7380,6 +7473,26 @@ EVENT_MISSION_COND_DETAIL_TYPE_NAME: dict[int, NiceEventMissionCondDetailType] =
     41: NiceEventMissionCondDetailType.purchaseShopNum,
     42: NiceEventMissionCondDetailType.itemUseQuestNum,
     43: NiceEventMissionCondDetailType.battleMissionValue,
+    44: NiceEventMissionCondDetailType.mapGimmickCountOnce,
+    45: NiceEventMissionCondDetailType.questClearTurnNumBelow,
+    46: NiceEventMissionCondDetailType.questClearTurnNumAbove,
+    47: NiceEventMissionCondDetailType.questClearWithSvtIndividualityOnly,
+    48: NiceEventMissionCondDetailType.questClearWithMyDeckSvtNumEqual,
+    49: NiceEventMissionCondDetailType.questClearWithMyDeckSvtNumAbove,
+    50: NiceEventMissionCondDetailType.questClearWithMyDeckSvtNumBelow,
+    51: NiceEventMissionCondDetailType.questClearWithSvtRarityEqual,
+    52: NiceEventMissionCondDetailType.questClearWithSvtRarityAbove,
+    53: NiceEventMissionCondDetailType.questClearWithSvtRarityBelow,
+    54: NiceEventMissionCondDetailType.questClearWithTotalCostAbove,
+    55: NiceEventMissionCondDetailType.questClearWithTotalCostBelow,
+    56: NiceEventMissionCondDetailType.questClearWithTreasureDeviceTypeSvtOnly,
+    57: NiceEventMissionCondDetailType.questClearWithSvtFriendshipRankAbove,
+    58: NiceEventMissionCondDetailType.questClearWithSvtIndividualityNumAboveOnlyStartingMember,
+    59: NiceEventMissionCondDetailType.questClearWithSvtRarityEqualNumAboveOnlyStartingMember,
+    60: NiceEventMissionCondDetailType.questClearWithSvtRarityAboveNumAboveOnlyStartingMember,
+    61: NiceEventMissionCondDetailType.questClearWithSvtRarityBelowNumAboveOnlyStartingMember,
+    62: NiceEventMissionCondDetailType.questClearWithSvtFriendshipRankAboveNumAboveOnlyStartingMember,
+    63: NiceEventMissionCondDetailType.questClearWithEquip,
 }
 
 
@@ -7915,4 +8028,238 @@ SVT_COLLECTION_STATUS_NAME: dict[int, NiceSvtCollectionStatus] = {
     9: NiceSvtCollectionStatus.linkBad,
     10: NiceSvtCollectionStatus.linkClose,
     11: NiceSvtCollectionStatus.collectionStatus6,
+}
+
+
+class UserStatusFlagKind(IntEnum):
+    COMBINE_MATERIAL_C = 0
+    COMBINE_MATERIAL_UC = 1
+    COMBINE_MATERIAL_R = 2
+    STATUS_UP_C = 3
+    STATUS_UP_UC = 4
+    STATUS_UP_R = 5
+    SVT_EQUIP_C = 6
+    SVT_EQUIP_UC = 7
+    SVT_EQUIP_R = 8
+    COSTUME_DISPLAY_SETTING = 9
+    FIRST_NP_SPEED = 10
+    FIX_MAIN_SUPPORT_DECK = 11
+    FIX_EVENT_SUPPORT_DECK = 12
+    QUEST_DROP_AUTOSEL_COMBINE_MATERIAL_C = 13
+    QUEST_DROP_AUTOSEL_COMBINE_MATERIAL_UC = 14
+    QUEST_DROP_AUTOSEL_COMBINE_MATERIAL_R = 15
+    QUEST_DROP_AUTOSEL_COMBINE_MATERIAL_SR = 16
+    RANDOM_LIMIT_COUNT = 17
+    RANDOM_LIMIT_COUNT_SUPPORT = 18
+    SVT_LIMIT_SPOILER_PROTECTION = 19
+    SVT_LIMIT_DISPLAY_SETTING = 20
+    BIRTHDAY_SETTING = 21
+    ISSUED_DELETE_PASSWORD = 22
+    DELETED = 23
+    SUPPORT_LIMIT_COUNT_TO_DISP_LIMIT_COUNT = 28
+
+
+class NiceUserStatusFlagKind(StrEnum):
+    """User Status Flag Kind"""
+
+    combineMaterialC = "combineMaterialC"
+    combineMaterialUc = "combineMaterialUc"
+    combineMaterialR = "combineMaterialR"
+    statusUpC = "statusUpC"
+    statusUpUc = "statusUpUc"
+    statusUpR = "statusUpR"
+    svtEquipC = "svtEquipC"
+    svtEquipUc = "svtEquipUc"
+    svtEquipR = "svtEquipR"
+    costumeDisplaySetting = "costumeDisplaySetting"
+    firstNpSpeed = "firstNpSpeed"
+    fixMainSupportDeck = "fixMainSupportDeck"
+    fixEventSupportDeck = "fixEventSupportDeck"
+    questDropAutoselCombineMaterialC = "questDropAutoselCombineMaterialC"
+    questDropAutoselCombineMaterialUc = "questDropAutoselCombineMaterialUc"
+    questDropAutoselCombineMaterialR = "questDropAutoselCombineMaterialR"
+    questDropAutoselCombineMaterialSr = "questDropAutoselCombineMaterialSr"
+    randomLimitCount = "randomLimitCount"
+    randomLimitCountSupport = "randomLimitCountSupport"
+    svtLimitSpoilerProtection = "svtLimitSpoilerProtection"
+    svtLimitDisplaySetting = "svtLimitDisplaySetting"
+    birthdaySetting = "birthdaySetting"
+    issuedDeletePassword = "issuedDeletePassword"
+    deleted = "deleted"
+    supportLimitCountToDispLimitCount = "supportLimitCountToDispLimitCount"
+
+
+USER_STATUS_FLAG_KIND_NAME: dict[int, NiceUserStatusFlagKind] = {
+    0: NiceUserStatusFlagKind.combineMaterialC,
+    1: NiceUserStatusFlagKind.combineMaterialUc,
+    2: NiceUserStatusFlagKind.combineMaterialR,
+    3: NiceUserStatusFlagKind.statusUpC,
+    4: NiceUserStatusFlagKind.statusUpUc,
+    5: NiceUserStatusFlagKind.statusUpR,
+    6: NiceUserStatusFlagKind.svtEquipC,
+    7: NiceUserStatusFlagKind.svtEquipUc,
+    8: NiceUserStatusFlagKind.svtEquipR,
+    9: NiceUserStatusFlagKind.costumeDisplaySetting,
+    10: NiceUserStatusFlagKind.firstNpSpeed,
+    11: NiceUserStatusFlagKind.fixMainSupportDeck,
+    12: NiceUserStatusFlagKind.fixEventSupportDeck,
+    13: NiceUserStatusFlagKind.questDropAutoselCombineMaterialC,
+    14: NiceUserStatusFlagKind.questDropAutoselCombineMaterialUc,
+    15: NiceUserStatusFlagKind.questDropAutoselCombineMaterialR,
+    16: NiceUserStatusFlagKind.questDropAutoselCombineMaterialSr,
+    17: NiceUserStatusFlagKind.randomLimitCount,
+    18: NiceUserStatusFlagKind.randomLimitCountSupport,
+    19: NiceUserStatusFlagKind.svtLimitSpoilerProtection,
+    20: NiceUserStatusFlagKind.svtLimitDisplaySetting,
+    21: NiceUserStatusFlagKind.birthdaySetting,
+    22: NiceUserStatusFlagKind.issuedDeletePassword,
+    23: NiceUserStatusFlagKind.deleted,
+    28: NiceUserStatusFlagKind.supportLimitCountToDispLimitCount,
+}
+
+
+class BattleScriptActionType(IntEnum):
+    AiAct = 1
+    Wait = 2
+    CutIn = 3
+    MoveCamera = 4
+    Message = 5
+    PlayVoice = 6
+    NormalSpeed = 7
+    ResumeSpeed = 8
+
+
+class NiceBattleScriptActionType(StrEnum):
+    """Battle Script Action Type"""
+
+    aiAct = "aiAct"
+    wait = "wait"
+    cutIn = "cutIn"
+    moveCamera = "moveCamera"
+    message = "message"
+    playVoice = "playVoice"
+    normalSpeed = "normalSpeed"
+    resumeSpeed = "resumeSpeed"
+
+
+BATTLE_SCRIPT_ACTION_TYPE_NAME: dict[int, NiceBattleScriptActionType] = {
+    1: NiceBattleScriptActionType.aiAct,
+    2: NiceBattleScriptActionType.wait,
+    3: NiceBattleScriptActionType.cutIn,
+    4: NiceBattleScriptActionType.moveCamera,
+    5: NiceBattleScriptActionType.message,
+    6: NiceBattleScriptActionType.playVoice,
+    7: NiceBattleScriptActionType.normalSpeed,
+    8: NiceBattleScriptActionType.resumeSpeed,
+}
+
+
+class BattleScriptActionActorType(IntEnum):
+    None_ = 0
+    Field = 1
+    Enemy = 2
+    Player = 3
+    Npc = 4
+
+
+class NiceBattleScriptActionActorType(StrEnum):
+    """Battle Script Action Actor Type"""
+
+    none = "none"
+    field = "field"
+    enemy = "enemy"
+    player = "player"
+    npc = "npc"
+
+
+BATTLE_SCRIPT_ACTION_ACTOR_TYPE_NAME: dict[int, NiceBattleScriptActionActorType] = {
+    0: NiceBattleScriptActionActorType.none,
+    1: NiceBattleScriptActionActorType.field,
+    2: NiceBattleScriptActionActorType.enemy,
+    3: NiceBattleScriptActionActorType.player,
+    4: NiceBattleScriptActionActorType.npc,
+}
+
+
+class UserQuestStatusFlag(IntEnum):
+    RESET = 2
+    RESET_REWARD = 4
+    PURCHASED_RARE_PRI = 8
+    CHALLENGED_NEWEST_PHASE = 16
+    BATTLE_RESULT_WIN = 32
+    BATTLE_RESULT_LOSE = 64
+    LATEST_RESULT_WIN = 128
+    LATEST_RESULT_LOSE = 256
+    NOT_GET_QUEST_CLEAR_GIFT = 512
+
+
+class NiceUserQuestStatusFlag(StrEnum):
+    """User Quest Status Flag"""
+
+    reset = "reset"
+    resetReward = "resetReward"
+    purchasedRarePri = "purchasedRarePri"
+    challengedNewestPhase = "challengedNewestPhase"
+    battleResultWin = "battleResultWin"
+    battleResultLose = "battleResultLose"
+    latestResultWin = "latestResultWin"
+    latestResultLose = "latestResultLose"
+    notGetQuestClearGift = "notGetQuestClearGift"
+
+
+USER_QUEST_STATUS_FLAG_NAME: dict[int, NiceUserQuestStatusFlag] = {
+    2: NiceUserQuestStatusFlag.reset,
+    4: NiceUserQuestStatusFlag.resetReward,
+    8: NiceUserQuestStatusFlag.purchasedRarePri,
+    16: NiceUserQuestStatusFlag.challengedNewestPhase,
+    32: NiceUserQuestStatusFlag.battleResultWin,
+    64: NiceUserQuestStatusFlag.battleResultLose,
+    128: NiceUserQuestStatusFlag.latestResultWin,
+    256: NiceUserQuestStatusFlag.latestResultLose,
+    512: NiceUserQuestStatusFlag.notGetQuestClearGift,
+}
+
+
+class EventStatusType(IntEnum):
+    NONE = 0
+    PURCHASED_RARE_PRI = 1
+    STRICT_CAMPAIGN_END = 2
+    IS_COMEBACK_TARGET_USER = 3
+    BATTLE_LINE_LOSE = 4
+    BATTLE_LINE_RESULT_END = 5
+    BATTLE_LINE_RESULT_WIN = 6
+    USE_EVENT_ITEM = 7
+    VIEW_OPENING_MOVIE = 8
+    RAID_PARTICIPATE = 9
+    GET_ITEM_FROM_BOX_GACHA = 10
+
+
+class NiceEventStatusType(StrEnum):
+    """Event Status Type"""
+
+    none = "none"
+    purchasedRarePri = "purchasedRarePri"
+    strictCampaignEnd = "strictCampaignEnd"
+    isComebackTargetUser = "isComebackTargetUser"
+    battleLineLose = "battleLineLose"
+    battleLineResultEnd = "battleLineResultEnd"
+    battleLineResultWin = "battleLineResultWin"
+    useEventItem = "useEventItem"
+    viewOpeningMovie = "viewOpeningMovie"
+    raidParticipate = "raidParticipate"
+    getItemFromBoxGacha = "getItemFromBoxGacha"
+
+
+EVENT_STATUS_TYPE_NAME: dict[int, NiceEventStatusType] = {
+    0: NiceEventStatusType.none,
+    1: NiceEventStatusType.purchasedRarePri,
+    2: NiceEventStatusType.strictCampaignEnd,
+    3: NiceEventStatusType.isComebackTargetUser,
+    4: NiceEventStatusType.battleLineLose,
+    5: NiceEventStatusType.battleLineResultEnd,
+    6: NiceEventStatusType.battleLineResultWin,
+    7: NiceEventStatusType.useEventItem,
+    8: NiceEventStatusType.viewOpeningMovie,
+    9: NiceEventStatusType.raidParticipate,
+    10: NiceEventStatusType.getItemFromBoxGacha,
 }
