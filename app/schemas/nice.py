@@ -703,6 +703,10 @@ class BaseVals(BaseModel):
     AvoidFieldBuff: int | None = None
     UseUserSpecifiedLimitCount: int | None = None
     ParamAddOpCheckDead: int | None = None
+    ResultAggregateGroupId: int | None = None
+    SelfTurnProgressGroup: int | None = None
+    EnemyCountWaitTimeAfterEffect: int | None = None
+
     # These are not DataVals but guesses from SkillLvEntity and EventDropUpValInfo
     Individuality: Optional[int] = None
     EventId: Optional[int] = None
@@ -817,8 +821,8 @@ class CondBranchSkillInfo(BaseModel):
     condType: NiceBattleBranchSkillCondBranchType
     condValue: list[int]
     skillId: int
-    detailText: str
-    iconBuffId: int
+    detailText: str | None = None
+    iconBuffId: int | None = None
 
 
 class NiceSkillScript(BaseModel):
