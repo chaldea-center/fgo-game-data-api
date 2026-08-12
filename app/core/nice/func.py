@@ -16,6 +16,7 @@ from ...schemas.nice import (
     NiceFuncGroup,
     ValCheckBattlePointPhaseRange,
     ValDamageRateBattlePointPhase,
+    ValTriggeredTargetBattlePointRateRange,
 )
 from ...schemas.raw import FunctionEntityNoReverse, MstFunc, MstFuncGroup
 from ..raw import get_func_entity_no_reverse
@@ -117,7 +118,8 @@ DataValType = dict[
     | list[str]
     | dict[str, Any]
     | list[ValDamageRateBattlePointPhase]
-    | list[ValCheckBattlePointPhaseRange],
+    | list[ValCheckBattlePointPhaseRange]
+    | list[ValTriggeredTargetBattlePointRateRange],
 ]
 
 
@@ -135,6 +137,9 @@ async def parse_dataVals(
     prefix = "aa"
     DamageRateBattlePointPhase: list[ValDamageRateBattlePointPhase] = []
     CheckBattlePointPhaseRange: list[ValCheckBattlePointPhaseRange] = []
+    TriggeredTargetBattlePointRateRange: list[
+        ValTriggeredTargetBattlePointRateRange
+    ] = []
     AddIndividualtyList: list[int] = []
 
     output: DataValType = {}
@@ -234,7 +239,10 @@ async def parse_dataVals(
                 }:
                     if i == 0:
                         text = "AddCount"
-                elif functype == FuncType.ADD_BATTLE_POINT:
+                elif functype in {
+                    FuncType.ADD_BATTLE_POINT,
+                    FuncType.SUB_BATTLE_POINT
+                }:
                     if i == 0:
                         text = "Rate"
                     elif i == 1:
@@ -321,6 +329,13 @@ async def parse_dataVals(
                                 range=array2[1].split("/"),
                             )
                         )
+                    elif array2[0].startswith("TriggeredTargetBattlePointRateRange"):
+                        TriggeredTargetBattlePointRateRange.append(
+                            ValTriggeredTargetBattlePointRateRange(
+                                battlePointId=int(array2[0].split("_")[1]),
+                                range=array2[1].split("/"),
+                            )
+                        )
                     else:
                         try:
                             text = array2[0]
@@ -341,6 +356,10 @@ async def parse_dataVals(
             output["DamageRateBattlePointPhase"] = DamageRateBattlePointPhase
         if CheckBattlePointPhaseRange:
             output["CheckBattlePointPhaseRange"] = CheckBattlePointPhaseRange
+        if TriggeredTargetBattlePointRateRange:
+            output["TriggeredTargetBattlePointRateRange"] = (
+                TriggeredTargetBattlePointRateRange
+            )
         if AddIndividualtyList:
             output["AddIndividualtyList"] = AddIndividualtyList
 
