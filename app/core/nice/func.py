@@ -36,6 +36,8 @@ ADD_BUFF_FUNCTIONS = {
     FuncType.ADD_FIELD_CHANGE_TO_FIELD,
     FuncType.ADD_STATE_TO_FIELD,
     FuncType.ADD_STATE_SHORT_TO_FIELD,
+    FuncType.ADD_STATE_FUNC_TYPE_169,
+    FuncType.ADD_STATE_FUNC_TYPE_170,
 }
 EVENT_DROP_FUNCTIONS = {
     FuncType.EVENT_POINT_UP,
@@ -96,6 +98,7 @@ LIST_2D_DATAVALS = {
     "SnapShotParamAddFieldIndividualityAndCheck",
     "AndOrCheckIndividualityList",
     "ApplyBuffIndividuality",
+    "TypeIndividualityEachFunc",
 }
 STRING_DATAVALS = {
     "PopValueText",
