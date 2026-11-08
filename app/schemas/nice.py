@@ -296,19 +296,19 @@ class NiceOpeningMovieScript(BaseModelORJson):
 class NiceOpeningMovie(BaseModelORJson):
     id: int
     priority: int
-    name: str
+    name: str = ""
     movieName: str
     url: HttpUrl
-    eventId: int
-    materialPosType: NiceOpeningMovieMaterialPosType
-    materialPosValue: int
-    releaseConditions: list[NiceCommonRelease]
-    materialReleaseConditions: list[NiceCommonRelease]
-    playTime: int
-    flags: list[NiceOpeningMovieFlag]
+    eventId: int = 0
+    materialPosType: NiceOpeningMovieMaterialPosType = NiceOpeningMovieMaterialPosType.none
+    materialPosValue: int = 0
+    releaseConditions: list[NiceCommonRelease] = []
+    materialReleaseConditions: list[NiceCommonRelease] = []
+    playTime: int = 0
+    flags: list[NiceOpeningMovieFlag] = []
     startedAt: int
     endedAt: int
-    script: NiceOpeningMovieScript
+    script: NiceOpeningMovieScript = NiceOpeningMovieScript()
 
 
 class NiceBuff(BaseModelORJson):
@@ -3177,7 +3177,7 @@ class NiceQuestPhaseRestriction(BaseModelORJson):
     dialogMessage: str
     noticeMessage: str
     title: str
-    script: NiceQuestPhaseRestrictionScript
+    script: NiceQuestPhaseRestrictionScript = NiceQuestPhaseRestrictionScript()
 
 
 class NiceQuestPhase(NiceQuest):
