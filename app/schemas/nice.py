@@ -77,6 +77,9 @@ from .gameenums import (
     NiceMissionType,
     NiceNpcFollowerEntityFlag,
     NiceNpcServantFollowerFlag,
+    NiceOpeningMovieFlag,
+    NiceOpeningMovieMaterialPosType,
+    NiceOpeningMovieTiming,
     NicePayType,
     NicePurchaseType,
     NiceQuestAfterClearType,
@@ -278,6 +281,34 @@ class NiceCommonRelease(BaseModelORJson):
     condType: NiceCondType
     condId: int = 0
     condNum: int = 0
+
+
+class NiceOpeningMovieScript(BaseModelORJson):
+    groupId: int | None = None
+    timing: NiceOpeningMovieTiming | None = None
+    warId: int | None = None
+    isGrand: bool | None = None
+    grandPVparentId: int | None = None
+    playedFlagId: int | None = None
+    afterTransitionParam: str | None = None
+
+
+class NiceOpeningMovie(BaseModelORJson):
+    id: int
+    priority: int
+    name: str
+    movieName: str
+    url: HttpUrl
+    eventId: int
+    materialPosType: NiceOpeningMovieMaterialPosType
+    materialPosValue: int
+    releaseConditions: list[NiceCommonRelease]
+    materialReleaseConditions: list[NiceCommonRelease]
+    playTime: int
+    flags: list[NiceOpeningMovieFlag]
+    startedAt: int
+    endedAt: int
+    script: NiceOpeningMovieScript
 
 
 class NiceBuff(BaseModelORJson):
@@ -3116,6 +3147,7 @@ class NiceQuestPhaseExtraDetail(BaseModelORJson):
     masterSkillDelay: int | None = None
     masterSkillDelayInfo: str | None = None
     isUseGrandBoard: int | None = None
+    isUseGrandBoardInitPos: list[int] | None = None
     turn: int | None = None
     LimitAct: StageLimitActType | None = None
     fixedMasterEquip: NiceQuestPhaseFixedMasterEquip | None = None
@@ -3134,6 +3166,10 @@ class NiceRestriction(BaseModelORJson):
     targetVals2: list[int]
 
 
+class NiceQuestPhaseRestrictionScript(BaseModelORJson):
+    releaseConditions: list[NiceCommonRelease] | None = None
+
+
 class NiceQuestPhaseRestriction(BaseModelORJson):
     restriction: NiceRestriction
     priority: int = 0
@@ -3141,7 +3177,7 @@ class NiceQuestPhaseRestriction(BaseModelORJson):
     dialogMessage: str
     noticeMessage: str
     title: str
-    # script:
+    script: NiceQuestPhaseRestrictionScript
 
 
 class NiceQuestPhase(NiceQuest):
